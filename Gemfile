@@ -13,12 +13,13 @@ gem "formtastic", "~> 2.1.1"
 group :development, :test do
   gem 'kumade'
   gem 'rspec-rails'
-  gem 'factory_girl_rails', :require => false
+  gem 'factory_girl_rails'
   gem 'unicorn'
   gem 'heroku'
   gem 'rails_best_practices'
   gem 'reek'
   gem 'bullet'
+  gem 'steak'
 end
 
 group :assets do

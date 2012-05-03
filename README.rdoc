@@ -2,3 +2,8 @@ Every Rails developer has their favorite set of tools and gems to use with their
 
 /admin
 /super_admins
+
+adds `rake code:reviews`
+adds 'rake pivotal:deliver_all_finished`
+
+acceptance test for active admin
