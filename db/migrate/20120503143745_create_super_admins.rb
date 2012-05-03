@@ -40,9 +40,6 @@ class CreateSuperAdmins < ActiveRecord::Migration
       t.timestamps
     end
 
-    # Create a default user
-    SuperAdmin.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
-
     add_index :super_admins, :email,                :unique => true
     add_index :super_admins, :reset_password_token, :unique => true
     # add_index :admin_users, :confirmation_token,   :unique => true

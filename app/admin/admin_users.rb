@@ -13,11 +13,11 @@ ActiveAdmin.register AdminUser, :namespace => :super_admins do
     end
     f.buttons
   end
-  
+
   controller do
     def update
       params[:admin_user].delete_if {|k,v| k.to_sym == :password } unless params[:admin_user].fetch(:password).present?
       update!
     end
-  end  
+  end
 end
