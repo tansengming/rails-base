@@ -7,6 +7,7 @@ gem 'activeadmin'
 gem 'sass-rails'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
+gem 'therubyracer'
 
 group :development, :test do
   gem 'kumade'
@@ -14,6 +15,9 @@ group :development, :test do
   gem 'factory_girl_rails', :require => false
   gem 'unicorn'
   gem 'heroku'
+  gem 'rails_best_practices'
+  gem 'reek'
+  gem 'bullet'
 end
 
 group :assets do
