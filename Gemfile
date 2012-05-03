@@ -4,10 +4,11 @@ gem 'rails', '3.2.3'
 gem 'pg'
 gem 'jquery-rails'
 gem 'activeadmin'
-gem 'sass-rails'
+gem 'sass-rails' # for active_admin
 gem 'haml'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
+gem "formtastic", "~> 2.1.1"
 
 group :development, :test do
   gem 'kumade'

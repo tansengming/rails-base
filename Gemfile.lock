@@ -73,8 +73,8 @@ GEM
       factory_girl (~> 3.2.0)
       railties (>= 3.0.0)
     fastercsv (1.5.4)
-    formtastic (2.2.0)
-      actionpack (>= 3.0)
+    formtastic (2.1.1)
+      actionpack (~> 3.0)
     haml (3.1.4)
     has_scope (0.5.1)
     heroku (2.25.0)
@@ -230,6 +230,7 @@ DEPENDENCIES
   bullet
   coffee-rails
   factory_girl_rails
+  formtastic (~> 2.1.1)
   haml
   heroku
   jquery-rails
