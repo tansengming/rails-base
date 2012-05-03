@@ -1,3 +1,4 @@
+.rbenv-version
 config/database.yml
 bin/
 rails_best_practices_output.html
