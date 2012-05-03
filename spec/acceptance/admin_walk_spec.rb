@@ -5,11 +5,11 @@ feature 'Admin walk', %q{
 } do
 
   background do
-    AdminUser.find_or_create_by_email('test@example.com', :password => '123456')
+    admin = create(:admin_user, :password => '123456')
     AdminUser.count.should == 1
-    AdminUser.first.email.should == 'test@example.com'
+
     visit "/admin"
-    fill_in 'admin_user_email', :with => 'test@example.com'
+    fill_in 'admin_user_email', :with => admin.email
     fill_in 'admin_user_password', :with => '123456'
     click_button 'Login'
 
