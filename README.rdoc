@@ -7,3 +7,5 @@ adds `rake code:reviews`
 adds 'rake pivotal:deliver_all_finished`
 
 acceptance test for active admin
+
+setup rspec, factory girl.
