@@ -1,7 +1,3 @@
-# unicorn_rails -c /data/github/current/config/unicorn.rb -E production -D
-
-RAILS_ENV = ENV['RAILS_ENV'] || 'production'
-
 worker_processes 2
 
 # Load rails+github.git into the master before forking workers
@@ -54,31 +50,4 @@ after_fork do |server, worker|
   # sockets, e.g. db connection
 
   ActiveRecord::Base.establish_connection
-  # CHIMNEY.client.connect_to_server
-  # Redis and Memcached would go here but their connections are established
-  # on demand, so the master never opens a socket
-
-
-  ##
-  # Unicorn master is started as root, which is fine, but let's
-  # drop the workers to git:git
-
-  begin
-    uid, gid = Process.euid, Process.egid
-    user, group = 'git', 'git'
-    target_uid = Etc.getpwnam(user).uid
-    target_gid = Etc.getgrnam(group).gid
-    worker.tmp.chown(target_uid, target_gid)
-    if uid != target_uid || gid != target_gid
-      Process.initgroups(user, target_gid)
-      Process::GID.change_privilege(target_gid)
-      Process::UID.change_privilege(target_uid)
-    end
-  rescue => e
-    if RAILS_ENV == 'development'
-      STDERR.puts "couldn't change user, oh well"
-    else
-      raise e
-    end
-  end
 end

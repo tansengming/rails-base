@@ -8,13 +8,14 @@ gem 'sass-rails' # for active_admin
 gem 'haml'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
-gem "formtastic", "~> 2.1.1"
+gem "simple_form"
+gem 'unicorn'
+gem 'foreman'
 
 group :development, :test do
   gem 'kumade'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'unicorn'
   gem 'heroku'
   gem 'rails_best_practices'
   gem 'reek'
