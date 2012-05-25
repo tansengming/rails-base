@@ -21,6 +21,7 @@ group :development, :test do
   gem 'reek'
   gem 'bullet'
   gem 'steak'
+  gem 'fuubar'
 end
 
 group :assets do
