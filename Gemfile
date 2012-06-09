@@ -11,6 +11,8 @@ gem 'therubyracer'
 gem "simple_form"
 gem 'unicorn'
 gem 'foreman'
+gem 'spin'
+gem 'mailcatcher'
 
 group :development, :test do
   gem 'kumade'
