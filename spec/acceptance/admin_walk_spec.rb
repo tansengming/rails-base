@@ -5,12 +5,12 @@ feature 'Admin walk', %q{
 } do
 
   background do
-    admin = create(:admin_user, :password => '123456')
+    admin = create(:admin_user, :password => '12345678')
     AdminUser.count.should == 1
 
     visit "/admin"
     fill_in 'admin_user_email', :with => admin.email
-    fill_in 'admin_user_password', :with => '123456'
+    fill_in 'admin_user_password', :with => '12345678'
     click_button 'Login'
 
     current_path.should == '/admin'
