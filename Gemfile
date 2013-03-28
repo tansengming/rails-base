@@ -12,6 +12,7 @@ gem "simple_form"
 gem 'unicorn'
 gem 'foreman'
 gem 'mailcatcher'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'kumade'
