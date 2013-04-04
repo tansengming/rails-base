@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
+ruby "2.0.0"
 
 gem 'rails', '3.2.13'
 gem 'pg'
@@ -12,23 +12,33 @@ gem 'therubyracer'
 gem "simple_form"
 gem 'unicorn'
 gem 'foreman'
-gem 'mailcatcher'
 gem 'newrelic_rpm'
 
-group :development, :test do
-  gem 'kumade'
+group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'steak'
+  gem 'fuubar'
+end
+
+group :development do
+  gem 'mailcatcher'
   gem 'heroku'
   gem 'rails_best_practices'
   gem 'reek'
   gem 'bullet'
-  gem 'steak'
-  gem 'fuubar'
-  gem 'zeus'
   gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'kumade'
+  gem 'zeus'
+  gem 'wirble'
+  # gem 'debugger'
+end
+
+group :development, :test do
+  gem "awesome_print", :require => "ap"
+  gem 'tapp'
 end
 
 group :assets do
