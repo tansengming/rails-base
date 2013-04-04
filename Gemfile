@@ -37,7 +37,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'awesome_print'
+  gem "awesome_print", :require => "ap"
   gem 'tapp'
 end
 
