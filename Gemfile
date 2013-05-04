@@ -14,24 +14,33 @@ gem 'unicorn'
 gem 'foreman'
 gem 'newrelic_rpm'
 
-group :development, :test do
-  gem 'kumade'
+group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'steak'
+  gem 'fuubar'
+end
+
+group :development do
+  gem 'mailcatcher'
   gem 'heroku'
   gem 'rails_best_practices'
   gem 'reek'
   gem 'bullet'
-  gem 'steak'
-  gem 'fuubar'
-  gem 'zeus'
   gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'tapp'
-  gem 'mailcatcher'
   gem 'rollbar'
   gem 'flog'
+  gem 'kumade'
+  gem 'zeus'
+  gem 'wirble'
+  # gem 'debugger'
+end
+
+group :development, :test do
+  gem "awesome_print", :require => "ap"
+  gem 'tapp'
 end
 
 group :assets do
