@@ -40,6 +40,5 @@ RailsBase::Application.configure do
     Bullet.alert = true
     Bullet.bullet_logger = true
     Bullet.console = true
-    Bullet.disable_browser_cache = true
   end
 end

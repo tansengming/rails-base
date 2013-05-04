@@ -12,7 +12,6 @@ gem 'therubyracer'
 gem "simple_form"
 gem 'unicorn'
 gem 'foreman'
-gem 'mailcatcher'
 gem 'newrelic_rpm'
 
 group :development, :test do
@@ -30,6 +29,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'tapp'
+  gem 'mailcatcher'
+  gem 'rollbar'
+  gem 'flog'
 end
 
 group :assets do
