@@ -13,6 +13,7 @@ gem "simple_form"
 gem 'unicorn'
 gem 'foreman'
 gem 'newrelic_rpm'
+gem 'app'
 
 group :test do
   gem 'rspec-rails'
