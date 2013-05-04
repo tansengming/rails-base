@@ -274,6 +274,8 @@ GEM
     steak (2.0.0)
       capybara (>= 1.0.0)
       rspec-rails (>= 2.5.0)
+    tapp (1.4.0)
+      thor
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
@@ -334,6 +336,7 @@ DEPENDENCIES
   sass-rails
   simple_form
   steak
+  tapp
   therubyracer
   twitter-bootstrap-rails
   uglifier
