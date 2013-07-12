@@ -1,4 +1,5 @@
 RailsBase::Application.routes.draw do
+      mount Dailycred::Engine => '/auth', :as => 'dailycred_engine'
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

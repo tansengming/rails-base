@@ -14,6 +14,7 @@ gem 'unicorn'
 gem 'foreman'
 gem 'newrelic_rpm'
 gem 'app'
+gem 'dailycred'
 
 group :test do
   gem 'rspec-rails'
