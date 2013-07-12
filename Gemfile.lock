@@ -91,6 +91,8 @@ GEM
       warden (~> 1.2.1)
     diff-lcs (1.2.1)
     dotenv (0.8.0)
+    dotenv-rails (0.8.0)
+      dotenv (= 0.8.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
     excon (0.16.10)
@@ -333,7 +335,7 @@ DEPENDENCIES
   binding_of_caller
   bullet
   coffee-rails
-  dotenv
+  dotenv-rails
   factory_girl_rails
   flog
   foreman
