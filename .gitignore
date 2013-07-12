@@ -1,3 +1,5 @@
+.last_run.json
+.resultset.json
 .rbenv-version
 bin/
 rails_best_practices_output.html
