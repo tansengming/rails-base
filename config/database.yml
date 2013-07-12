@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: postgres
+  database: rails_base_dev
+
+test:
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  database: rails_base_test
+  host: localhost
+
+production:
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: postgres
+  database: rails_base_pro
