@@ -42,6 +42,7 @@ end
 group :development, :test do
   gem "awesome_print", :require => "ap"
   gem 'tapp'
+  gem 'dotenv'
 end
 
 group :assets do
