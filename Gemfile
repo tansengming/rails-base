@@ -36,7 +36,7 @@ group :development do
   gem 'kumade'
   gem 'zeus'
   gem 'wirble'
-  # gem 'debugger'
+  gem 'pry'
 end
 
 group :development, :test do
