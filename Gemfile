@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'jquery-rails'
 gem 'activeadmin'
-gem 'sass-rails' # for active_admin
+gem 'sass-rails'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
