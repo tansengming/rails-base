@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/repos/51df69fb13d6374f780068ad/badges/c76b71b4327cf8984a9f/gpa.png)](https://codeclimate.com/repos/51df69fb13d6374f780068ad/feed)
+
 Every Rails developer has their favorite set of tools and gems. These just happen to be mine.
 
 Setup includes:
