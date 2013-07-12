@@ -13,6 +13,7 @@ gem "simple_form"
 gem 'unicorn'
 gem 'foreman'
 gem 'newrelic_rpm'
+gem 'app'
 
 group :test do
   gem 'rspec-rails'
@@ -30,15 +31,18 @@ group :development do
   gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rollbar'
+  gem 'flog'
   gem 'kumade'
   gem 'zeus'
   gem 'wirble'
-  # gem 'debugger'
+  gem 'pry'
 end
 
 group :development, :test do
   gem "awesome_print", :require => "ap"
   gem 'tapp'
+  gem 'dotenv-rails'
 end
 
 group :assets do

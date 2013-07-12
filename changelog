@@ -1,6 +1,7 @@
 current
 - adds support for daily cred
 - specs for super admin login
+- travis test
 
 2013-03-28
 =======
