@@ -21,6 +21,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'steak'
   gem 'fuubar'
+  gem 'coveralls'
 end
 
 group :development do

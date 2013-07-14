@@ -82,6 +82,13 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     colored (1.2)
+    colorize (0.5.8)
+    coveralls (0.6.7)
+      colorize
+      multi_json (~> 1.3)
+      rest-client
+      simplecov (>= 0.7)
+      thor
     daemons (1.1.9)
     dailycred (0.3.1)
       omniauth
@@ -293,6 +300,10 @@ GEM
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
     sinatra (1.3.6)
       rack (~> 1.4)
       rack-protection (~> 1.3)
@@ -358,6 +369,7 @@ DEPENDENCIES
   bullet
   coffee-rails
   dailycred
+  coveralls
   dotenv-rails
   factory_girl_rails
   flog
