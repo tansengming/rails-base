@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120503143746) do
+ActiveRecord::Schema.define(:version => 20130712142916) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -65,8 +65,22 @@ ActiveRecord::Schema.define(:version => 20120503143746) do
   add_index "super_admins", ["reset_password_token"], :name => "index_super_admins_on_reset_password_token", :unique => true
 
   create_table "users", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "email"
+    t.string   "username"
+    t.boolean  "verified"
+    t.boolean  "admin"
+    t.string   "referred"
+    t.string   "token"
+    t.text     "tags"
+    t.text     "access_tokens"
+    t.string   "display"
+    t.boolean  "subscribed"
+    t.text     "identities"
+    t.datetime "created"
   end
 
 end

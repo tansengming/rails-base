@@ -8,6 +8,14 @@ module SecureEndpointHelper
       setup_controller_for_warden
     end
   end
+
+  def login_as(user)
+    session[:user_id] = user.id
+  end
+
+  def logout
+    session[:user_id] = nil
+  end
 end
 
 # in controller spec
