@@ -1,5 +1,5 @@
-Rails.configuration.DAILYCRED_CLIENT_ID = "YOUR_CLIENT_ID"
-Rails.configuration.DAILYCRED_SECRET_KEY = "YOUR_SECRET_KEY"
+Rails.configuration.DAILYCRED_CLIENT_ID = ENV['DAILYCRED_CLIENT_ID']
+Rails.configuration.DAILYCRED_SECRET_KEY = ENV['DAILYCRED_SECRET_KEY']
 
 # configure where users should be redirected after authentication
 #
