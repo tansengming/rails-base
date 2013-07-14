@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/tansengming/rails-base.png?branch=develop)](https://travis-ci.org/tansengming/rails-base)
 [![Coverage Status](https://coveralls.io/repos/tansengming/rails-base/badge.png?branch=develop)](https://coveralls.io/r/tansengming/rails-base?branch=develop)
 [![Code Climate](https://codeclimate.com/repos/51df69fb13d6374f780068ad/badges/c76b71b4327cf8984a9f/gpa.png)](https://codeclimate.com/repos/51df69fb13d6374f780068ad/feed)
+[![Dependency Status](https://gemnasium.com/tansengming/rails-base.png)](https://gemnasium.com/tansengming/rails-base)
 
 Every Rails developer has their favorite set of tools and gems. These just happen to be mine.
 
