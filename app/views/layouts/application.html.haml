@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title RailsBase
+    = stylesheet_link_tag "application", media: "all"
+    = csrf_meta_tags
+  %body
+    = yield
+    = javascript_include_tag "application"
+    = yield :javascripts
+    - # to use
+    - # - content_for :javascripts do
+    - #   :javavscripts
+    - #     $(document).ready(function({});)
