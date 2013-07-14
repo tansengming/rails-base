@@ -15,6 +15,7 @@ gem 'foreman'
 gem 'newrelic_rpm'
 gem 'app'
 gem 'dailycred'
+gem 'lodash-rails'
 
 group :test do
   gem 'rspec-rails'
