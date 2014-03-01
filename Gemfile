@@ -33,7 +33,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'rollbar'
   gem 'kumade'
-  gem 'zeus'
+  gem 'spring-commands-rspec'
   gem 'wirble'
   gem 'pry'
 end
