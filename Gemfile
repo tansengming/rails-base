@@ -28,7 +28,7 @@ group :development do
   gem 'mailcatcher'
   gem 'heroku'
   gem 'rails_best_practices'
-  gem 'reek'
+  # gem 'reek'
   gem 'bullet'
   gem 'meta_request'
   gem 'better_errors'
