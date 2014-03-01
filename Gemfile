@@ -36,6 +36,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'wirble'
   gem 'pry'
+  gem 'git-up'
 end
 
 group :development, :test do
