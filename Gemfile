@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.3'
 gem 'pg'
 gem 'jquery-rails'
-gem 'activeadmin'
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'sass-rails'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
