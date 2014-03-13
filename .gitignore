@@ -1,3 +1,4 @@
+.DS_Store
 .last_run.json
 .resultset.json
 .rbenv-version
