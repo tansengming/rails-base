@@ -11,7 +11,7 @@ ActiveAdmin.register AdminUser, :namespace => :super_admins do
       f.input :email
       f.input :password
     end
-    f.buttons
+    f.actions
   end
 
   controller do
