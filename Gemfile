@@ -15,6 +15,7 @@ gem 'newrelic_rpm'
 gem 'app'
 gem 'dailycred'
 gem 'lodash-rails'
+gem 'rollbar'
 
 group :test do
   gem 'rspec-rails'
@@ -31,7 +32,6 @@ group :development do
   gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'rollbar'
   gem 'kumade'
   gem 'spring-commands-rspec'
   gem 'wirble'
