@@ -16,6 +16,7 @@ gem 'app'
 gem 'dailycred'
 gem 'lodash-rails'
 gem 'rollbar'
+gem 'less-rails'
 
 group :test do
   gem 'rspec-rails'
