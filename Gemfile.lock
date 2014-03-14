@@ -72,10 +72,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    climate_control (0.0.3)
-      activesupport (>= 3.0)
-    cocaine (0.5.3)
-      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -139,7 +135,7 @@ GEM
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hashie (2.0.5)
-    heroku (2.41.0)
+    heroku (3.2.3)
       heroku-api (~> 0.3.7)
       launchy (>= 0.3.2)
       netrc (~> 0.7.7)
@@ -164,11 +160,6 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
-    kumade (0.8.2)
-      cocaine (>= 0.2.0)
-      heroku (~> 2.0)
-      rails (>= 2)
-      rake (>= 0.8.7)
     launchy (2.4.2)
       addressable (~> 2.3)
     libv8 (3.16.14.3)
@@ -226,6 +217,8 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.5.2)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
@@ -297,7 +290,7 @@ GEM
     skinny (0.2.3)
       eventmachine (~> 1.0.0)
       thin (~> 1.5.0)
-    slop (3.4.7)
+    slop (3.5.0)
     spring (1.1.2)
     spring-commands-rspec (1.0.1)
       spring (>= 0.9.1)
@@ -376,13 +369,12 @@ DEPENDENCIES
   haml
   heroku
   jquery-rails
-  kumade
   lodash-rails
   mailcatcher
   meta_request
   newrelic_rpm
   pg
-  pry
+  pry-rails
   rails (= 4.0.3)
   rollbar
   rspec-rails

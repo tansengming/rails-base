@@ -32,10 +32,9 @@ group :development do
   gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'kumade'
   gem 'spring-commands-rspec'
   gem 'wirble'
-  gem 'pry'
+  gem 'pry-rails'
   gem 'git-up'
 end
 
