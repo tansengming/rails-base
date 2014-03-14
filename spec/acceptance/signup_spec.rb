@@ -7,4 +7,8 @@ feature 'Signup', %q{
   scenario 'visit signup page' do
     visit "/auth"
   end
+
+  scenario 'password reset' do
+    visit "/auth/reset_password"
+  end
 end
