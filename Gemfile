@@ -21,7 +21,7 @@ gem 'less-rails'
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'steak'
+  gem 'capybara'
   gem 'fuubar'
   gem 'coveralls'
 end
