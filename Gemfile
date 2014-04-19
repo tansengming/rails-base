@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.3'
+gem 'rails', '~> 4.1'
 gem 'pg'
 gem 'jquery-rails'
 gem 'activeadmin', github: 'gregbell/active_admin'
@@ -17,6 +17,11 @@ gem 'dailycred'
 gem 'lodash-rails'
 gem 'rollbar'
 gem 'less-rails'
+
+# for activeadmin
+gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
+gem 'ransack',     github: 'activerecord-hackery/ransack'
+gem 'formtastic',  github: 'justinfrench/formtastic'
 
 group :test do
   gem 'rspec-rails'
