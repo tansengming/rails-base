@@ -25,7 +25,6 @@ gem 'formtastic',  github: 'justinfrench/formtastic'
 
 group :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
   gem 'capybara'
   gem 'fuubar'
   gem 'coveralls'
@@ -48,6 +47,7 @@ group :development, :test do
   gem "awesome_print", :require => "ap"
   gem 'tapp'
   gem 'dotenv-rails'
+  gem 'factory_girl_rails'
 end
 
 group :assets do
