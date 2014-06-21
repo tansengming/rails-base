@@ -116,6 +116,7 @@ GEM
     dailycred (0.3.1)
       omniauth
       omniauth-oauth2
+    database_cleaner (1.2.0)
     debug_inspector (0.0.2)
     devise (3.2.4)
       bcrypt (~> 3.0)
@@ -386,6 +387,7 @@ DEPENDENCIES
   coffee-rails
   coveralls
   dailycred
+  database_cleaner
   dotenv-rails
   factory_girl_rails
   foreman

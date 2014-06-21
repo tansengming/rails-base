@@ -23,13 +23,6 @@ gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack',     github: 'activerecord-hackery/ransack'
 gem 'formtastic',  github: 'justinfrench/formtastic'
 
-group :test do
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'fuubar'
-  gem 'coveralls'
-end
-
 group :development do
   gem 'mailcatcher'
   gem 'heroku'
@@ -48,6 +41,14 @@ group :development, :test do
   gem 'tapp'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'fuubar'
+  gem 'coveralls'
+  gem 'database_cleaner'
 end
 
 group :assets do
