@@ -21,7 +21,7 @@ describe 'Admin' do
       end
 
       it 'should not have an exception' do
-         lambda { subject }.should_not raise_error
+         expect { subject }.not_to raise_error
       end
     end
   end

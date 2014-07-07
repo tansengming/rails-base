@@ -18,7 +18,7 @@ describe 'Admin' do
 
       it 'should not have an exception' do
         click_link 'Admin Users'
-        page.should have_content('an_admin@example.com')
+        expect(page).to have_content('an_admin@example.com')
         click_link 'New Admin User'
         click_link 'Logout'
       end
