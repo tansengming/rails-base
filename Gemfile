@@ -45,9 +45,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 2.99'
+  gem 'rspec-rails'
   gem 'capybara'
-  gem 'fuubar'
+  gem 'fuubar', github: 'thekompanee/fuubar'
   gem 'coveralls'
   gem 'database_cleaner'
   gem 'rspec-its'
