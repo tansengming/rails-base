@@ -3,7 +3,7 @@ ActiveAdmin.register AdminUser, :namespace => :super_admins do
 
   index do
     column :email
-    default_actions
+    actions
   end
 
   form do |f|

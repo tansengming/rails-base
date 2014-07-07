@@ -22,6 +22,7 @@ gem 'less-rails'
 gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack',     github: 'activerecord-hackery/ransack'
 gem 'formtastic',  github: 'justinfrench/formtastic'
+gem 'devise'
 
 group :development do
   gem 'mailcatcher'
@@ -44,11 +45,12 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.99'
   gem 'capybara'
   gem 'fuubar'
   gem 'coveralls'
   gem 'database_cleaner'
+  gem 'rspec-its'
 end
 
 group :assets do
