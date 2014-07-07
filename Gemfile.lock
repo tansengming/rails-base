@@ -417,7 +417,7 @@ DEPENDENCIES
   pg
   polyamorous!
   pry-rails
-  rails (~> 4.1)
+  rails (~> 4)
   ransack!
   rollbar
   rspec-its

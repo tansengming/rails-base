@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1'
+gem 'rails', '~> 4'
 gem 'pg'
 gem 'jquery-rails'
 gem 'activeadmin', github: 'gregbell/active_admin'
