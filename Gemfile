@@ -35,6 +35,7 @@ group :development do
   gem 'wirble'
   gem 'pry-rails'
   gem 'git-up'
+  gem 'powder'
 end
 
 group :development, :test do
