@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/activerecord-hackery/ransack.git
-  revision: f0c9f7114fa78ef143855570b6bfd5cb8fa98184
+  revision: 5e644af11cc116442b68334bc8cb05b2d9023454
   specs:
     ransack (1.2.3)
       actionpack (>= 3.0)
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: a8ae008ec9632110bf33443ce7090dfef9cca480
+  revision: ac85139e308d26cc5706e0f431ea07553fff45d5
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -42,10 +42,10 @@ GIT
 
 GIT
   remote: git://github.com/thekompanee/fuubar.git
-  revision: 04742082befd60210ef55e84fa689f420ff26175
+  revision: 0dcad9ada7d67823cbd167dd1734aaeae778081d
   specs:
-    fuubar (2.0.0.rc1)
-      rspec (~> 3.0.rc1)
+    fuubar (2.0.0)
+      rspec (~> 3.0)
       ruby-progressbar (~> 1.4)
 
 GEM
@@ -92,7 +92,7 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.2.2)
-    bullet (4.13.0)
+    bullet (4.13.1)
       activesupport (>= 3.0.0)
       uniform_notifier (>= 1.6.0)
     callsite (0.0.11)
@@ -210,7 +210,7 @@ GEM
       skinny (>= 0.1.2)
       sqlite3-ruby
       thin
-    meta_request (0.3.3)
+    meta_request (0.3.4)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
       railties (>= 3.0.0, < 5.0.0)
@@ -222,7 +222,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     netrc (0.7.7)
-    newrelic_rpm (3.9.0.229)
+    newrelic_rpm (3.9.1.236)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     oauth2 (1.0.0)
@@ -242,7 +242,7 @@ GEM
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
-    posix-spawn (0.3.8)
+    posix-spawn (0.3.9)
     powder (0.2.1)
       thor (>= 0.11.5)
     pry (0.10.0)
@@ -367,7 +367,7 @@ GEM
       execjs
       rails (>= 3.1)
       railties (>= 3.1)
-    tzinfo (1.2.1)
+    tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
