@@ -52,6 +52,7 @@ group :test do
   gem 'fuubar', github: 'thekompanee/fuubar'
   gem 'database_cleaner'
   gem 'rspec-its'
+  gem 'codeclimate-test-reporter', group: :test, require: nil
 end
 
 group :assets do
