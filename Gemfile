@@ -50,7 +50,6 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'fuubar', github: 'thekompanee/fuubar'
-  gem 'coveralls'
   gem 'database_cleaner'
   gem 'rspec-its'
 end

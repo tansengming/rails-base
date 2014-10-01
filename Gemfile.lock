@@ -113,12 +113,6 @@ GEM
     colored (1.2)
     commonjs (0.2.7)
     configuration (1.3.4)
-    coveralls (0.7.0)
-      multi_json (~> 1.3)
-      rest-client
-      simplecov (>= 0.7)
-      term-ansicolor
-      thor
     daemons (1.1.9)
     dailycred (0.3.1)
       omniauth
@@ -132,7 +126,6 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    docile (1.1.5)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
@@ -321,11 +314,6 @@ GEM
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
-    simplecov (0.9.0)
-      docile (~> 1.1.0)
-      multi_json
-      simplecov-html (~> 0.8.0)
-    simplecov-html (0.8.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -351,8 +339,6 @@ GEM
       sqlite3 (>= 1.3.3)
     tapp (1.4.1)
       thor
-    term-ansicolor (1.3.0)
-      tins (~> 1.0)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -363,7 +349,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    tins (1.3.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -400,7 +385,6 @@ DEPENDENCIES
   bullet
   capybara
   coffee-rails
-  coveralls
   dailycred
   database_cleaner
   devise
