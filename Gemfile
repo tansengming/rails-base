@@ -2,28 +2,34 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.1.4'
 gem 'pg'
+gem "simple_form"
+gem 'foreman'
+gem 'app'
+gem 'iconv' # fixes json_pure-1.2.4/lib/json/common.rb:2:in `require': cannot load such file -- iconv (LoadError)
+
+# Production
+gem 'therubyracer'
+gem 'unicorn'
+
+# Front End
 gem 'jquery-rails'
-gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'sass-rails'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
-gem 'therubyracer'
-gem "simple_form"
-gem 'unicorn'
-gem 'foreman'
-gem 'newrelic_rpm'
-gem 'app'
-gem 'dailycred'
-gem 'lodash-rails'
-gem 'rollbar'
 gem 'less-rails'
-gem 'iconv' # fixes json_pure-1.2.4/lib/json/common.rb:2:in `require': cannot load such file -- iconv (LoadError)
+gem 'lodash-rails'
 
-# for activeadmin
+# activeadmin
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack',     github: 'activerecord-hackery/ransack'
 gem 'formtastic',  github: 'justinfrench/formtastic'
 gem 'devise'
+
+# Services
+gem 'newrelic_rpm'
+gem 'dailycred'
+gem 'rollbar'
 
 group :development do
   gem 'mailcatcher'
