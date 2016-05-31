@@ -16,11 +16,8 @@ gem 'less-rails'
 gem 'lodash-rails'
 
 # activeadmin
-gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
-gem 'ransack',     github: 'activerecord-hackery/ransack'
-gem 'formtastic',  github: 'justinfrench/formtastic'
-gem 'devise'
+gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'devise',      '~> 3.2'
 
 # Services
 gem 'newrelic_rpm'
