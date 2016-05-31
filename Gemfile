@@ -7,10 +7,6 @@ gem 'foreman'
 gem 'app'
 gem 'iconv' # fixes json_pure-1.2.4/lib/json/common.rb:2:in `require': cannot load such file -- iconv (LoadError)
 
-# Production
-gem 'therubyracer'
-gem 'unicorn'
-
 # Front End
 gem 'jquery-rails'
 gem 'sass-rails'
@@ -70,4 +66,6 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'therubyracer'
+  gem 'unicorn'
 end
