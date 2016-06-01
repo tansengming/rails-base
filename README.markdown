@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/tansengming/rails-base.png?branch=develop)](https://travis-ci.org/tansengming/rails-base)
+[![Travis](https://travis-ci.org/tansengming/rails-base.png?branch=develop)](https://travis-ci.org/tansengming/rails-base)
+[![CircleCI](https://circleci.com/gh/tansengming/rails-base.svg?style=svg)](https://circleci.com/gh/tansengming/rails-base)
 [![Code Climate](https://codeclimate.com/github/tansengming/rails-base.png)](https://codeclimate.com/github/tansengming/rails-base)
 [![Dependency Status](https://gemnasium.com/tansengming/rails-base.png)](https://gemnasium.com/tansengming/rails-base)
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/tansengming/rails-base/tree/develop)
