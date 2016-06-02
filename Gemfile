@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1.4'
+gem 'rails', '~> 4.2.1'
 gem 'pg'
 gem "simple_form"
 gem 'foreman'
@@ -48,7 +48,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'fuubar', github: 'thekompanee/fuubar'
+  gem 'fuubar'
   gem 'database_cleaner'
   gem 'rspec-its'
   gem 'codeclimate-test-reporter', group: :test, require: nil
