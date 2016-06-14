@@ -295,7 +295,7 @@ GEM
     rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
-    rollbar (2.11.4)
+    rollbar (2.11.5)
       multi_json
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
@@ -321,6 +321,9 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    rspec_junit_formatter (0.2.3)
+      builder (< 4)
+      rspec-core (>= 2, < 4, != 2.12.0)
     ruby-progressbar (1.8.1)
     rubyzip (1.1.7)
     sass (3.4.22)
@@ -427,6 +430,7 @@ DEPENDENCIES
   rollbar
   rspec-its
   rspec-rails
+  rspec_junit_formatter
   sass-rails
   simple_form
   skylight

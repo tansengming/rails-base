@@ -52,6 +52,7 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec-its'
   gem 'codeclimate-test-reporter', group: :test, require: nil
+  gem 'rspec_junit_formatter'
   # gem 'rspec-nc'
   # gem 'guard-rspec'
 end
