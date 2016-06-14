@@ -5,7 +5,6 @@ gem 'pg'
 gem "simple_form"
 gem 'foreman'
 gem 'app'
-gem 'iconv' # fixes json_pure-1.2.4/lib/json/common.rb:2:in `require': cannot load such file -- iconv (LoadError)
 
 # Front End
 gem 'jquery-rails'
