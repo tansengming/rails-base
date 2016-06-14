@@ -19,8 +19,8 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'devise',      '~> 3.2'
 
 # Services
-gem 'newrelic_rpm'
 gem 'dailycred'
+gem 'newrelic_rpm'
 gem 'rollbar'
 gem "skylight"
 
