@@ -22,6 +22,7 @@ gem 'devise',      '~> 3.2'
 gem 'newrelic_rpm'
 gem 'dailycred'
 gem 'rollbar'
+gem "skylight"
 
 group :development do
   gem 'mailcatcher'

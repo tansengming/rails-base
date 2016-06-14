@@ -345,6 +345,8 @@ GEM
     skinny (0.2.4)
       eventmachine (~> 1.0.0)
       thin (>= 1.5, < 1.7)
+    skylight (0.10.4)
+      activesupport (>= 3.0.0)
     slop (3.6.0)
     spring (1.7.1)
     spring-commands-rspec (1.0.4)
@@ -427,6 +429,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   simple_form
+  skylight
   spring-commands-rspec
   tapp
   therubyracer
