@@ -1,6 +1,6 @@
 test:
   override:
-    - bundle exec rspec --tag ~search --tag ~skip --format RspecJunitFormatter --out $CIRCLE_TEST_REPORTS/rspec.xml:
+    - bundle exec rspec --tag ~skip --format RspecJunitFormatter --out $CIRCLE_TEST_REPORTS/rspec.xml:
         parallel: true
         files:
           - spec/**/*_spec.rb          # or a glob (ruby globs)
