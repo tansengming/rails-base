@@ -33,12 +33,12 @@ group :development do
   gem 'binding_of_caller'
   gem 'spring-commands-rspec'
   gem 'wirble'
-  gem 'pry-rails'
   gem 'git-up'
   gem 'powder'
 end
 
 group :development, :test do
+  gem 'pry-rails'
   gem "awesome_print", :require => "ap"
   gem 'tapp'
   gem 'dotenv-rails'
