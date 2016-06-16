@@ -22,6 +22,7 @@ gem 'devise',      '~> 3.2'
 gem 'dailycred'
 gem 'newrelic_rpm'
 gem 'rollbar'
+gem 'sendwithus_ruby_action_mailer'
 gem "skylight"
 
 group :development do
