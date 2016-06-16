@@ -160,6 +160,8 @@ GEM
       has_scope (~> 0.6.0.rc)
       railties (>= 3.2, < 5)
       responders
+    intercom-rails (0.2.35)
+      activesupport (> 3.0)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -391,6 +393,7 @@ DEPENDENCIES
   git-up
   haml
   heroku
+  intercom-rails
   jquery-rails
   less-rails
   lodash-rails
