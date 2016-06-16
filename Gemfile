@@ -20,13 +20,13 @@ gem 'devise',      '~> 3.2'
 
 # Services
 gem 'dailycred'
+gem "intercom-rails"
 gem 'newrelic_rpm'
 gem 'rollbar'
 gem 'sendwithus_ruby_action_mailer'
 gem "skylight"
 
 group :development do
-  gem 'mailcatcher'
   gem 'heroku'
   gem 'bullet'
   gem 'meta_request'
@@ -36,6 +36,7 @@ group :development do
   gem 'wirble'
   gem 'git-up'
   gem 'powder'
+  # gem 'mailcatcher' # Please install outside of bundle
 end
 
 group :development, :test do
@@ -68,3 +69,5 @@ group :production do
   gem 'therubyracer'
   gem 'unicorn'
 end
+gem 'nokogiri', '>= 1.6.8'
+gem 'rest-client', '>= 1.8.0'
