@@ -20,6 +20,7 @@ gem 'devise',      '~> 3.2'
 
 # Services
 gem 'dailycred'
+gem "intercom-rails"
 gem 'newrelic_rpm'
 gem 'rollbar'
 gem "skylight"
