@@ -67,3 +67,5 @@ group :production do
   gem 'therubyracer'
   gem 'unicorn'
 end
+gem 'nokogiri', '>= 1.6.8'
+gem 'rest-client', '>= 1.8.0'
