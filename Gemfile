@@ -25,7 +25,6 @@ gem 'rollbar'
 gem "skylight"
 
 group :development do
-  gem 'mailcatcher'
   gem 'heroku'
   gem 'bullet'
   gem 'meta_request'
@@ -35,6 +34,7 @@ group :development do
   gem 'wirble'
   gem 'git-up'
   gem 'powder'
+  # gem 'mailcatcher' # Please install outside of bundle
 end
 
 group :development, :test do
