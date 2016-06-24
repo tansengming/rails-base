@@ -27,7 +27,7 @@ gem 'sendwithus_ruby_action_mailer'
 gem "skylight"
 
 group :development do
-  gem 'heroku'
+  # gem 'heroku' # deprecated and replaced with the Heroku Toolbelt
   gem 'bullet'
   gem 'meta_request'
   gem 'better_errors'
