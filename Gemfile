@@ -54,6 +54,8 @@ group :test do
   gem 'codeclimate-test-reporter', group: :test, require: nil
   gem 'database_cleaner'
   gem 'fuubar'
+  gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
   gem 'rspec-its'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
