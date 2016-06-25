@@ -4,6 +4,7 @@ gem 'rails',       '~> 4.2.1'
 gem 'app'
 gem 'pg'
 gem 'nokogiri',    '>= 1.6.8' # security update
+gem 'rack-attack'
 gem 'rest-client', '>= 1.8.0' # security update
 gem "simple_form"
 

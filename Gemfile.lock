@@ -222,6 +222,8 @@ GEM
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     rack (1.6.4)
+    rack-attack (4.4.1)
+      rack
     rack-contrib (1.4.0)
       git-version-bump (~> 0.15)
       rack (~> 1.4)
@@ -391,6 +393,7 @@ DEPENDENCIES
   pg
   powder
   pry-rails
+  rack-attack
   rails (~> 4.2.1)
   rails_12factor
   rest-client (>= 1.8.0)
