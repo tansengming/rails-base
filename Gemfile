@@ -1,18 +1,20 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.2.1'
-gem 'pg'
-gem "simple_form"
-gem 'foreman'
+gem 'rails',       '~> 4.2.1'
 gem 'app'
+gem 'pg'
+gem 'nokogiri',    '>= 1.6.8' # security update
+gem 'rack-attack'
+gem 'rest-client', '>= 1.8.0' # security update
+gem "simple_form"
 
 # Front End
-gem 'jquery-rails'
-gem 'sass-rails'
 gem 'haml'
-gem 'twitter-bootstrap-rails'
+gem 'jquery-rails'
 gem 'less-rails'
 gem 'lodash-rails'
+gem 'sass-rails'
+gem 'twitter-bootstrap-rails'
 
 # activeadmin
 gem 'activeadmin', '~> 1.0.0.pre2'
@@ -27,34 +29,39 @@ gem 'sendwithus_ruby_action_mailer'
 gem "skylight"
 
 group :development do
-  # gem 'heroku' # deprecated and replaced with the Heroku Toolbelt
-  gem 'bullet'
-  gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'foreman'
+  gem 'git-up'
+  gem 'meta_request'
+  gem 'powder'
   gem 'spring-commands-rspec'
   gem 'wirble'
-  gem 'git-up'
-  gem 'powder'
+  # gem 'heroku' # deprecated and replaced with the Heroku Toolbelt
   # gem 'mailcatcher' # Please install outside of bundle
 end
 
 group :development, :test do
-  gem 'pry-rails'
   gem "awesome_print", :require => "ap"
-  gem 'tapp'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+  gem 'pry-rails'
+  gem 'tapp'
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'capybara'
-  gem 'fuubar'
-  gem 'database_cleaner'
-  gem 'rspec-its'
   gem 'codeclimate-test-reporter', group: :test, require: nil
+  gem 'database_cleaner'
+  gem 'fuubar'
+  gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'rspec-its'
   gem 'rspec_junit_formatter'
+  gem 'rspec-rails'
+  gem 'rspec-retry'
+  # rspec guard
   # gem 'rspec-nc'
   # gem 'guard-rspec'
 end
@@ -69,5 +76,3 @@ group :production do
   gem 'therubyracer'
   gem 'unicorn'
 end
-gem 'nokogiri', '>= 1.6.8'
-gem 'rest-client', '>= 1.8.0'

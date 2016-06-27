@@ -10,6 +10,16 @@ require 'rspec/rails'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+
+# Phantom Setup
+require 'capybara/poltergeist'
+require 'phantomjs'
+Capybara.default_max_wait_time = 4
+Capybara.javascript_driver = :poltergeist
+# Capybara.register_driver :poltergeist do |app|
+#   Capybara::Poltergeist::Driver.new(app, js_errors: false, phantomjs: Phantomjs.path)
+# end
+
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.infer_spec_type_from_file_location!

@@ -15,7 +15,6 @@ describe 'Admin' do
     its(:current_path) { should == '/super_admins' }
 
     describe 'walking around the place' do
-
       it 'should not have an exception' do
         click_link 'Admin Users'
         expect(page).to have_content('an_admin@example.com')
