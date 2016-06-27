@@ -91,6 +91,8 @@ GEM
     colored (1.2)
     commonjs (0.2.7)
     concurrent-ruby (1.0.2)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     dailycred (0.3.1)
       omniauth
       omniauth-oauth2
@@ -143,6 +145,7 @@ GEM
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
+    hashdiff (0.3.0)
     hashie (3.4.4)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -312,6 +315,7 @@ GEM
       builder (< 4)
       rspec-core (>= 2, < 4, != 2.12.0)
     ruby-progressbar (1.8.1)
+    safe_yaml (1.0.4)
     sass (3.4.22)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -369,6 +373,10 @@ GEM
     uniform_notifier (1.10.0)
     warden (1.2.6)
       rack (>= 1.0)
+    webmock (2.1.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -429,6 +437,7 @@ DEPENDENCIES
   twitter-bootstrap-rails
   uglifier
   unicorn
+  webmock
   wirble
 
 BUNDLED WITH
