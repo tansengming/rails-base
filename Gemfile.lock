@@ -305,6 +305,8 @@ GEM
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
+    rspec-retry (0.4.5)
+      rspec-core
     rspec-support (3.4.1)
     rspec_junit_formatter (0.2.3)
       builder (< 4)
@@ -412,6 +414,7 @@ DEPENDENCIES
   rollbar
   rspec-its
   rspec-rails
+  rspec-retry
   rspec_junit_formatter
   sass-rails
   simple_form
