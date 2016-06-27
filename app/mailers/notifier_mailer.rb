@@ -15,14 +15,9 @@ class NotifierMailer < SendWithUsMailer::Base
     default_assigns_for recipient
     default_opts = {
                       recipient_address: recipient.email, 
-                      email_id: email_id,
-                      locale: locale(recipient)
+                      email_id: email_id
                     }
 
     mail default_opts.merge(opts)
-  end
-
-  def locale(recipient)
-    'en-US'
   end
 end
