@@ -25,6 +25,7 @@ gem 'dailycred'
 gem "intercom-rails"
 gem 'newrelic_rpm'
 gem 'rollbar'
+gem 'sendwithus_ruby_action_mailer'
 gem "skylight"
 
 group :development do
@@ -60,6 +61,7 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
   gem 'rspec-retry'
+  gem 'webmock'
   # rspec guard
   # gem 'rspec-nc'
   # gem 'guard-rspec'

@@ -10,6 +10,6 @@ FactoryGirl.define do
   end
 
   factory :user do
-    sequence(:email) { |n| "super-admin-#{n}@example.com" }
+    sequence(:email) { |n| "user-#{n}@example.com" }
   end
 end
