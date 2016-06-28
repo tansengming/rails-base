@@ -4,10 +4,11 @@
 [![Dependency Status](https://gemnasium.com/tansengming/rails-base.png)](https://gemnasium.com/tansengming/rails-base)
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/tansengming/rails-base/tree/develop)
 
-Every Rails developer has their favorite set of tools and gems. These just happen to be mine.
+This is an accumulation of all my favorite Rails tools and services. With the boilerplates boilerplated and batteries included. Every Rails developer has their favorite set of tools and gems. These just happen to be mine.
+
+`.env.example` includes a good set of ENV variables to set up.
 
 Setup includes:
 
 - Active Admin, together with a super admin role to administer admin users. Endpoints are at  `/admin` and `/super_admins`.
-- Deliver all your pivotal stories with `rake pivotal:deliver_all_finished`.
 - RSpec, Factory Girl, Devise test helpers and Twitter Bootstrap setup and running.
