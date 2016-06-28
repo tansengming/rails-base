@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'signup', js: true do
   it 'should show signup page' do
