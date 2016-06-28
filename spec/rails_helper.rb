@@ -17,6 +17,9 @@ Capybara.javascript_driver = :poltergeist
 #   Capybara::Poltergeist::Driver.new(app, js_errors: false, phantomjs: Phantomjs.path)
 # end
 
+# Checks for pending migration and applies them before tests are run.
+# If you are not using ActiveRecord, you can remove this line.
+ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
