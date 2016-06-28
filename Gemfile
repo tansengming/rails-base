@@ -21,6 +21,7 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'devise',      '~> 3.2'
 
 # Services
+gem 'analytics-ruby', require: 'segment'
 gem 'dailycred'
 gem "intercom-rails"
 gem 'newrelic_rpm'

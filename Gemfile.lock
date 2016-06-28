@@ -50,6 +50,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    analytics-ruby (2.1.0)
     app (1.2.0)
     arbre (1.0.3)
       activesupport (>= 3.0.0)
@@ -389,6 +390,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 1.0.0.pre2)
+  analytics-ruby
   app
   awesome_print
   better_errors
