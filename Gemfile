@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',       '~> 4.2.1'
+gem 'rails',       '~> 4.2.7.1'
 gem 'app'
 gem 'pg'
 gem 'nokogiri',    '>= 1.6.8' # security update
