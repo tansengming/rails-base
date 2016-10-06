@@ -183,7 +183,7 @@ GEM
       sprockets (> 2, < 4)
       tilt
     libv8 (3.16.14.15)
-    lodash-rails (4.16.1)
+    lodash-rails (4.16.4)
       railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -286,7 +286,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rollbar (2.13.2)
+    rollbar (2.13.3)
       multi_json
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
