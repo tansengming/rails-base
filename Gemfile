@@ -53,7 +53,7 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'codeclimate-test-reporter', group: :test, require: nil
+  gem 'codeclimate-test-reporter', require: nil
   gem 'database_cleaner'
   gem 'fuubar'
   gem 'poltergeist'
@@ -67,7 +67,6 @@ group :test do
   # gem 'rspec-nc'
   # gem 'guard-rspec'
 end
-
 group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
