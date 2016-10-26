@@ -64,11 +64,11 @@ class Rack::Attack
   #   end
   # end
 
-  blacklist('block /cgi-bin') do |req|
+  blocklist('block /cgi-bin') do |req|
     req.path[/^\/cgi-bin.*/]
   end
 
-  blacklist('block from path blacklist') do |req|
+  blocklist('block from path blacklist') do |req|
     PATH_BLACKLIST.include? req.path
   end
 
