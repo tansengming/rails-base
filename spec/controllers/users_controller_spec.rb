@@ -19,6 +19,11 @@ describe UsersController do
           expect(subject.body).to include 'heap.identify'
         end
       end
+
+      context 'and user is deleted' do
+        before { user.delete }
+        it { should be_redirect }
+      end
     end
 
     context 'if not logged in' do
