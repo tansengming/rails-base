@@ -4,6 +4,8 @@ test:
         parallel: true
         files:
           - spec/**/*_spec.rb          # or a glob (ruby globs)
+  post:
+    - bundle exec codeclimate-test-reporter
 # deployment:
 #   staging:
 #     branch: develop
