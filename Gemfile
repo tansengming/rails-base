@@ -61,6 +61,7 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
   gem 'rspec-retry'
+  gem 'simplecov'
   gem 'webmock'
   # rspec guard
   # gem 'rspec-nc'

@@ -420,6 +420,7 @@ DEPENDENCIES
   sass-rails
   sendwithus_ruby_action_mailer
   simple_form
+  simplecov
   skylight
   spring-commands-rspec
   tapp
