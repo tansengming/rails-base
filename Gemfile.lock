@@ -179,7 +179,7 @@ GEM
       less (~> 2.6.0)
       sprockets (> 2, < 4)
       tilt
-    libv8 (3.16.14.15)
+    libv8 (3.16.14.17)
     lodash-rails (4.16.6)
       railties (>= 3.1)
     loofah (2.0.3)
