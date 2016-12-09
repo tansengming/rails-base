@@ -14,6 +14,7 @@ gem 'less-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
 gem 'twitter-bootstrap-rails'
+gem 'jquery-ui-rails', '< 6' # fixes active admin dep issue
 
 # activeadmin
 gem 'activeadmin', '~> 1.0.0.pre2'
