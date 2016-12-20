@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'user walk' do
-  let(:user) { create :user, email: 'rc@example.com', password: 12345678 }
+  let(:user) { create :user }
 
   describe 'edit' do
     before do
