@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe 'user walk' do
+  subject { page }
   let(:user) { create :user }
 
   describe 'edit' do
@@ -9,9 +10,7 @@ describe 'user walk' do
       visit '/user/edit'
     end
 
-    it 'should be on the edit page' do
-      expect(page.current_path).to eq '/user/edit'
-    end
+    its(:current_path) { should == '/user/edit' }
 
     it 'should have heap' do
       expect(page.body).to include 'heap.identify'

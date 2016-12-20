@@ -2,17 +2,15 @@ require 'rails_helper'
 
 describe 'Admin' do
   subject { page }
-  let(:admin) { create(:admin_user, :password => '12345678', email: 'an_admin@example.com') }
-  let(:super_admin) { create(:super_admin, password: 'super12345678') }
+  let(:admin)       { create(:admin_user, email: 'an_admin@example.com') }
+  let(:super_admin) { create(:super_admin) }
 
   before { admin }
 
   describe 'login' do
     before do
+      sign_in super_admin
       visit "/super_admins"
-      fill_in 'super_admin_email', :with => super_admin.email
-      fill_in 'super_admin_password', :with => 'super12345678'
-      click_button 'Login'
     end
     its(:current_path) { should == '/super_admins' }
 
