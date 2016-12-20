@@ -22,7 +22,6 @@ gem 'devise'
 
 # Services
 gem 'analytics-ruby', require: 'segment'
-gem 'dailycred'
 gem "intercom-rails"
 gem 'newrelic_rpm'
 gem 'rollbar'
