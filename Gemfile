@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',       '~> 4.2.7.1'
+gem 'rails',       '~> 5.0.0'
 gem 'app'
 gem 'pg'
 gem 'nokogiri',    '>= 1.6.8' # security update
@@ -17,8 +17,9 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-ui-rails', '< 6' # fixes active admin dep issue
 
 # activeadmin
-gem 'activeadmin', '~> 1.0.0.pre2'
-gem 'devise',      '~> 3.2'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 # Services
 gem 'analytics-ruby', require: 'segment'
