@@ -10,7 +10,6 @@ gem "simple_form"
 # Front End
 gem 'haml'
 gem 'jquery-rails'
-gem 'less-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
 gem 'twitter-bootstrap-rails'

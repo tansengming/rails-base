@@ -410,7 +410,6 @@ DEPENDENCIES
   intercom-rails
   jquery-rails
   jquery-ui-rails (< 6)
-  less-rails
   lodash-rails
   meta_request
   newrelic_rpm
