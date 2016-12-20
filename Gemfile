@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',       '~> 4.2.7.1'
+gem 'rails',       '~> 5.0.0'
 gem 'app'
 gem 'pg'
 gem 'nokogiri',    '>= 1.6.8' # security update
@@ -10,15 +10,15 @@ gem "simple_form"
 # Front End
 gem 'haml'
 gem 'jquery-rails'
-gem 'less-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-ui-rails', '< 6' # fixes active admin dep issue
 
 # activeadmin
-gem 'activeadmin', '~> 1.0.0.pre2'
-gem 'devise',      '~> 3.2'
+gem 'activeadmin'        , git: 'https://github.com/activeadmin/activeadmin'
+gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+gem 'devise'
 
 # Services
 gem 'analytics-ruby', require: 'segment'
