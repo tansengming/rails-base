@@ -1,17 +1,16 @@
 require 'rails_helper'
 
 describe UsersController do
-  include SecureEndpointHelper
   let(:user) { create(:user) }
 
   describe 'GET /edit' do
     subject { get :edit }
 
     context 'after logging in' do
-      before { login_as user }
+      before { sign_in user }
       it { should be_success }
 
-      context 'when heap ID is set' do
+      skip 'when heap ID is set' do
         render_views
         before { allow(App).to receive(:heap_app_id?) { true } }
 
@@ -27,7 +26,7 @@ describe UsersController do
     end
 
     context 'if not logged in' do
-      before { logout }
+      before { sign_out user }
       it { should be_redirect }
     end
   end
