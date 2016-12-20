@@ -1,13 +1,18 @@
 require 'rails_helper'
 
-describe 'signup', js: true do
+describe 'devise' do
   it 'should show signup page' do
-    visit '/auth'
+    visit '/users/sign_up'
+    expect(page.status_code).to eq 200
+  end
+
+  it 'should show login page' do
+    visit '/users/sign_in'
     expect(page.status_code).to eq 200
   end
 
   it 'should show password reset' do
-    visit "/auth/reset_password"
+    visit '/users/password/new'
     expect(page.status_code).to eq 200
   end
 end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, only: :edit
+  before_action :authenticate_user!
 
   def edit
   end

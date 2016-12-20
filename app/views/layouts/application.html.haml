@@ -6,6 +6,10 @@
     = csrf_meta_tags
     = render 'shared/heap'
   %body
+    %p.notice
+      = notice
+    %p.alert
+      = alert
     = yield
     = javascript_include_tag "application"
     = yield :javascripts
