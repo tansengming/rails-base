@@ -17,9 +17,9 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-ui-rails', '< 6' # fixes active admin dep issue
 
 # activeadmin
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin'        , git: 'https://github.com/activeadmin/activeadmin'
+gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
 gem 'devise'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 # Services
 gem 'analytics-ruby', require: 'segment'
