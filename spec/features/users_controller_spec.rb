@@ -1,19 +1,30 @@
 require 'rails_helper'
 
-describe 'user walk' do
-  subject { page }
+describe 'users controller' do
   let(:user) { create :user }
 
-  describe 'edit' do
-    before do
-      sign_in user
-      visit '/user/edit'
+  describe 'GET /user/edit' do
+    subject { visit '/user/edit' }
+
+    context 'when logged in' do
+      before { sign_in user }
+
+      it 'should visit the page' do
+        subject
+        expect(page.current_path).to eq '/user/edit'
+      end
+
+      it 'should have heap' do
+        subject
+        expect(page.body).to include 'heap.identify'
+      end
     end
 
-    its(:current_path) { should == '/user/edit' }
-
-    it 'should have heap' do
-      expect(page.body).to include 'heap.identify'
+    context 'when not logged in' do
+      it 'should be redirected' do
+        subject
+        expect(page.current_path).to_not eq '/user/edit'
+      end
     end
   end
 end
