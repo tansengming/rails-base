@@ -81,9 +81,6 @@ GEM
       sass (~> 3.4)
       thor (~> 0.19)
     builder (3.2.2)
-    bullet (5.5.0)
-      activesupport (>= 3.0.0)
-      uniform_notifier (~> 1.10.0)
     capybara (2.11.0)
       addressable
       mime-types (>= 1.16)
@@ -314,7 +311,6 @@ GEM
     unicorn (5.2.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    uniform_notifier (1.10.0)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (3.4.0)
@@ -341,7 +337,6 @@ DEPENDENCIES
   analytics-ruby
   app
   awesome_print
-  bullet
   capybara
   codeclimate-test-reporter
   coffee-rails
