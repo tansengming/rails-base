@@ -3,7 +3,7 @@ RailsBase::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-  devise_for :super_admins, ActiveAdmin::Devise.config.merge(:path => :super_admins)
+  devise_for :super_admins, ActiveAdmin::Devise.config.merge(path: :super_admins)
 
   resource :user, only: :edit
 
