@@ -36,15 +36,6 @@ group :development do
   gem 'wirble'
 end
 
-# Extras shouldn't be part of the bundle but are recommended
-# for your dev box
-# group :extras do
-#   gem 'foreman'
-#   gem 'git-up'
-#   gem 'mailcatcher'
-#   gem 'powder'
-# end
-
 group :development, :test do
   gem "awesome_print", require: "ap"
   gem 'dotenv-rails'
@@ -77,3 +68,12 @@ group :production do
   gem 'therubyracer'
   gem 'unicorn'
 end
+
+# Extras shouldn't be part of the bundle but are recommended
+# for your dev box
+# group :extras do
+#   gem 'foreman'
+#   gem 'git-up'
+#   gem 'mailcatcher'
+#   gem 'powder'
+# end
