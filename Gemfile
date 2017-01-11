@@ -46,7 +46,7 @@ end
 # end
 
 group :development, :test do
-  gem "awesome_print", :require => "ap"
+  gem "awesome_print", require: "ap"
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'tapp'
@@ -58,7 +58,7 @@ group :test do
   gem 'database_cleaner'
   gem 'fuubar'
   gem 'poltergeist'
-  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'phantomjs', require: 'phantomjs/poltergeist'
   gem 'rspec-its'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
