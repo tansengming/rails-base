@@ -38,7 +38,6 @@ group :development do
   gem 'powder'
   gem 'spring-commands-rspec'
   gem 'wirble'
-  # gem 'heroku' # deprecated and replaced with the Heroku Toolbelt
   # gem 'mailcatcher' # Please install outside of bundle
 end
 
@@ -63,10 +62,8 @@ group :test do
   gem 'rspec-retry'
   gem 'simplecov'
   gem 'webmock'
-  # rspec guard
-  # gem 'rspec-nc'
-  # gem 'guard-rspec'
 end
+
 group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
