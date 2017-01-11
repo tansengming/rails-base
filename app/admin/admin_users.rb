@@ -17,7 +17,7 @@ ActiveAdmin.register AdminUser, :namespace => :super_admins do
 
   controller do
     def update
-      params[:admin_user].delete_if {|k,v| k.to_sym == :password } if params[:admin_user].fetch(:password).blank?
+      params[:admin_user].delete_if {|k,_v| k.to_sym == :password } if params[:admin_user].fetch(:password).blank?
       update!
     end
   end
