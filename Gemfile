@@ -32,14 +32,19 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
-  gem 'foreman'
-  gem 'git-up'
   gem 'meta_request'
-  gem 'powder'
   gem 'spring-commands-rspec'
   gem 'wirble'
-  # gem 'mailcatcher' # Please install outside of bundle
 end
+
+# Extras shouldn't be part of the bundle but are recommended
+# for your dev box
+# group :extras do
+#   gem 'foreman'
+#   gem 'git-up'
+#   gem 'mailcatcher'
+#   gem 'powder'
+# end
 
 group :development, :test do
   gem "awesome_print", :require => "ap"
