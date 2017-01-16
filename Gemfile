@@ -6,6 +6,7 @@ gem 'pg'
 gem 'nokogiri', '>= 1.6.8' # security update
 gem 'rack-attack'
 gem "simple_form"
+gem 'sidekiq'
 
 # Front End
 gem 'haml'
