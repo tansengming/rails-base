@@ -4,7 +4,7 @@ describe NotifierMailer do
   let(:user) { create :user }
 
   describe '#welcome' do
-    subject    { described_class.welcome(user.id).deliver }
+    subject    { described_class.welcome(user).deliver }
     before     { stub }
     let(:stub) {
       stub_request(:post, "https://api.sendwithus.com/api/v1/send").
