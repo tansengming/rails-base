@@ -11,3 +11,7 @@ Setup includes:
 
 - Active Admin, together with a super admin role to administer admin users. Endpoints are at  `/admin` and `/super_admins`.
 - RSpec, Factory Girl, Devise test helpers and Twitter Bootstrap setup and running.
+
+# Development Instructions
+- Install Redis with `brew install redis`
+- Start all the development services with `foreman start -f Procfile.dev`
