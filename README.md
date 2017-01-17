@@ -25,5 +25,5 @@ The Setup includes:
 1. `bundle install`
 1. Sign up for accounts at Skylight, Segment, Heap, Rollbar, Intercom, sendwithus, New Relic, Code Climate and Circle CI.
 1. `cp .env.example .env`
-1. Update `.env` with all the tokens from the accounts you've signed up for.
+1. Update `.env` with all the tokens from the accounts you just signed up for.
 1. Start all the development services with `foreman start -f Procfile.dev`.
