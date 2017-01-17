@@ -7,10 +7,12 @@ This is an accumulation of all my favorite Rails tools and services. With the bo
 
 `.env.example` includes a good set of ENV variables to set up.
 
-Setup includes:
+The Setup includes:
 
 - Active Admin, together with a super admin role to administer admin users. Endpoints are at  `/admin` and `/super_admins`.
-- RSpec, Factory Girl, Devise test helpers and Twitter Bootstrap setup and running.
+- RSpec, Factory Girl
+  - specify retry counts with the `RETRIES` environment variable i.e. `RETRIES=5 bundle exec rspec spec` to retry failing specs 5 times. By default failing specs get retried 3 times.
+- Twitter Bootstrap
 
 # Development Instructions
 - Install Redis with `brew install redis`
