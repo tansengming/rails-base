@@ -18,10 +18,10 @@ The Setup includes:
 
 # macOS Installation
 
-- `brew install redis`
-- `brew install postgres`
-- `gem install bundler foreman git-up mailcatcher powder`
-- `bundle install`
-- `cp .env.example .env`
-- Sign up for accounts at Skylight, Segment, Heap, Rollbar, Intercom and sendwithus.
-- Start all the development services with `foreman start -f Procfile.dev`.
+1. `brew install redis`
+1. `brew install postgres`
+1. `gem install bundler foreman git-up mailcatcher powder`
+1. `bundle install`
+1. `cp .env.example .env`
+1. Sign up for accounts at Skylight, Segment, Heap, Rollbar, Intercom and sendwithus.
+1. Start all the development services with `foreman start -f Procfile.dev`.
