@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/tansengming/rails-base/tree/develop.png)](https://circleci.com/gh/tansengming/rails-base/tree/develop)
+[![CircleCI](https://circleci.com/gh/tansengming/rails-base/tree/develop.svg)](https://circleci.com/gh/tansengming/rails-base/tree/develop)
 [![Code Climate](https://codeclimate.com/github/tansengming/rails-base.png)](https://codeclimate.com/github/tansengming/rails-base)
 [![Dependency Status](https://gemnasium.com/tansengming/rails-base.png)](https://gemnasium.com/tansengming/rails-base)
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/tansengming/rails-base/tree/develop)
