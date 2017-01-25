@@ -30,6 +30,7 @@ gem 'sendwithus_ruby_action_mailer'
 gem "skylight"
 
 group :development do
+  gem 'listen'
   gem 'spring-commands-rspec'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
