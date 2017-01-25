@@ -1,4 +1,4 @@
-redis: redis-server /usr/local/etc/redis.conf
+redis: redis-server config/redis.dev.conf
 smtp: mailcatcher -vf
 worker: bundle exec sidekiq -C config/sidekiq.yml
 web: bundle exec rackup
