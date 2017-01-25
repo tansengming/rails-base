@@ -27,3 +27,5 @@ The Setup includes:
 1. `cp .env.example .env`
 1. Update `.env` with all the tokens from the accounts you just signed up for.
 1. Start all the development services with `foreman start -f Procfile.dev`.
+  - The web server should be running at http://localhost:9292
+  - A client for the SMTP server should be running at http://localhost:1080
