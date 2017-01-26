@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 87c6b2dac624773f3c25a52c6a488aa258d9b759
+  revision: 0f7b700363547c3667e5e145e7eb2f966224e40a
   specs:
     activeadmin (1.0.0.pre4)
       arbre (~> 1.0, >= 1.0.2)
@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/activeadmin/inherited_resources
-  revision: 6707bf7e45b9a25e84c6c95a37d67b1dc28d211d
+  revision: e48c1bd28e98d02a0d0cf4765f6ba531c6f5d1bc
   specs:
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5.1)
@@ -302,7 +302,7 @@ GEM
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
-    simplecov (0.12.0)
+    simplecov (0.13.0)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
@@ -327,7 +327,7 @@ GEM
       ref
     thor (0.19.4)
     thread_safe (0.3.5)
-    tilt (2.0.5)
+    tilt (2.0.6)
     twitter-bootstrap-rails (3.2.2)
       actionpack (>= 3.1)
       execjs (>= 2.2.2, >= 2.2)
@@ -340,7 +340,7 @@ GEM
     unicorn (5.2.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    warden (1.2.6)
+    warden (1.2.7)
       rack (>= 1.0)
     web-console (3.4.0)
       actionview (>= 5.0)
