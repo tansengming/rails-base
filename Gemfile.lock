@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 0f7b700363547c3667e5e145e7eb2f966224e40a
+  revision: d739eeb62d2d7bd20c983bfaea651bea6420b9d8
   specs:
     activeadmin (1.0.0.pre4)
       arbre (~> 1.0, >= 1.0.2)
@@ -115,9 +115,9 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.3)
     docile (1.1.5)
-    dotenv (2.1.2)
-    dotenv-rails (2.1.2)
-      dotenv (= 2.1.2)
+    dotenv (2.2.0)
+    dotenv-rails (2.2.0)
+      dotenv (= 2.2.0)
       railties (>= 3.2, < 5.1)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -248,7 +248,7 @@ GEM
       i18n
       polyamorous (~> 1.3)
     rb-fsevent (0.9.8)
-    rb-inotify (0.9.7)
+    rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redis (3.3.3)
     ref (2.0.0)
