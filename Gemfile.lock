@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: a7f75368539cd2353aab4c4f84540e0f922c683f
+  revision: 7ff122d580835d70cfc424bc251e70ab0ec51b3d
   specs:
     activeadmin (1.0.0.pre4)
       arbre (~> 1.0, >= 1.0.2)
@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/activeadmin/inherited_resources
-  revision: 3efcc730d2390b7f9c7c2bd69a638e92d8137d33
+  revision: 615b0d5c37a4bfc86ad18ec22b90d161fd996130
   specs:
     inherited_resources (1.7.0)
       actionpack (>= 3.2, < 5.1)
@@ -77,7 +77,7 @@ GEM
     arel (7.1.4)
     awesome_print (1.7.0)
     bcrypt (3.1.11)
-    bourbon (4.3.0)
+    bourbon (4.3.2)
       sass (~> 3.4)
       thor (~> 0.19)
     builder (3.2.3)
@@ -177,7 +177,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    lodash-rails (4.17.2)
+    lodash-rails (4.17.4)
       railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -190,7 +190,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
-    newrelic_rpm (3.18.0.329)
+    newrelic_rpm (3.18.1.330)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
