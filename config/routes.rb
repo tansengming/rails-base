@@ -1,6 +1,8 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  root to: 'roots#show'
+
   devise_for :users
   ActiveAdmin.routes(self)
 
