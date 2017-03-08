@@ -17,8 +17,14 @@ The Setup includes:
 - **Customer Support** with Intercom and Heap
 - **Design** with Twitter Bootstrap
 
-# macOS Installation
+# Installation
 
+## macOS
+
+1. `git clone https://github.com/tansengming/rails-base.git`
+1. `cd rails-base`
+1. `rm -rf .git`
+1. `git init && git add . && git commit -m 'initial commit'`
 1. `brew install redis`
 1. `brew install postgres`
 1. `gem install bundler foreman git-up mailcatcher powder`
