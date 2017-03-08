@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: d8879eee46b924e3c721fceb0ef405f9fb522907
+  revision: 1d8916680620c922449ed21a2306ccfe8f322d75
   specs:
-    activeadmin (1.0.0.pre4)
+    activeadmin (1.0.0.pre5)
       arbre (~> 1.0, >= 1.0.2)
       bourbon
       coffee-rails
@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/activeadmin/inherited_resources
-  revision: 615b0d5c37a4bfc86ad18ec22b90d161fd996130
+  revision: eea3aa21f3867dc182e4db24d1c765bdbcb3df34
   specs:
     inherited_resources (1.7.0)
       actionpack (>= 3.2, < 5.1)
@@ -126,7 +126,7 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    ffi (1.9.17)
+    ffi (1.9.18)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -337,7 +337,7 @@ GEM
       railties (~> 5.0, >= 5.0.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.1.2)
+    uglifier (3.1.4)
       execjs (>= 0.3.0, < 3)
     unicorn (5.2.0)
       kgio (~> 2.6)
