@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 1d8916680620c922449ed21a2306ccfe8f322d75
+  revision: 3668f2ed62d5136dc68ee06a46eac9f8a9fdc1fc
   specs:
     activeadmin (1.0.0.pre5)
       arbre (~> 1.0, >= 1.0.2)
@@ -89,7 +89,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     cliver (0.3.2)
-    codeclimate-test-reporter (1.0.6)
+    codeclimate-test-reporter (1.0.7)
       simplecov
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -172,7 +172,7 @@ GEM
       less (~> 2.6.0)
       sprockets (> 2, < 4)
       tilt
-    libv8 (3.16.14.17)
+    libv8 (3.16.14.19)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -337,7 +337,7 @@ GEM
       railties (~> 5.0, >= 5.0.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.1.4)
+    uglifier (3.1.5)
       execjs (>= 0.3.0, < 3)
     unicorn (5.2.0)
       kgio (~> 2.6)
