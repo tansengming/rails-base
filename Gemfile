@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',    '~> 5.0.0'
 gem 'app'
 gem 'pg'
-gem 'nokogiri', '>= 1.6.8' # security update
+gem 'nokogiri', '>= 1.7.1' # security update
 gem 'rack-attack'
 gem 'sidekiq'
 gem "simple_form"
