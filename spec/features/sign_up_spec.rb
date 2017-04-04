@@ -16,7 +16,6 @@ describe 'Siging Up' do
 
   it 'should redirect to the payments page' do
     fill_and_submit_sign_up_form
-    # expect(page.status_code).to eq 301
     expect(page.current_path).to eq '/payment/new'
   end
 end
