@@ -1,19 +1,15 @@
-:plain
-  <form action="/charge" method="post" id="payment-form">
-    <div class="form-row">
-      <label for="card-element">
-        Credit or debit card
-      </label>
-      <div id="card-element">
-        <!-- a Stripe Element will be inserted here. -->
-      </div>
-
-      <!-- Used to display Element errors -->
-      <div id="card-errors"></div>
-    </div>
-
-    <button>Submit Payment</button>
-  </form>
+.row
+  .col-md-4
+    %form#payment-form{action: payment_path, method: "post"}
+      .form-row
+        %label{:for => "card-element"}
+          Credit or debit card
+        #card-element
+          / a Stripe Element will be inserted here.
+        / Used to display Element errors
+        #card-errors
+      %button
+        Submit Payment
 
 - content_for :javascripts do
   :plain
