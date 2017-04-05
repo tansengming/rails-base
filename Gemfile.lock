@@ -71,7 +71,6 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     analytics-ruby (2.2.2)
       commander (~> 4.4)
-    app (1.2.0)
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (7.1.4)
@@ -103,6 +102,7 @@ GEM
       highline (~> 1.7.2)
     commonjs (0.2.7)
     concurrent-ruby (1.0.5)
+    configatron (4.5.1)
     connection_pool (2.2.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -366,11 +366,11 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   analytics-ruby
-  app
   awesome_print
   capybara
   codeclimate-test-reporter
   coffee-rails
+  configatron
   database_cleaner
   devise
   dotenv-rails
