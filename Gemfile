@@ -27,7 +27,8 @@ gem "intercom-rails"
 gem 'newrelic_rpm'
 gem 'rollbar'
 gem 'sendwithus_ruby_action_mailer'
-gem "skylight"
+gem 'skylight'
+gem 'stripe-rails'
 
 group :development do
   gem 'listen'
