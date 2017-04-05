@@ -56,7 +56,7 @@ Rollbar.configure do |config|
     accessToken: App.rollbar_post_client_item_access_token,
     captureUncaught: true,
     payload: {
-      environment: Rails.env
+      environment: ENV['ROLLBAR_ENV'] || Rails.env
     }
   }
 end
