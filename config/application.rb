@@ -10,6 +10,7 @@ module RailsBase
   class Application < Rails::Application
     config.middleware.use Rack::Attack
     config.active_job.queue_adapter = :sidekiq
+    config.stripe.publishable_key   = configatron.stripe.publishable_key
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
