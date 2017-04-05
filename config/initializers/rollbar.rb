@@ -51,6 +51,8 @@ Rollbar.configure do |config|
   # https://devcenter.heroku.com/articles/deploying-to-a-custom-rails-environment
   config.environment = ENV['ROLLBAR_ENV'] || Rails.env
 
+  # Note: JS intentionally left enabled on all environments because I want to 
+  # catch JS injection issues asap
   config.js_enabled = true
   config.js_options = {
     accessToken: App.rollbar_post_client_item_access_token,
