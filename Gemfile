@@ -7,6 +7,7 @@ gem 'nokogiri', '>= 1.7.1' # security update
 gem 'rack-attack'
 gem 'sidekiq'
 gem "simple_form"
+gem 'stripe-rails'
 
 # Front End
 gem 'haml'
@@ -28,7 +29,6 @@ gem 'newrelic_rpm'
 gem 'rollbar'
 gem 'sendwithus_ruby_action_mailer'
 gem 'skylight'
-gem 'stripe-rails'
 
 group :development do
   gem 'listen'
@@ -44,6 +44,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'tapp'
+  # gem 'stripe-ruby-mock', require: 'stripe_mock' # only works for stripe < 2.0
 end
 
 group :test do
