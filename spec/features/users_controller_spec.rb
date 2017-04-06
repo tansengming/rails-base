@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'users controller' do
-  let(:user) { create :user }
+  let(:user) { create :user, active_until: 1.year.from_now }
 
   describe 'GET /user/edit' do
     subject { visit '/user/edit' }
