@@ -27,6 +27,16 @@ GIT
       railties (>= 3.2, < 5.1)
       responders
 
+GIT
+  remote: https://github.com/tansengming/stripe-rails
+  revision: 5c99f8f3dac26e22585705a8bf9f400764465173
+  branch: feature/js-v3
+  specs:
+    stripe-rails (0.3.2)
+      rails (>= 3)
+      responders (~> 2.0)
+      stripe (< 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -116,6 +126,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.3)
     docile (1.1.5)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.0)
     dotenv-rails (2.2.0)
       dotenv (= 2.2.0)
@@ -127,8 +139,6 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    faraday (0.12.0.1)
-      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
@@ -145,6 +155,8 @@ GEM
       activesupport (>= 4.1, < 5.1)
     hashdiff (0.3.2)
     highline (1.7.8)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     i18n (0.8.1)
     intercom-rails (0.3.4)
       activesupport (> 3.0)
@@ -197,7 +209,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
-    multipart-post (2.0.0)
+    netrc (0.11.0)
     newrelic_rpm (4.0.0.332)
     nio4r (2.0.0)
     nokogiri (1.7.1)
@@ -264,6 +276,10 @@ GEM
     ref (2.0.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rest-client (2.0.1)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rollbar (2.14.1)
       multi_json
     rspec-core (3.5.4)
@@ -332,11 +348,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (2.1.0)
-      faraday (~> 0)
-    stripe-rails (0.3.1)
-      rails (>= 3)
-      stripe
+    stripe (1.58.0)
+      rest-client (>= 1.4, < 4.0)
     tapp (1.5.0)
       thor
     therubyracer (0.12.3)
@@ -354,6 +367,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.1.13)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     unicorn (5.3.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -419,7 +435,7 @@ DEPENDENCIES
   simplecov
   skylight
   spring-commands-rspec
-  stripe-rails
+  stripe-rails!
   tapp
   therubyracer
   twitter-bootstrap-rails

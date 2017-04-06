@@ -12,8 +12,7 @@
         Submit Payment
 
 - content_for :javascripts do
-  :plain
-    <script src="https://js.stripe.com/v3/"></script>
+  = stripe_javascript_tag(:v3)
   :javascript
     var stripe   = Stripe('#{configatron.stripe.publishable_key}');
     var elements = stripe.elements();

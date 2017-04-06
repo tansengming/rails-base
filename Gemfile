@@ -7,7 +7,7 @@ gem 'nokogiri', '>= 1.7.1' # security update
 gem 'rack-attack'
 gem 'sidekiq'
 gem "simple_form"
-gem 'stripe-rails'
+gem 'stripe-rails', git: 'https://github.com/tansengming/stripe-rails', branch: 'feature/js-v3'
 
 # Front End
 gem 'haml'
