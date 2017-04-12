@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails',    '~> 5.0.0'
 gem 'configatron'
-gem 'pg'
 gem 'nokogiri', '>= 1.7.1' # security update
+gem 'pg'
+gem 'puma'
 gem 'rack-attack'
 gem 'sidekiq'
 gem "simple_form"
