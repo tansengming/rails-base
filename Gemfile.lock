@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 5c0a82b437c3b60a7dd3798b79a258bf3ce2d594
+  revision: 095fc4eb014df1541ff88bd6132dce8f5499925a
   specs:
     activeadmin (1.0.0.pre5)
       arbre (>= 1.1.1)
@@ -19,9 +19,9 @@ GIT
 
 GIT
   remote: https://github.com/activeadmin/inherited_resources
-  revision: eea3aa21f3867dc182e4db24d1c765bdbcb3df34
+  revision: 0839b077a791013e741ea12cb793b6809a007317
   specs:
-    inherited_resources (1.7.0)
+    inherited_resources (1.7.1)
       actionpack (>= 3.2, < 5.1)
       has_scope (~> 0.6)
       railties (>= 3.2, < 5.1)
@@ -143,7 +143,7 @@ GEM
     hashdiff (0.3.2)
     highline (1.7.8)
     i18n (0.8.1)
-    intercom-rails (0.3.4)
+    intercom-rails (0.3.5)
       activesupport (> 3.0)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
@@ -151,7 +151,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
-    json (2.0.3)
+    json (2.0.4)
     kaminari (1.0.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.0.1)
@@ -309,7 +309,7 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
-    skylight (1.1.0)
+    skylight (1.2.0)
       activesupport (>= 3.0.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -337,7 +337,7 @@ GEM
       railties (~> 5.0, >= 5.0.1)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    uglifier (3.1.13)
+    uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicorn (5.3.0)
       kgio (~> 2.6)
@@ -349,7 +349,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webmock (2.3.2)
+    webmock (3.0.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
