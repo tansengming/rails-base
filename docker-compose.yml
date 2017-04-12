@@ -1,26 +1,28 @@
-app:
-  build: .
-  environment:
-    RAILS_ENV: development
-    REDIS_URL: redis://redis:6379/0/cache
-  command: rails server -b '0.0.0.0'
-  volumes:
-    - .:/app
-  ports:
-    - "3000:3000"
-  links:
-    - postgres
-    - redis
-    - mailcatcher
-postgres:
-  image: postgres:9.6
-  ports:
-    - "5432"
-redis:
-  image: redis:3.0
-  ports:
-    - "6379"
-mailcatcher:
-  image: schickling/mailcatcher
-  ports:
-    - "1080:1080"
+version: '2'
+services:
+  web:
+    ports:
+      - "3000:3000"
+    build: .
+    environment:
+      RAILS_ENV: development
+      REDIS_URL: redis://redis:6379/0/cache
+    command: rails server -b '0.0.0.0'
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+      - redis
+      - mailcatcher
+  postgres:
+    image: postgres:9.6
+    ports:
+      - "5432"
+  redis:
+    image: redis:3.0
+    ports:
+      - "6379"
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "1080:1080"
