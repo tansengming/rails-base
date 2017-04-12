@@ -6,6 +6,7 @@ gem 'nokogiri', '>= 1.7.1' # security update
 gem 'pg'
 gem 'puma'
 gem 'rack-attack'
+gem 'redis-rails'
 gem 'sidekiq'
 gem "simple_form"
 
