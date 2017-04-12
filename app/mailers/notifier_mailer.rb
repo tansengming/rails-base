@@ -1,8 +1,7 @@
 class NotifierMailer < SendWithUsMailer::Base
   default from: 'no-reply@example.com'
 
-  def welcome(recipient_id)
-    recipient = User.find(recipient_id)
+  def welcome(recipient)
     mail_for recipient, 'ID-CODE-FROM-SEND-WITH-US'
   end
 

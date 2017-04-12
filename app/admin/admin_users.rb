@@ -1,5 +1,6 @@
 ActiveAdmin.register AdminUser, :namespace => :super_admins do
   filter :email
+  permit_params :email, :password
 
   index do
     column :email
@@ -16,7 +17,7 @@ ActiveAdmin.register AdminUser, :namespace => :super_admins do
 
   controller do
     def update
-      params[:admin_user].delete_if {|k,v| k.to_sym == :password } unless params[:admin_user].fetch(:password).present?
+      params[:admin_user].delete_if {|k,_v| k.to_sym == :password } if params[:admin_user].fetch(:password).blank?
       update!
     end
   end
