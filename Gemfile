@@ -68,7 +68,6 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'therubyracer'
-  gem 'unicorn'
 end
 
 # Extras shouldn't be part of the bundle but are recommended
