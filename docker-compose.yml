@@ -1,13 +1,11 @@
 version: '2'
 services:
-  web:
+  app:
     ports:
       - "3000:3000"
     build: .
-    environment:
-      RAILS_ENV: development
-      REDIS_URL: redis://redis:6379/0/cache
     command: rails server -b '0.0.0.0'
+    env_file: .env
     volumes:
       - .:/app
     depends_on:
@@ -26,3 +24,4 @@ services:
     image: schickling/mailcatcher
     ports:
       - "1080:1080"
+      - "1025"
