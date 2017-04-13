@@ -19,22 +19,22 @@ The Setup includes:
 
 # Installation
 
-## macOS
+## Development
+
+### macOS
 
 1. `git clone https://github.com/tansengming/rails-base.git`
 1. `cd rails-base`
 1. `rm -rf .git`
 1. `git init && git add . && git commit -m 'initial commit'`
-1. `brew install redis`
-1. `brew install postgres`
-1. `gem install bundler foreman git-up mailcatcher powder`
-1. `bundle install`
-1. Sign up for accounts at Skylight, Segment, Heap, Rollbar, Intercom, sendwithus, New Relic, Code Climate and Circle CI.
 1. `cp .env.example .env`
+1. `docker-compose up --build`
+1. `docker-compose run app rake db:create`
+1. `docker-compose run app rake db:migrate`
+1. `docker-compose run app rake db:seed`
+1. A web server should be running at http://localhost:3000, a client for the SMTP server should be running at http://localhost:1080
+1. Sign up for accounts at Skylight, Segment, Heap, Rollbar, Intercom, sendwithus, New Relic, Code Climate and Circle CI.
 1. Update `.env` with all the tokens from the accounts you just signed up for.
-1. Start all the development services with `foreman start -f Procfile.dev`.
-  - The web server should be running at http://localhost:9292
-  - A client for the SMTP server should be running at http://localhost:1080
 
 ## Application Notes
 - There are 2 levels of admins. Regular admins get to administer the app. Super Admins administer regular admins. You can access them at `/admin` and `/super_admins`.
