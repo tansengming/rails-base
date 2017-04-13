@@ -1,10 +1,8 @@
 version: '2'
 services:
-  app:
-    ports:
-      - "3000:3000"
+  worker: &base_app
     build: .
-    command: rails server -b '0.0.0.0'
+    command: sidekiq
     env_file: .env
     volumes:
       - .:/app
@@ -12,6 +10,11 @@ services:
       - postgres
       - redis
       - mailcatcher
+  app:
+    <<: *base_app
+    ports:
+      - "3000:3000"
+    command: rails server -b '0.0.0.0'
   postgres:
     image: postgres:9.6
     ports:
