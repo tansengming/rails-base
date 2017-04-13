@@ -30,4 +30,4 @@ EXPOSE 3000
 # tell the Rails dev server to bind to all interfaces by 
 # default.
 ENTRYPOINT ["bundle", "exec"]
-CMD puma -C config/puma.rb
+CMD rails server -b '0.0.0.0'
