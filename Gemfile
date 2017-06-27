@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',    '~> 5.0.0'
+gem 'rails',    '~> 5.1.0'
 gem 'configatron'
 gem 'nokogiri', '>= 1.7.2' # security update
 gem 'pg'
@@ -19,8 +19,7 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-ui-rails', '< 6' # fixes active admin dep issue
 
 # activeadmin
-gem 'activeadmin'        , git: 'https://github.com/activeadmin/activeadmin'
-gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+gem 'activeadmin'
 gem 'devise'
 
 # Services
