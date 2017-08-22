@@ -1,0 +1,30 @@
+version: '2'
+services:
+  worker: &base_app
+    build: .
+    command: sidekiq
+    env_file: .env
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+      - redis
+      - mailcatcher
+  app:
+    <<: *base_app
+    ports:
+      - "3000:3000"
+    command: rails server -b '0.0.0.0'
+  postgres:
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:3.0
+    ports:
+      - "6379"
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "1080:1080"
+      - "1025"

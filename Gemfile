@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails',    '~> 5.0.0'
+gem 'rails',    '~> 5.1.0'
 gem 'configatron'
+gem 'nokogiri', '>= 1.7.2' # security update
 gem 'pg'
-gem 'nokogiri', '>= 1.7.1' # security update
+gem 'puma'
 gem 'rack-attack'
+gem 'redis-rails'
 gem 'sidekiq'
 gem "simple_form"
 gem 'stripe'
@@ -19,8 +21,7 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-ui-rails', '< 6' # fixes active admin dep issue
 
 # activeadmin
-gem 'activeadmin'        , git: 'https://github.com/activeadmin/activeadmin'
-gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+gem 'activeadmin'
 gem 'devise'
 
 # Services
@@ -71,7 +72,6 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'therubyracer'
-  gem 'unicorn'
 end
 
 # Extras shouldn't be part of the bundle but are recommended
