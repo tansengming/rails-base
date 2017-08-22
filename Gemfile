@@ -46,7 +46,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'puma'
   gem 'tapp'
-  # gem 'stripe-ruby-mock', require: 'stripe_mock' # only works for stripe < 2.0
 end
 
 group :test do
