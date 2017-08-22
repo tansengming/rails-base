@@ -340,6 +340,10 @@ GEM
       sprockets (>= 3.0.0)
     stripe (3.3.1)
       faraday (~> 0.9)
+    stripe-rails (1.0.2)
+      rails (>= 3)
+      responders
+      stripe
     tapp (1.5.0)
       thor
     temple (0.8.0)
@@ -422,6 +426,7 @@ DEPENDENCIES
   skylight
   spring-commands-rspec
   stripe
+  stripe-rails
   tapp
   therubyracer
   twitter-bootstrap-rails
