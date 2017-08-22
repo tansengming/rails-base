@@ -1,1 +1,0 @@
-Stripe.api_key = configatron.stripe.secret_key
