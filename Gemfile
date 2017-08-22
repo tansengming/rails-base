@@ -4,7 +4,6 @@ gem 'rails',    '~> 5.1.0'
 gem 'configatron'
 gem 'nokogiri', '>= 1.7.2' # security update
 gem 'pg'
-gem 'puma'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
@@ -42,9 +41,10 @@ group :development do
 end
 
 group :development, :test do
-  gem "awesome_print", require: "ap"
+  gem 'awesome_print', require: 'ap'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+  gem 'puma'
   gem 'tapp'
   # gem 'stripe-ruby-mock', require: 'stripe_mock' # only works for stripe < 2.0
 end
