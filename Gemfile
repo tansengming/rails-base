@@ -8,9 +8,9 @@ gem 'puma'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
-gem "simple_form"
+gem 'simple_form'
 gem 'stripe'
-# gem 'stripe-rails' # commented until it supports Stripe V2
+gem 'stripe-rails'
 
 # Front End
 gem 'haml'
