@@ -338,12 +338,17 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (3.3.1)
-      faraday (~> 0.9)
-    stripe-rails (1.0.2)
+    stripe (1.58.0)
+      rest-client (>= 1.4, < 4.0)
+    stripe-rails (1.1.0)
       rails (>= 3)
       responders
       stripe
+      stripe-ruby-mock (~> 2.4)
+    stripe-ruby-mock (2.4.1)
+      dante (>= 0.2.0)
+      multi_json (~> 1.0)
+      stripe (>= 1.31.0, <= 1.58.0)
     tapp (1.5.0)
       thor
     temple (0.8.0)
