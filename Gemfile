@@ -33,7 +33,7 @@ gem 'skylight'
 
 group :development do
   gem 'listen'
-  gem 'meta_request'
+  gem 'meta_request' # For rails_panel
   gem 'spring-commands-rspec'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
