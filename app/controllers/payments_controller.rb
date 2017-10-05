@@ -7,6 +7,11 @@ class PaymentsController < ApplicationController
   def create
     stripe_token = params[:stripeToken]
 
+    if stripe_token.nil?
+      flash[:error] = 'There was a problem with the payment, please try again'
+      redirect_to new_payment_path and return
+    end
+
     begin
       new_stripe_customer = Stripe::Customer.create({
         email: current_user.email,
