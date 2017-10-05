@@ -58,6 +58,7 @@ group :test do
   gem 'rspec-rails'
   gem 'rspec-retry'
   gem 'simplecov'
+  gem 'stripe-ruby-mock', require: 'stripe_mock'
   gem 'webmock'
 end
 

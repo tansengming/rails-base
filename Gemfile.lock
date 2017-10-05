@@ -88,6 +88,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.2)
+    dante (0.2.0)
     database_cleaner (1.6.1)
     devise (4.3.0)
       bcrypt (~> 3.0)
@@ -341,6 +342,10 @@ GEM
       rails (>= 3)
       responders
       stripe
+    stripe-ruby-mock (2.5.0)
+      dante (>= 0.2.0)
+      multi_json (~> 1.0)
+      stripe (>= 2.0.3)
     tapp (1.5.1)
       thor
     temple (0.8.0)
@@ -422,6 +427,7 @@ DEPENDENCIES
   spring-commands-rspec
   stripe
   stripe-rails
+  stripe-ruby-mock
   tapp
   therubyracer
   twitter-bootstrap-rails
