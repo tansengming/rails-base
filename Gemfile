@@ -7,7 +7,6 @@ gem 'pg'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
-gem "simple_form"
 
 # Front End
 gem 'haml'

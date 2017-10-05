@@ -309,9 +309,6 @@ GEM
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (>= 3.3.4, < 5)
-    simple_form (3.5.0)
-      actionpack (> 4, < 5.2)
-      activemodel (> 4, < 5.2)
     simplecov (0.13.0)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -406,7 +403,6 @@ DEPENDENCIES
   sass-rails
   sendwithus_ruby_action_mailer
   sidekiq
-  simple_form
   simplecov
   skylight
   spring-commands-rspec
@@ -418,6 +414,5 @@ DEPENDENCIES
   webmock
   wirble
 
-
 BUNDLED WITH
-   1.14.6
+   1.16.0.pre.2
