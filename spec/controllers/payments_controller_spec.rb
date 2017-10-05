@@ -19,4 +19,22 @@ RSpec.describe PaymentsController do
       end
     end
   end
+
+  describe 'create' do
+    before { StripeMock.start }
+    after  { StripeMock.stop }
+    let(:stripe_helper) { StripeMock.create_test_helper }
+    subject { post :create, params: params }
+
+    context 'when there is a valid stripe token' do
+      let(:params) { {stripeToken: stripe_helper.generate_card_token} }
+
+      it 'should create a new stripe customer' do
+        expect { subject }.to change { StripeCustomer.count }.by(1)
+        expect(user.reload.stripe_customer).not_to be_nil
+      end
+    end
+
+    context 'when the token is invalid'
+  end
 end
