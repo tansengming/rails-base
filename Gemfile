@@ -67,12 +67,3 @@ group :production do
   gem 'rails_12factor'
   gem 'therubyracer'
 end
-
-# Extras shouldn't be part of the bundle but are recommended
-# for your dev box
-# group :extras do
-#   gem 'foreman'
-#   gem 'git-up'
-#   gem 'mailcatcher'
-#   gem 'powder'
-# end
