@@ -32,9 +32,28 @@ RSpec.describe PaymentsController do
       it 'should create a new stripe customer' do
         expect { subject }.to change { StripeCustomer.count }.by(1)
         expect(user.reload.stripe_customer).not_to be_nil
+        expect(subject).to redirect_to user_root_path
       end
     end
 
-    context 'when the token is invalid'
+    context 'when the token is invalid' do
+      let(:params) { {stripeToken: 'sk_test_fake'} }
+
+      it 'should not create a new stripe customer' do
+        expect { subject }.not_to change { StripeCustomer.count }
+        expect(user.reload.stripe_customer).to be_nil
+        expect(subject).to redirect_to new_payment_path
+      end
+    end
+
+    context 'when the token is empty' do
+      let(:params) { {stripeToken: nil} }
+
+      it 'should not create a new stripe customer' do
+        expect { subject }.not_to change { StripeCustomer.count }
+        expect(user.reload.stripe_customer).to be_nil
+        expect(subject).to redirect_to new_payment_path
+      end
+    end
   end
 end
