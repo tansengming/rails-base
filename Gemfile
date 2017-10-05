@@ -7,7 +7,6 @@ gem 'pg'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
-gem 'simple_form'
 gem 'stripe'
 gem 'stripe-rails'
 
@@ -17,7 +16,6 @@ gem 'jquery-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
 gem 'twitter-bootstrap-rails'
-gem 'jquery-ui-rails', '< 6' # fixes active admin dep issue
 
 # activeadmin
 gem 'activeadmin'
@@ -72,12 +70,3 @@ group :production do
   gem 'rails_12factor'
   gem 'therubyracer'
 end
-
-# Extras shouldn't be part of the bundle but are recommended
-# for your dev box
-# group :extras do
-#   gem 'foreman'
-#   gem 'git-up'
-#   gem 'mailcatcher'
-#   gem 'powder'
-# end
