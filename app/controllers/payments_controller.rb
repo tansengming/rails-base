@@ -19,7 +19,8 @@ class PaymentsController < ApplicationController
       })
   
       StripeCustomer.create! stripe_customer_id: new_stripe_customer.id, user: current_user
-      current_user.update_attributes! active_until: 3.months.from_now  
+      current_user.update_attributes! active_until: 3.months.from_now
+      flash[:notice] = 'Thank you for the payment!'
       redirect_to user_root_path and return
     rescue Stripe::InvalidRequestError
       flash[:error] = 'There was a problem with the payment, please try again'
