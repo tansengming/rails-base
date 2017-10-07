@@ -23,15 +23,7 @@ require 'rspec/rails'
 # Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 require Rails.root.join('spec/support/rspec_retry.rb')
-
-# Phantom Setup
-require 'capybara/poltergeist'
-require 'phantomjs'
-Capybara.default_max_wait_time = 4
-Capybara.javascript_driver = :poltergeist
-# Capybara.register_driver :poltergeist do |app|
-#   Capybara::Poltergeist::Driver.new(app, js_errors: false, phantomjs: Phantomjs.path)
-# end
+require Rails.root.join('spec/support/phantomjs.rb')
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
