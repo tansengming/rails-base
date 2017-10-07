@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'segment'
 require File.expand_path("../../../app/services/event_tracker", __FILE__)
 

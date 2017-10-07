@@ -6,6 +6,16 @@
     = csrf_meta_tags
     = render 'shared/heap'
   %body
+    %nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %a.navbar-brand
+            = Rails.application.class.parent_name
+        .collapse.navbar-collapse
+          .nav.navbar-nav
+            - if user_signed_in?
+              %li
+                = link_to 'Log Out', destroy_user_session_path, method: 'delete', class: 'btn btn-default'
     .container-fluid
       .row
         .col-md-12
@@ -15,10 +25,6 @@
           - if alert
             %p.alert.alert-danger
               = alert
-      - if user_signed_in?
-        .row
-          .col-md-1
-            = link_to 'Log Out', destroy_user_session_path, method: 'delete', class: 'btn btn-default'
       = yield
       = javascript_include_tag "application"
       = yield :javascripts
@@ -26,3 +32,6 @@
       - # - content_for :javascripts do
       - #   :javascript
       - #     $(document).ready(function({});)
+    %footer.footer
+      .container
+        = link_to 'Terms of Service', page_path('terms')
