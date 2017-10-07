@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  pages:
+    show:
+      terms: This should contain your Terms of Service

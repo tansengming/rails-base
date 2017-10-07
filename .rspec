@@ -1,3 +1,4 @@
 --format Fuubar
 --colour
 --fail-fast
+--require spec_helper
