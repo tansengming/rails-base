@@ -7,7 +7,7 @@ class NotifierMailer < SendWithUsMailer::Base
 
   private
   def default_assigns_for(recipient)
-    assign :recipient, recipient.display
+    # assign :recipient, recipient.name
   end
 
   def mail_for(recipient, email_id, opts = {})
