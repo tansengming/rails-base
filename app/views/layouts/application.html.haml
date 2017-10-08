@@ -16,6 +16,11 @@
             - if user_signed_in?
               %li
                 = link_to 'Log Out', destroy_user_session_path, method: 'delete', class: 'btn btn-default'
+            - else
+              %li
+                = link_to 'Sign Up', new_user_registration_path
+              %li
+                = link_to 'Log in', new_user_session_path
     .container-fluid
       .row
         .col-md-12
