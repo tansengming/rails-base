@@ -13,13 +13,7 @@ class PaymentsController < ApplicationController
     end
 
     begin
-      new_stripe_customer = Stripe::Customer.create({
-        email: current_user.email,
-        source: stripe_token
-      })
-  
-      StripeCustomer.create! stripe_customer_id: new_stripe_customer.id, user: current_user
-      current_user.update_attributes! active_until: 3.months.from_now
+      Payments::UserActivator.(stripe_token, current_user)
       flash[:notice] = 'Thank you for the payment!'
       redirect_to user_root_path and return
     rescue Stripe::InvalidRequestError
