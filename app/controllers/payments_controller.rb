@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+  rescue_from Stripe::InvalidRequestError, with: :retry_payment
   before_action :authenticate_user!
 
   def new
@@ -12,14 +13,14 @@ class PaymentsController < ApplicationController
       redirect_to new_payment_path and return
     end
 
-    begin
-      Payments::UserActivator.(stripe_token, current_user)
-      flash[:notice] = 'Thank you for the payment!'
-      redirect_to user_root_path and return
-    rescue Stripe::InvalidRequestError
-      flash[:error] = 'There was a problem with the payment, please try again'
-    end
+    Payments::UserActivator.(stripe_token, current_user)
+    flash[:notice] = 'Thank you for the payment!'
+    redirect_to user_root_path
+  end
 
-    redirect_to new_payment_path
+  private
+  def retry_payment
+    flash[:error] = 'There was a problem with the payment, please try again'
+    redirect_to new_payment_path and return
   end
 end
