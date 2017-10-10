@@ -8,14 +8,15 @@ class PaymentsController < ApplicationController
   def create
     stripe_token = params[:stripeToken]
 
-    if stripe_token.nil?
-      flash[:error] = 'There was a problem with the payment, please try again'
-      redirect_to new_payment_path and return
-    end
+    if stripe_token.present?
+      Payments::UserActivator.(stripe_token, current_user)
 
-    Payments::UserActivator.(stripe_token, current_user)
-    flash[:notice] = 'Thank you for the payment!'
-    redirect_to user_root_path
+      flash[:notice] = 'Thank you for the payment!'
+      redirect_to user_root_path
+    else
+      flash[:error] = 'There was a problem with the payment, please try again'
+      redirect_to new_payment_path
+    end
   end
 
   private
