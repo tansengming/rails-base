@@ -14,7 +14,9 @@ RSpec.describe 'Payment Flow' do
 
   it do
     fill_and_submit_sign_up_form
-    expect(page.current_path).to eq '/payment/new'
+    expect(page.current_path).to eq '/plans'
+
+    # pick a plan
   
     # Note: cannot fulfill payment because there is no way for me to
     # get a Strip token. Goes to failure path instead.

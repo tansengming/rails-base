@@ -5,7 +5,7 @@ module PaymentRequirable
     PaymentRequired.(current_user)
   end
 
-  def redirect_to_payments
-    redirect_to new_payment_path
+  def redirect_to_plans
+    redirect_to plans_path
   end
 end

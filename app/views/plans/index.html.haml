@@ -1,0 +1,10 @@
+.row
+  .col-md-5
+    - @plans.each do |plan|
+      %a.btn.btn-default{href: '/'}
+        %p
+          = plan.name
+        %p
+          = "$#{plan.amount / 100.0}"
+          every
+          = plan.interval
