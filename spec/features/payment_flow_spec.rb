@@ -17,6 +17,7 @@ RSpec.describe 'Payment Flow' do
     expect(page.current_path).to eq '/plans'
 
     # pick a plan
+    click_on 'Nice Tip'
   
     # Note: cannot fulfill payment because there is no way for me to
     # get a Strip token. Goes to failure path instead.
