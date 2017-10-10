@@ -14,8 +14,7 @@ class PaymentsController < ApplicationController
       flash[:notice] = 'Thank you for the payment!'
       redirect_to user_root_path
     else
-      flash[:error] = 'There was a problem with the payment, please try again'
-      redirect_to new_payment_path
+      retry_payment
     end
   end
 
