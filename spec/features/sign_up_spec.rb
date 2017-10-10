@@ -1,5 +1,5 @@
 require 'rails_helper'
-require Rails.root.join("spec/support/feature_spec_helpers")
+require Rails.root.join('spec/support/feature_spec_helpers')
 
 describe 'Siging Up' do
   include FeatureSpecHelpers
