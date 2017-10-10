@@ -28,21 +28,33 @@ Stripe.plan :nice_tip do |plan|
   plan.name     = 'Nice Tip'
   plan.amount   = 99
   plan.interval = 'month'
-  plan.metadata = { display: true }
+  plan.metadata = { 
+    display: true, # determines if it is displayed on the plans page
+    enable: true,  # determines if user can subscribe to this plan
+    description: 'This will be appreciated'
+  }
 end
 
 Stripe.plan :good_tip do |plan|
   plan.name     = 'Good Tip'
   plan.amount   = 999
   plan.interval = 'month'
-  plan.metadata = { display: true }
+  plan.metadata = { 
+    display: true,
+    enable: true,
+    description: 'This will be REALLY appreciated'
+  }
 end
 
 Stripe.plan :great_tip do |plan|
   plan.name     = 'Great Tip'
   plan.amount   = 9999
   plan.interval = 'month'
-  plan.metadata = { display: false }
+  plan.metadata = { 
+    display: false,
+    enable: false,
+    description: 'This will be GREATLY appreciated'
+  }
 end
 
 # Once you have your plans defined, you can run

@@ -1,10 +1,13 @@
 .row
   .col-md-5
     - @plans.each do |plan|
-      %a.btn.btn-default{href: '/'}
+      %a.btn.btn-default{href: new_payment_path(plan: plan.id)}
         %p
           = plan.name
-        %p
+          %p
+            = plan.metadata[:description]
+          %p
+          Charges
           = "$#{plan.amount / 100.0}"
           every
           = plan.interval
