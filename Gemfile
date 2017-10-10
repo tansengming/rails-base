@@ -13,6 +13,7 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
+gem 'turbolinks'
 gem 'twitter-bootstrap-rails'
 
 # activeadmin
