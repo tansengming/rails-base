@@ -1,23 +1,11 @@
 require 'rails_helper'
+require Rails.root.join("spec/support/feature_spec_helpers")
 
 describe 'Siging Up' do
-  def fill_and_submit_sign_up_form
-    visit '/'
-    within '#sign_up_or_log_in' do
-      click_on 'Sign Up'
-    end
-    fill_in 'Email', with: 'email@example.com'
-    fill_in 'Password', with: '12345678'
-    fill_in 'Password confirmation', with: '12345678'
-    click_on 'Sign up'
-  end
+  include FeatureSpecHelpers
 
-  it 'should create a new user' do
+  it 'should create a new user and redirect to the plans page' do
     expect { fill_and_submit_sign_up_form }.to change { User.count }.by(1)
-  end
-
-  it 'should redirect to the payments page' do
-    fill_and_submit_sign_up_form
-    expect(page.current_path).to eq '/payment/new'
+    expect(page.current_path).to eq '/plans'
   end
 end
