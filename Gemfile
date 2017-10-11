@@ -7,6 +7,8 @@ gem 'pg'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
+gem 'stripe'
+gem 'stripe-rails'
 
 # Front End
 gem 'haml'
@@ -26,10 +28,11 @@ gem "intercom-rails"
 gem 'newrelic_rpm'
 gem 'rollbar'
 gem 'sendwithus_ruby_action_mailer'
-gem "skylight"
+gem 'skylight'
 
 group :development do
   gem 'listen'
+  gem 'meta_request' # For rails_panel
   gem 'spring-commands-rspec'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
@@ -56,6 +59,7 @@ group :test do
   gem 'rspec-rails'
   gem 'rspec-retry'
   gem 'simplecov'
+  gem 'stripe-ruby-mock', require: 'stripe_mock'
   gem 'webmock'
 end
 
