@@ -9,7 +9,7 @@ class PaymentsController < ApplicationController
     stripe_token = params[:stripeToken]
     plan_name    = params[:plan]
 
-    if stripe_token.present?
+    if stripe_token.present? && Stripe::Plans.all.select{|p| p.metadata[:enable]}.map(&:id).map(&:to_s).include?(plan_name)
       Payments::UserActivator.(stripe_token, plan_name, current_user)
 
       flash[:notice] = 'Thank you for the payment!'
