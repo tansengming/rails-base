@@ -1,4 +1,4 @@
-class SuperAdmin < ActiveRecord::Base
+class SuperAdmin < ApplicationRecord
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
