@@ -4,6 +4,7 @@ gem 'rails',    '~> 5.1.0'
 gem 'configatron'
 gem 'nokogiri', '>= 1.7.2' # security update
 gem 'pg'
+gem 'pundit'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
