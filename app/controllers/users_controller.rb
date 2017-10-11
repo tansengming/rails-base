@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-  include PaymentRequirable
   before_action :authenticate_user!
-  before_action :redirect_to_plans, if: :payment_required?
 
   def edit
+    redirect_to(plans_path) unless policy(User).edit?
   end
 end
