@@ -7,9 +7,10 @@ class PaymentsController < ApplicationController
 
   def create
     stripe_token = params[:stripeToken]
+    plan_name    = params[:plan]
 
     if stripe_token.present?
-      Payments::UserActivator.(stripe_token, current_user)
+      Payments::UserActivator.(stripe_token, plan_name, current_user)
 
       flash[:notice] = 'Thank you for the payment!'
       redirect_to user_root_path
