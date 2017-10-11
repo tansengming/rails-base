@@ -20,7 +20,7 @@ module Payments
       })
   
       StripeCustomer.create! stripe_customer_id: new_stripe_customer.id, user: current_user
-      current_user.update_attributes! active_until: 3.months.from_now
+      current_user.update_attributes! active_until: 33.days.from_now # slightly over a month
     end
   end
 end
