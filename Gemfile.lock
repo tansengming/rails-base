@@ -396,7 +396,6 @@ DEPENDENCIES
   awesome_print
   capybara
   codeclimate-test-reporter
-  coffee-rails
   configatron
   database_cleaner
   devise
@@ -442,7 +441,6 @@ DEPENDENCIES
   web-console
   webmock
   wirble
-
 
 BUNDLED WITH
    1.16.0.pre.3
