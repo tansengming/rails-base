@@ -38,6 +38,11 @@ class ApplicationPolicy
     Pundit.policy_scope!(user, record.class)
   end
 
+  private
+  def paid?
+    user.active_until && user.active_until > Time.now
+  end
+
   class Scope
     attr_reader :user, :scope
 

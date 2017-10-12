@@ -1,5 +1,5 @@
 class UserPolicy < ApplicationPolicy
   def edit?
-    !PaymentRequired.(user)
+    paid?
   end
 end
