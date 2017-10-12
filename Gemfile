@@ -31,6 +31,10 @@ gem 'rollbar'
 gem 'sendwithus_ruby_action_mailer'
 gem 'skylight'
 
+# assets
+gem 'uglifier'
+
+
 group :development do
   gem 'listen'
   gem 'meta_request' # For rails_panel
@@ -62,11 +66,6 @@ group :test do
   gem 'simplecov'
   gem 'stripe-ruby-mock', require: 'stripe_mock'
   gem 'webmock'
-end
-
-group :assets do
-  gem 'coffee-rails'
-  gem 'uglifier'
 end
 
 group :production do
