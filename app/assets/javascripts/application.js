@@ -6,6 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require lodash
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
