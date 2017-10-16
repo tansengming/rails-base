@@ -7,6 +7,7 @@ gem 'pg'
 gem 'pundit'
 gem 'rack-attack'
 gem 'redis-rails'
+gem 'reform-rails'
 gem 'sidekiq'
 gem 'stripe'
 gem 'stripe-rails'
@@ -33,7 +34,6 @@ gem 'skylight'
 
 # assets
 gem 'uglifier'
-
 
 group :development do
   gem 'listen'
