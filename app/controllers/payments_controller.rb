@@ -6,11 +6,11 @@ class PaymentsController < ApplicationController
   end
 
   def create
-    stripe_token = params[:stripeToken]
-    plan_name    = params[:plan]
+    payment_params = params.slice(:stripeToken, :plan)
+    @form = PaymentForm.new(OpenStruct.new)
 
-    if stripe_token.present? && Stripe::Plans.all.select{|p| p.metadata[:enable]}.map(&:id).map(&:to_s).include?(plan_name)
-      Payments::UserActivator.(stripe_token, plan_name, current_user)
+    if @form.validate(payment_params)
+      Payments::UserActivator.(payment_params[:stripeToken], payment_params[:plan], current_user)
 
       flash[:notice] = 'Thank you for the payment!'
       redirect_to user_root_path
