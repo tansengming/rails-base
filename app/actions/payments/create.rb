@@ -1,5 +1,5 @@
 module Payments
-  class UserActivator
+  class Create
     attr_reader :stripe_token, :current_user, :plan_name
 
     def self.call(stripe_token, plan_name, current_user)

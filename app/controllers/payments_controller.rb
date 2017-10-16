@@ -10,7 +10,7 @@ class PaymentsController < ApplicationController
     @form = PaymentForm.new(OpenStruct.new)
 
     if @form.validate(payment_params)
-      Payments::UserActivator.(payment_params[:stripeToken], payment_params[:plan], current_user)
+      Payments::Create.(payment_params[:stripeToken], payment_params[:plan], current_user)
 
       flash[:notice] = 'Thank you for the payment!'
       redirect_to user_root_path
