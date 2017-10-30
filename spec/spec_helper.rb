@@ -16,7 +16,7 @@
 
 require 'simplecov'
 SimpleCov.start do
-  add_filter '/spec/', '/config/'
+  add_filter ['/spec/', '/config/']
 end
 
 require 'webmock/rspec'
