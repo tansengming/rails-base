@@ -2,10 +2,9 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   root to: 'roots#show'
-
-  devise_for :users
   ActiveAdmin.routes(self)
 
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   devise_for :admin_users,  ActiveAdmin::Devise.config
   devise_for :super_admins, ActiveAdmin::Devise.config.merge(path: :super_admins)
 

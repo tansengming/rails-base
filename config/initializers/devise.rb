@@ -1,6 +1,16 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  config.omniauth :auth0,
+                  ENV['AUTH0_CLIENT_ID'],
+                  ENV['AUTH0_CLIENT_SECRET'],
+                  ENV['AUTH0_CLIENT_DOMAIN'],
+                  callback_path: '/users/auth/auth0/callback',
+                  authorize_params: {
+                    scope: 'openid profile email',
+                    audience: "https://#{ENV['AUTH0_CLIENT_DOMAIN']}/userinfo"
+                  }
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
