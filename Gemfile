@@ -28,6 +28,7 @@ gem 'devise'
 gem 'analytics-ruby', require: 'segment'
 gem "intercom-rails"
 gem 'newrelic_rpm'
+gem 'omniauth-auth0'
 gem 'rollbar'
 gem 'sendwithus_ruby_action_mailer'
 gem 'skylight'
