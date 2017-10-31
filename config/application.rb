@@ -23,5 +23,7 @@ module RailsBase
 
     # NOTE: please update for PROD
     config.action_mailer.default_url_options = { :host => 'localhost' }
+
+    config.read_encrypted_secrets = true
   end
 end
