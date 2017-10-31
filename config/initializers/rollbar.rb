@@ -2,7 +2,7 @@ Rollbar.configure do |config|
   # Without configuration, Rollbar is enabled in all environments.
   # To disable in specific environments, set config.enabled=false.
 
-  config.access_token = configatron.rollbar_post_client_item_access_token
+  config.access_token = Rails.application.secrets.rollbar_post_client_item_access_token
   config.enabled      = configatron.rollbar_enabled
 
   # By default, Rollbar will try to call the `current_user` controller method
@@ -55,7 +55,7 @@ Rollbar.configure do |config|
   # catch JS injection issues asap
   config.js_enabled = true
   config.js_options = {
-    accessToken: configatron.rollbar_post_client_item_access_token,
+    accessToken: Rails.application.secrets.rollbar_post_client_item_access_token,
     captureUncaught: true,
     payload: {
       environment: ENV['ROLLBAR_ENV'] || Rails.env
