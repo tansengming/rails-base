@@ -2,13 +2,13 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   config.omniauth :auth0,
-                  ENV['AUTH0_CLIENT_ID'],
-                  ENV['AUTH0_CLIENT_SECRET'],
-                  ENV['AUTH0_CLIENT_DOMAIN'],
+                  configatron.auth0.client_id,
+                  configatron.auth0.client_secret,
+                  configatron.auth0.client_domain,
                   callback_path: '/users/auth/auth0/callback',
                   authorize_params: {
                     scope: 'openid profile email',
-                    audience: "https://#{ENV['AUTH0_CLIENT_DOMAIN']}/userinfo"
+                    audience: "https://#{configatron.auth0.client_domain}/userinfo"
                   }
 
   # The secret key used by Devise. Devise uses this key to generate
