@@ -24,6 +24,5 @@ tmp
 
 # Ignore encrypted secrets key file.
 config/secrets.yml.key
-
-# Reserved only for development secrets. Do not check in.
+# Only use encrypted secrets
 config/secrets.yml
