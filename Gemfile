@@ -4,6 +4,7 @@ gem 'rails',    '~> 5.1.0'
 gem 'configatron'
 gem 'nokogiri', '>= 1.7.2' # security update
 gem 'pg'
+gem 'puma'
 gem 'pundit'
 gem 'rack-attack'
 gem 'redis-rails'
@@ -48,7 +49,6 @@ end
 group :development, :test do
   gem 'awesome_print', require: 'ap'
   gem "factory_bot_rails"
-  gem 'puma'
   gem 'tapp'
 end
 
