@@ -1,4 +1,4 @@
-:concurrency: 25
+:concurrency: 10
 :queues:
   - [notifications, 3]
   - [default, 1]
