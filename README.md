@@ -27,14 +27,15 @@ The Setup includes:
 1. `cd rails-base`
 1. `rm -rf .git`
 1. `git init && git add . && git commit -m 'initial commit'`
-1. `cp .env.example .env`
+1. `rails secrets:setup`
+1. `rails secrets:edit` and use the values from `config/secrets.yml.sample`
 1. `docker-compose up --build`
 1. `docker-compose run app rake db:create`
 1. `docker-compose run app rake db:migrate`
 1. `docker-compose run app rake db:seed`
 1. A web server should be running at http://localhost:3000, a client for the SMTP server should be running at http://localhost:1080
-1. Sign up for accounts at Skylight, Segment, Heap, Rollbar, Intercom, sendwithus, New Relic, Code Climate and Circle CI.
-1. Update `.env` with all the tokens from the accounts you just signed up for.
+1. Sign up for accounts at Skylight, Segment, Heap, Intercom, sendwithus, Code Climate and Circle CI.
+1. Update your secrets at `rails secrets:edit` with all the tokens from the accounts you just signed up for.
 
 ## Application Notes
 - There are 2 levels of admins. Regular admins get to administer the app. Super Admins administer regular admins. You can access them at `/admin` and `/super_admins`.
