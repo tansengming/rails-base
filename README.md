@@ -3,7 +3,7 @@
 [![Dependency Status](https://gemnasium.com/tansengming/rails-base.png)](https://gemnasium.com/tansengming/rails-base)
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/tansengming/rails-base/tree/develop)
 
-# The SASS Starter Pack
+# Rails Bootstrap
 
 If I was going to build a SASS from scratch (and I'm not saying that I am). These would be the set of tools I would use. Every Rails developer has their favorite set of tools and gems. These happen to be mine.
 
