@@ -1,5 +1,2 @@
-#sign_up_or_log_in.row
-  .col-md-4
-  .col-md-4
-    = link_to 'Log in or Sign Up', user_auth0_omniauth_authorize_path
-  .col-md-4
+%section.text-center
+  %a.btn.btn-success.btn-lg{href: user_auth0_omniauth_authorize_path} Login
