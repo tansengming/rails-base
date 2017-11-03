@@ -7,10 +7,6 @@ module FeatureSpecHelpers
     })
 
     visit '/'
-    within '#sign_up_or_log_in' do
-      click_on 'Sign Up'
-    end
-
-
+    click_on 'Login'
   end
 end

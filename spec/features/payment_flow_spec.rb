@@ -16,9 +16,7 @@ RSpec.describe 'Payment Flow' do
 
   def fill_and_submit_sign_up_form
     visit '/'
-    within '#sign_up_or_log_in' do
-      click_on 'Sign Up'
-    end
+    click_on 'Login'
   end
 
   it do

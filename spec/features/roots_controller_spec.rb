@@ -11,7 +11,7 @@ describe 'roots controller' do
 
     context 'when not logged in' do
       its(:status_code) { should eq 200 }
-      its(:body) { should include 'Sign Up' }
+      its(:body) { should include 'Login' }
     end
 
     context 'when logged in' do
