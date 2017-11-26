@@ -20,6 +20,15 @@ describe 'users controller' do
       end
     end
 
+    context 'when not active' do
+      before { user.update! active_until: nil }
+
+      it 'should not redirect' do
+        subject
+        expect(page.current_path).to_not eq '/user/edit'
+      end
+    end
+
     context 'when not logged in' do
       it 'should be redirected' do
         subject
