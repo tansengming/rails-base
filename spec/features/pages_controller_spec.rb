@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe PagesController do
   describe '/pages/terms' do
-   subject { visit 'pages/terms' }
+    subject { visit 'pages/terms' }
 
-   it 'should show the page' do
+    it 'should show the page' do
     subject
     expect(page.body).to have_content 'Terms'
-   end
+    end
   end
 
   describe '/pages/does-not-exist' do
