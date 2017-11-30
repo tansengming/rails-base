@@ -27,7 +27,6 @@ class PaymentsController < ApplicationController
   end
 
   def selected_plan
-    plan_names = Stripe::Plans.all.map(&:id).map(&:to_s)
-    params[:plan] if plan_names.include?(params[:plan])
+    Stripe::Plans.all.find{|plan| plan.id.to_s == params[:plan]}
   end
 end
