@@ -226,8 +226,8 @@ GEM
     rack (2.0.3)
     rack-attack (5.0.1)
       rack
-    rack-contrib (1.2.0)
-      rack (>= 0.9.1)
+    rack-contrib (2.0.0)
+      rack (~> 2.0)
     rack-protection (2.0.0)
       rack
     rack-test (0.8.2)
