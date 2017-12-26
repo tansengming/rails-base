@@ -5,8 +5,8 @@ RSpec.describe PagesController do
     subject { visit 'pages/terms' }
 
     it 'should show the page' do
-    subject
-    expect(page.body).to have_content 'Terms'
+      subject
+      expect(page.body).to have_content 'Terms'
     end
   end
 
