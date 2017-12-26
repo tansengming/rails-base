@@ -14,8 +14,7 @@ class PaymentsController < ApplicationController
     if @form.validate(payment_params)
       Payments::Create.(payment_params[:stripeToken], payment_params[:plan], current_user)
 
-      flash.notice = 'Thank you for the payment!'
-      redirect_to user_root_path
+      redirect_to user_root_path, flash: {notice: 'Thank you for the payment!'}
     else
       retry_payment
     end
@@ -23,8 +22,7 @@ class PaymentsController < ApplicationController
 
   private
   def retry_payment
-    flash.alert = 'There was a problem with the payment, please try again'
-    redirect_to new_payment_path and return
+    redirect_to(new_payment_path, flash: {alert: 'There was a problem with the payment, please try again'}) and return
   end
 
   def selected_plan
