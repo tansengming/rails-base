@@ -18,6 +18,15 @@ describe 'users controller' do
         subject
         expect(page.body).to include 'heap.identify'
       end
+
+      context 'when not active' do
+        before { user.update! active_until: nil }
+
+        it 'should redirect to plans' do
+          subject
+          expect(page.current_path).to eq '/plans'
+        end
+      end
     end
 
     context 'when not logged in' do

@@ -8,8 +8,9 @@
           / a Stripe Element will be inserted here.
         / Used to display Element errors
         #card-errors
-      %button
-        Submit Payment
+      = hidden_field_tag 'plan', selected_plan.id
+      %button{type: 'submit'}
+        = "Pay $#{selected_plan&.amount&./100&.to_f} Every Month"
 %style
   :plain
     .StripeElement {
@@ -32,6 +33,13 @@
 
     .StripeElement--webkit-autofill {
       background-color: #fefde5 !important;
+    }
+
+    #payment-form button {
+      display: block;
+      width: calc(100% - 30px);
+      height: 40px;
+      margin: 40px 15px 0;
     }
 
 - content_for :javascripts do

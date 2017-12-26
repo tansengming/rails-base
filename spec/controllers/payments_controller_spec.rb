@@ -7,8 +7,17 @@ RSpec.describe PaymentsController do
   describe 'new' do
     subject { get :new }
 
-    it 'should be success' do
-      expect(subject).to be_success  
+    context 'when there is a selected plan' do
+      subject { get :new, params: {plan: 'nice_tip'} }
+      it 'should be success' do
+        expect(subject).to be_success  
+      end
+    end
+
+    context 'when there is not a selected plan' do
+      it 'should be a redirect' do
+        expect(subject).to redirect_to '/plans'
+      end
     end
 
     context 'when user is signed out' do
