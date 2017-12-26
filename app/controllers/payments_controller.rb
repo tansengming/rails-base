@@ -1,8 +1,10 @@
 class PaymentsController < ApplicationController
   rescue_from Stripe::InvalidRequestError, with: :retry_payment
   before_action :authenticate_user!
+  helper_method :selected_plan
 
   def new
+    redirect_to plans_path, flash: {alert: 'Please select a plan before continuing.'} if selected_plan.nil?
   end
 
   def create
@@ -12,8 +14,7 @@ class PaymentsController < ApplicationController
     if @form.validate(payment_params)
       Payments::Create.(payment_params[:stripeToken], payment_params[:plan], current_user)
 
-      flash.notice = 'Thank you for the payment!'
-      redirect_to user_root_path
+      redirect_to page_path('thanks')
     else
       retry_payment
     end
@@ -21,7 +22,10 @@ class PaymentsController < ApplicationController
 
   private
   def retry_payment
-    flash.alert = 'There was a problem with the payment, please try again'
-    redirect_to new_payment_path and return
+    redirect_to(new_payment_path, flash: {alert: 'There was a problem with the payment, please try again'}) and return
+  end
+
+  def selected_plan
+    Stripe::Plans.all.find{|plan| plan.id.to_s == params[:plan]}
   end
 end

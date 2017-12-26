@@ -7,8 +7,17 @@ RSpec.describe PaymentsController do
   describe 'new' do
     subject { get :new }
 
-    it 'should be success' do
-      expect(subject).to be_success  
+    context 'when there is a selected plan' do
+      subject { get :new, params: {plan: 'nice_tip'} }
+      it 'should be success' do
+        expect(subject).to be_success  
+      end
+    end
+
+    context 'when there is not a selected plan' do
+      it 'should be a redirect' do
+        expect(subject).to redirect_to '/plans'
+      end
     end
 
     context 'when user is signed out' do
@@ -35,7 +44,7 @@ RSpec.describe PaymentsController do
       it 'should create a new stripe customer' do
         expect { subject }.to change { StripeCustomer.count }.by(1)
         expect(user.reload.stripe_customer).not_to be_nil
-        expect(subject).to redirect_to user_root_path
+        expect(subject).to redirect_to page_path('thanks')
         expect(user.stripe_customer.retrieve.subscriptions.data.map{|s| s.plan[:id]}).to eq ['good_tip']
       end
     end
