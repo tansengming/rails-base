@@ -14,7 +14,7 @@ class PaymentsController < ApplicationController
     if @form.validate(payment_params)
       Payments::Create.(payment_params[:stripeToken], payment_params[:plan], current_user)
 
-      redirect_to user_root_path, flash: {notice: 'Thank you for the payment!'}
+      redirect_to page_path('thanks')
     else
       retry_payment
     end
