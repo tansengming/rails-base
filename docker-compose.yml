@@ -16,11 +16,11 @@ services:
       - "3000:3000"
     command: rails server -b '0.0.0.0'
   postgres:
-    image: postgres:9.6
+    image: postgres
     ports:
       - "5432:5432"
   redis:
-    image: redis:3.0
+    image: redis
     ports:
       - "6379:6379"
   mailcatcher:
