@@ -20,6 +20,7 @@ services:
     ports:
       - "5432:5432"
     # For a persistent DB
+    # https://peterlyons.com/problog/2017/12/how-to-use-docker-to-run-local-databases
     volumes:
       - '~/docker-volumes/host:/host'
       - '~/docker-volumes/postgres:/var/lib/postgresql/data'
