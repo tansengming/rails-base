@@ -1,0 +1,103 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    parallelism: 1
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+        environment:
+          PGHOST: 127.0.0.1
+          PGUSER: myapp
+          RAILS_ENV: test
+      - image: circleci/postgres:latest
+        environment:
+          POSTGRES_USER: myapp
+          POSTGRES_DB: myapp-test
+          POSTGRES_PASSWORD: ""
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run: echo 127.0.0.1 127.0.0.1.xip.io | sudo tee -a /etc/hosts
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+        
+      # Database setup
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:schema:load
+
+      # run tests!
+      - run:
+          name: run tests
+          command: |
+            mkdir /tmp/test-results
+            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
+            bundle exec rspec --format progress \
+                            --format RspecJunitFormatter \
+                            --tag ~skip \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress \
+                            -- $(echo "${TEST_FILES}" | sed -e 's/\n/\\n/' -e 's/ /\ /')
+
+      # collect reports
+      - store_test_results:
+          path: /tmp/test-results
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test-results
+      - store_artifacts:
+          path: tmp/capybara
+  # deploy-production:
+  #   docker:
+  #     - image: circleci/ruby:2.4.1-node-browsers
+  #   working_directory: /tmp/my-project  
+  #   steps:
+  #     - run:
+  #         name: Run deploy script
+  #         command: curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/$REDEPLOY_KEY
+  # deploy-staging:
+  #   docker:
+  #     - image: circleci/ruby:2.4.1-node-browsers
+  #   working_directory: /tmp/my-project
+  #   steps:
+  #     - run:
+  #         name: Run deploy script
+  #         command: curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/$STAGING_REDEPLOY_KEY
+
+workflows:
+  version: 2
+  test-and-deploy:
+    jobs:
+      - build
+      # - deploy-production:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: master
+      # - deploy-staging:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: develop
