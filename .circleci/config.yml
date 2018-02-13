@@ -23,9 +23,6 @@ jobs:
     steps:
       - checkout
 
-      - run: echo 127.0.0.1 127.0.0.1.xip.io | sudo tee -a /etc/hosts
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "Gemfile.lock" }}
