@@ -54,11 +54,12 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'capybara-selenium'
+  gem 'chromedriver-helper'
   gem 'codeclimate-test-reporter', require: nil
   gem 'database_cleaner'
   gem 'fuubar'
-  gem 'poltergeist'
-  gem 'phantomjs', require: 'phantomjs/poltergeist'
   gem 'rspec-its'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
