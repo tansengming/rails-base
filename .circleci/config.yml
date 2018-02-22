@@ -65,37 +65,9 @@ jobs:
           destination: test-results
       - store_artifacts:
           path: tmp/capybara
-  # deploy-production:
-  #   docker:
-  #     - image: circleci/ruby:2.4.1-node-browsers
-  #   working_directory: /tmp/my-project  
-  #   steps:
-  #     - run:
-  #         name: Run deploy script
-  #         command: curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/$REDEPLOY_KEY
-  # deploy-staging:
-  #   docker:
-  #     - image: circleci/ruby:2.4.1-node-browsers
-  #   working_directory: /tmp/my-project
-  #   steps:
-  #     - run:
-  #         name: Run deploy script
-  #         command: curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/$STAGING_REDEPLOY_KEY
 
 workflows:
   version: 2
   test-and-deploy:
     jobs:
       - build
-      # - deploy-production:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: master
-      # - deploy-staging:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: develop
