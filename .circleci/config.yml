@@ -40,9 +40,9 @@ jobs:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
         
       # Database setup
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
-      - run: bundle exec rake db:migrate
+      - run: spring rake db:create
+      - run: spring rake db:schema:load
+      - run: spring rake db:migrate
 
       # run tests!
       - run:
