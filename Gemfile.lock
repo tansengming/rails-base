@@ -129,7 +129,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.21)
+    ffi (1.9.22)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -355,7 +355,7 @@ GEM
     selenium-webdriver (3.9.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
-    send_with_us (4.0.1)
+    send_with_us (4.1.0)
     sendwithus_ruby_action_mailer (0.4.0)
       actionpack
       activejob
@@ -389,7 +389,7 @@ GEM
       rails (>= 3)
       responders
       stripe
-    stripe-ruby-mock (2.5.2)
+    stripe-ruby-mock (2.5.3)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
       stripe (>= 2.0.3)
