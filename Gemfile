@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails',    '~> 5.1.0'
+gem 'rails',        '~> 5.1.0'
 gem 'configatron'
-gem 'nokogiri', '>= 1.7.2' # security update
-gem 'pg',       '< 1' # rails doesn't support pg 1 https://github.com/rails/rails/issues/31669
+gem 'nokogiri',     '>= 1.7.2' # security update
+gem 'pg'
 gem 'puma'
 gem 'pundit'
 gem 'rack-attack'
@@ -70,6 +70,5 @@ group :test do
 end
 
 group :production do
-  gem 'rails_12factor'
   gem 'therubyracer'
 end
