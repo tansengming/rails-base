@@ -30,12 +30,12 @@ RSpec.describe PaymentsController do
   end
 
   describe 'create' do
-    before { StripeMock.start }
-    after  { StripeMock.stop }
-    let(:stripe_helper) { StripeMock.create_test_helper }
-    let(:default_params) { {stripeToken: stripe_helper.generate_card_token, plan: 'good_tip'} }
+    before  { StripeMock.start }
+    after   { StripeMock.stop }
     subject { post :create, params: params }
-    before { stripe_helper.create_plan(id: 'good_tip') }
+    before  { stripe_helper.create_plan(id: 'good_tip') }
+    let(:stripe_helper)  { StripeMock.create_test_helper }
+    let(:default_params) { {stripeToken: stripe_helper.generate_card_token, plan: 'good_tip'} }
 
 
     context 'when there is a valid stripe token and plan' do
