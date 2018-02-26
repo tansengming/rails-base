@@ -53,7 +53,7 @@ RSpec.describe PaymentsController do
       let(:params) { default_params.merge(plan: 'does_not_exist') }
 
       it 'should not create a new stripe customer' do
-        expect { subject }.not_to change { StripeCustomer.count }
+        expect { subject }.not_to change { RemoteKey.count }
         expect(subject).to redirect_to new_payment_path
       end
     end
@@ -73,7 +73,7 @@ RSpec.describe PaymentsController do
       let(:params) { default_params.merge(plan: 'disabled') }
 
       it 'should not create a new stripe customer' do
-        expect { subject }.not_to change { StripeCustomer.count }
+        expect { subject }.not_to change { RemoteKey.count }
         expect(subject).to redirect_to new_payment_path
       end
     end
@@ -82,7 +82,7 @@ RSpec.describe PaymentsController do
       let(:params) { default_params.merge(stripeToken: 'sk_test_fake') }
 
       it 'should not create a new stripe customer' do
-        expect { subject }.not_to change { StripeCustomer.count }
+        expect { subject }.not_to change { RemoteKey.count }
         expect(user.reload.stripe_customer).to be_nil
         expect(subject).to redirect_to new_payment_path
       end
@@ -92,7 +92,7 @@ RSpec.describe PaymentsController do
       let(:params) { default_params.merge(stripeToken: nil) }
 
       it 'should not create a new stripe customer' do
-        expect { subject }.not_to change { StripeCustomer.count }
+        expect { subject }.not_to change { RemoteKey.count }
         expect(user.reload.stripe_customer).to be_nil
         expect(subject).to redirect_to new_payment_path
       end
