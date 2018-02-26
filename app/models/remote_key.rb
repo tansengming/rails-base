@@ -7,7 +7,7 @@ class RemoteKey < ApplicationRecord
       # e.g. Stripe::Customer.retrieve(key)
       "Stripe::#{remote_type.capitalize}".constantize.retrieve(key)
     else
-      raise
+      raise "#{remote_service} not supported!"
     end
   end
 end
