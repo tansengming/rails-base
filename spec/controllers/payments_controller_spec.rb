@@ -42,7 +42,7 @@ RSpec.describe PaymentsController do
       let(:params) { default_params }
 
       it 'should create a new stripe customer' do
-        expect { subject }.to change { StripeCustomer.count }.by(1)
+        expect { subject }.to change { RemoteKey.count }.by(1)
         expect(user.reload.stripe_customer).not_to be_nil
         expect(subject).to redirect_to page_path('thanks')
         expect(user.stripe_customer.retrieve.subscriptions.data.map{|s| s.plan[:id]}).to eq ['good_tip']

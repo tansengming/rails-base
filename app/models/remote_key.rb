@@ -1,0 +1,2 @@
+class RemoteKey < ApplicationRecord
+end

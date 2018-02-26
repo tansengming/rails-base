@@ -2,7 +2,8 @@ class User < ApplicationRecord
   devise  :omniauthable,
           :omniauth_providers => [:auth0]
 
-  has_one :stripe_customer
+  has_one   :stripe_customer
+  has_many  :remote_keys, as: :remoteable
 
   validates :email, uniqueness: true
 
