@@ -19,7 +19,7 @@ module Payments
         plan: plan_name
       })
   
-      current_user.remote_keys.create! key: new_stripe_customer.id, remote_service: 'stripe', remote_type: 'customer'
+      current_user.remote_keys.stripe_customers.create! key: new_stripe_customer.id
       current_user.update_attributes! active_until: 33.days.from_now # slightly over a month
     end
   end
