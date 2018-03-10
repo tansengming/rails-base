@@ -26,6 +26,7 @@ The Setup includes:
 1. `git clone https://github.com/tansengming/rails-base.git`
 1. `cd rails-base`
 1. `rm -rf .git`
+1. `rm config/secrets.yml.enc`
 1. `git init && git add . && git commit -m 'initial commit'`
 1. `rails secrets:setup`
 1. `rails secrets:edit` and use the values from `config/secrets.yml.sample`
