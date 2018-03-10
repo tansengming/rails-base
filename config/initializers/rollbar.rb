@@ -55,7 +55,7 @@ Rollbar.configure do |config|
   # catch JS injection issues asap
   config.js_enabled = true
   config.js_options = {
-    accessToken: Rails.application.secrets.rollbar_post_client_item_access_token,
+    accessToken: configatron.rollbar.access_token,
     captureUncaught: true,
     payload: {
       environment: ENV['ROLLBAR_ENV'] || Rails.env
