@@ -15,6 +15,7 @@ gem 'stripe-rails'
 
 # Front End
 gem 'haml'
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
