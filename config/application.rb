@@ -25,7 +25,7 @@ module RailsBase
     config.action_mailer.default_url_options = { :host => 'localhost' }
 
     config.read_encrypted_secrets = true
-    config.stripe.secret_key = Rails.application.secrets.stripe_secret_key
-    config.stripe.publishable_key = Rails.application.secrets.stripe_publishable_key
+    config.stripe.secret_key = configatron.stripe.secret_key
+    config.stripe.publishable_key = configatron.stripe.publishable_key
   end
 end
