@@ -27,5 +27,14 @@ module RailsBase
     config.read_encrypted_secrets = true
     config.stripe.secret_key = configatron.stripe.secret_key
     config.stripe.publishable_key = configatron.stripe.publishable_key
+
+    config.generators do |g|
+      g.test_framework :rspec
+      g.template_engine :haml
+      g.helper false
+      g.assets false
+      g.view_specs false
+      g.helper_specs false
+    end    
   end
 end
