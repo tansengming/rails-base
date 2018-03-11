@@ -14,9 +14,14 @@ describe 'users controller' do
         expect(page.current_path).to eq '/user/edit'
       end
 
-      it 'should have heap' do
-        subject
-        expect(page.body).to include 'heap.identify'
+      context 'if heap id exists' do
+        before { configatron.heap.app_id = 'fake-id' }
+        after  { configatron.heap.app_id = nil }
+        
+        it 'should have heap' do
+          subject
+          expect(page.body).to include 'heap.identify'
+        end
       end
 
       context 'when not active' do
