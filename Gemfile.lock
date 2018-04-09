@@ -203,7 +203,7 @@ GEM
       ruby_dep (~> 1.2)
     lodash-rails (4.17.5)
       railties (>= 3.1)
-    loofah (2.2.1)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -269,8 +269,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
     railties (5.1.5)
       actionpack (= 5.1.5)
       activesupport (= 5.1.5)
@@ -475,6 +475,7 @@ DEPENDENCIES
   pundit
   rack-attack
   rails (~> 5.1.0)
+  rails-html-sanitizer (>= 1.0.4)
   redis-rails
   reform-rails
   rollbar

@@ -78,3 +78,4 @@ end
 group :production do
   gem 'therubyracer'
 end
+gem 'rails-html-sanitizer', '>= 1.0.4'
