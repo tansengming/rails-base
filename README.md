@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/tansengming/rails-base/tree/develop.svg)](https://circleci.com/gh/tansengming/rails-base/tree/develop)
 [![Code Climate](https://codeclimate.com/github/tansengming/rails-base.png)](https://codeclimate.com/github/tansengming/rails-base)
-[![Dependency Status](https://gemnasium.com/tansengming/rails-base.png)](https://gemnasium.com/tansengming/rails-base)
+[![Depfu](https://badges.depfu.com/badges/238d26e5741b585f9f886753fe8ef147/count.svg)](https://depfu.com/github/tansengming/rails-base?project=Bundler)
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/tansengming/rails-base/tree/develop)
 
 # Rails Bootstrap
