@@ -405,7 +405,7 @@ GEM
       sprockets (>= 3.0.0)
     stripe (3.17.2)
       faraday (~> 0.10)
-    stripe-rails (1.2.2)
+    stripe-rails (1.3.0)
       rails (>= 3)
       responders
       stripe (>= 1.36.2)
