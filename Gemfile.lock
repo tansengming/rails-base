@@ -250,7 +250,7 @@ GEM
       activerecord (>= 3.0)
     public_suffix (3.0.2)
     puma (3.12.0)
-    pundit (1.1.0)
+    pundit (2.0.0)
       activesupport (>= 3.0.0)
     rack (2.0.5)
     rack-attack (5.4.0)
