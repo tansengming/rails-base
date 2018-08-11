@@ -63,7 +63,6 @@ group :test do
   gem 'capybara-screenshot'
   gem 'capybara-selenium'
   gem 'chromedriver-helper'
-  gem 'codeclimate-test-reporter', require: nil
   gem 'database_cleaner'
   gem 'fuubar'
   gem 'rspec-its'
