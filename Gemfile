@@ -54,7 +54,8 @@ end
 
 group :development, :test do
   gem 'awesome_print', require: 'ap'
-  gem "factory_bot_rails"
+  gem 'dotenv-rails'
+  gem 'factory_bot_rails'
   gem 'tapp'
 end
 
