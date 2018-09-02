@@ -10,11 +10,12 @@ module RailsBase
   class Application < Rails::Application
     config.middleware.use Rack::Attack
 
-    config.cache_store = :redis_store, configatron.redis_url
+    config.cache_store = :redis_store, ENV['REDIS_URL']
 
     config.active_job.queue_adapter = :sidekiq
     config.active_job.queue_name_prefix = "rails5_#{Rails.env}"
 
+    config.stripe.secret_key      = ENV['STRIPE_SECRET_KEY']
     config.stripe.publishable_key = ENV['STRIPE_PUBLISHABLE_KEY']
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -25,8 +26,6 @@ module RailsBase
     config.action_mailer.default_url_options = { :host => 'localhost' }
 
     config.read_encrypted_secrets = true
-    config.stripe.secret_key = configatron.stripe.secret_key
-    config.stripe.publishable_key = configatron.stripe.publishable_key
 
     config.generators do |g|
       g.test_framework :rspec
