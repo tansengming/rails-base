@@ -38,7 +38,7 @@ gem 'newrelic_rpm'
 gem 'omniauth-auth0'
 gem 'rollbar'
 gem 'sendwithus_ruby_action_mailer'
-gem 'skylight'
+# gem 'skylight'
 
 # assets
 gem 'uglifier'
