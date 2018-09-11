@@ -49,7 +49,6 @@ group :development do
   gem 'spring-commands-rspec'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
-  gem 'wirble'
 end
 
 group :development, :test do
