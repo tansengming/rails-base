@@ -3,7 +3,6 @@ docker: &docker
   encoding: unicode
   pool: 5
   timeout: 5000
-  username: postgres
   host: postgres
   port: 5432
 
@@ -14,8 +13,6 @@ development:
 test:
   <<: *docker
   host: localhost # to run specs outside of docker
-  username: root
-  password: circle_test
 
 production:
   adapter: postgresql
