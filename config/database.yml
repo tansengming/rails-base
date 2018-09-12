@@ -12,6 +12,7 @@ development:
 
 test:
   <<: *docker
+  host: localhost # to run specs outside of docker
 
 production:
   adapter: postgresql
