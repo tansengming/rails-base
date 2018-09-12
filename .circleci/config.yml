@@ -9,10 +9,12 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
         environment:
-          PGHOST: 127.0.0.1
+          PGHOST: localhost
+          PGUSER: root
           RAILS_ENV: test
-      - image: circleci/postgres:9.3-ram
+      - image: circleci/postgres:latest-ram
         environment:
+          POSTGRES_USER: root
           POSTGRES_PASSWORD: ""
 
     working_directory: ~/repo
@@ -43,8 +45,7 @@ jobs:
         
       # Database setup
       - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
-      - run: bundle exec rake db:migrate
+      - run: bundle exec rake db:test:prepare
 
       # run tests!
       - run:
