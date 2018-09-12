@@ -14,8 +14,8 @@ jobs:
           RAILS_ENV: test
       - image: circleci/postgres:latest-ram
         environment:
-          POSTGRES_USER: myapp
-          POSTGRES_DB: myapp-test
+          POSTGRES_USER: root
+          POSTGRES_DB: rails_base_dev
           POSTGRES_PASSWORD: ""
 
     working_directory: ~/repo
