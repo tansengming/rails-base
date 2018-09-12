@@ -13,6 +13,7 @@ development:
 test:
   <<: *docker
   host: localhost # to run specs outside of docker
+  database: rails_base_test
 
 production:
   adapter: postgresql
