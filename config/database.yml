@@ -12,7 +12,6 @@ development:
 
 test:
   <<: *docker
-  database: rails_base_dev
 
 production:
   adapter: postgresql
