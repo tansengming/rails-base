@@ -13,9 +13,6 @@ jobs:
           PGUSER: root
           RAILS_ENV: test
       - image: circleci/postgres:latest-ram
-        environment:
-          POSTGRES_USER: root
-          POSTGRES_PASSWORD: ""
 
     working_directory: ~/repo
 
