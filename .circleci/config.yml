@@ -10,11 +10,11 @@ jobs:
       - image: circleci/ruby:2.4.1-node-browsers
         environment:
           PGHOST: localhost
-          PGUSER: root
+          PGUSER: postgres
           RAILS_ENV: test
       - image: circleci/postgres:latest-ram
         environment:
-          POSTGRES_USER: root
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: ""
 
     working_directory: ~/repo
