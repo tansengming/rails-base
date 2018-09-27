@@ -214,7 +214,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    marcel (0.3.2)
+    marcel (0.3.3)
       mimemagic (~> 0.3.2)
     meta_request (0.6.0)
       callsite (~> 0.0, >= 0.0.11)
@@ -399,7 +399,7 @@ GEM
       sprockets (>= 3.0.0)
     stripe (3.28.0)
       faraday (~> 0.10)
-    stripe-rails (1.4.2)
+    stripe-rails (1.5.0)
       rails (>= 3)
       responders
       stripe (>= 1.36.2)
