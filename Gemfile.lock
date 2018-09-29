@@ -253,7 +253,7 @@ GEM
     pundit (2.0.0)
       activesupport (>= 3.0.0)
     rack (2.0.5)
-    rack-attack (5.4.0)
+    rack-attack (5.4.1)
       rack (>= 1.0, < 3)
     rack-contrib (2.0.1)
       rack (~> 2.0)
