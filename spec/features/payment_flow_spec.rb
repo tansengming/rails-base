@@ -2,21 +2,14 @@ require 'rails_helper'
 
 RSpec.describe 'Payment Flow' do
   let(:user) { create :user, uid: 12345, provider: 'auth0' }
-  before do
-    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
-      provider: 'auth0',
-      uid: user.uid,
-      info: {email: user.email }
-    })
-  end
-
-  after do
-    OmniAuth.config.mock_auth[:auth0] = nil
-  end
-
   def fill_and_submit_sign_up_form
     visit '/'
     click_on 'Login'
+
+    fill_in 'Email', with: 'email@example.com'
+    fill_in 'Password', with: '12345678'
+    fill_in 'Password confirmation', with: '12345678'
+    click_on 'Sign up'
   end
 
   it do
