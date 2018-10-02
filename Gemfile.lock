@@ -403,7 +403,7 @@ GEM
       rails (>= 3)
       responders
       stripe (>= 1.36.2)
-    stripe-ruby-mock (2.5.4)
+    stripe-ruby-mock (2.5.5)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
       stripe (>= 2.0.3)
