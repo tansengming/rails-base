@@ -4,7 +4,7 @@ docker: &docker
   pool: 5
   timeout: 5000
   username: postgres
-  host: postgres
+  host: localhost
   port: 5432
 
 development:
@@ -13,7 +13,6 @@ development:
 
 test:
   <<: *docker
-  host: localhost # to run specs outside of docker
   database: rails_base_test
 
 production:
