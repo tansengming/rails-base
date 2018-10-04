@@ -5,6 +5,7 @@ describe 'roots controller' do
   include FeatureSpecHelpers
 
   subject { page }
+  let!(:user) { create :user, password: '12345678', email: 'email@example.com' }
 
   describe 'GET /' do
     before { visit '/' }
@@ -15,7 +16,7 @@ describe 'roots controller' do
     end
 
     context 'when logged in' do
-      before { fill_and_submit_sign_up_form }
+      before { login email: 'email@example.com', password: '12345678' }
 
       it 'should redirect' do
         visit '/'

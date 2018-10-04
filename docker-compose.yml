@@ -21,6 +21,9 @@ services:
       - "5432:5432"
     # For a persistent DB
     # https://peterlyons.com/problog/2017/12/how-to-use-docker-to-run-local-databases
+    # To nuke the volumes:
+    # 1. `rm -rf ~/docker-volumes/host ~/docker-volumes/postgres`
+    # 2. `docker-compose rm postgres`
     volumes:
       - '~/docker-volumes/host:/host'
       - '~/docker-volumes/postgres:/var/lib/postgresql/data'
