@@ -10,7 +10,7 @@ RSpec.describe PaymentsController do
     context 'when there is a selected plan' do
       subject { get :new, params: {plan: 'nice_tip'} }
       it 'should be success' do
-        expect(subject).to be_success  
+        expect(subject).to be_successful
       end
     end
 
@@ -24,7 +24,7 @@ RSpec.describe PaymentsController do
       before { sign_out user }
 
       it 'should be success' do
-        expect(subject).to_not be_success  
+        expect(subject).to_not be_successful  
       end
     end
   end
