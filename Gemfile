@@ -29,11 +29,13 @@ gem 'twitter-bootstrap-rails'
 # activeadmin
 gem 'activeadmin'
 
-# Services
-gem 'analytics-ruby', require: 'segment'
-gem "intercom-rails"
+# Required Services
 gem 'newrelic_rpm'
 gem 'rollbar'
+
+# Optional Services
+gem 'analytics-ruby', require: 'segment'
+gem "intercom-rails"
 gem 'sendwithus_ruby_action_mailer'
 # gem 'skylight'
 
