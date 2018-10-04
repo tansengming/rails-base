@@ -1,11 +1,10 @@
 module FeatureSpecHelpers
-  def fill_and_submit_sign_up_form(email = 'email@example.com', password = '12345678')
+  def login(email: 'email@example.com', password: '12345678')
     visit '/'
-    click_on 'Sign Up'
+    click_on 'Login'
 
     fill_in 'Email', with: email
     fill_in 'Password', with: password
-    fill_in 'Password confirmation', with: password
-    click_on 'Sign up'
+    click_on 'Log in'
   end
 end
