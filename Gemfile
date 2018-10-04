@@ -7,7 +7,7 @@ end
 
 gem 'rails',        '~> 5.2.0'
 gem 'configatron'
-gem 'nokogiri',     '>= 1.7.2' # security update
+gem 'devise'
 gem 'pg'
 gem 'puma'
 gem 'pundit'
@@ -19,7 +19,6 @@ gem 'stripe'
 gem 'stripe-rails'
 
 # Front End
-gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'lodash-rails'
@@ -29,7 +28,6 @@ gem 'twitter-bootstrap-rails'
 
 # activeadmin
 gem 'activeadmin'
-gem 'devise'
 
 # Services
 gem 'analytics-ruby', require: 'segment'
@@ -76,4 +74,3 @@ end
 group :production do
   gem 'therubyracer'
 end
-gem 'rails-html-sanitizer', '>= 1.0.4'
