@@ -1,15 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Payment Flow' do
-  let(:user) { create :user, uid: 12345, provider: 'auth0' }
+  let!(:user) { create :user, password: '12345678', email: 'email@example.com' }
   def fill_and_submit_sign_up_form
     visit '/'
     click_on 'Login'
 
     fill_in 'Email', with: 'email@example.com'
     fill_in 'Password', with: '12345678'
-    fill_in 'Password confirmation', with: '12345678'
-    click_on 'Sign up'
+    click_on 'Log in'
   end
 
   it do
