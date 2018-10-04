@@ -12,6 +12,10 @@ describe EventTracker do
 
     context 'signup' do
       let(:event) { :signup }
+      before do
+        expect_any_instance_of(Segment::Analytics::Client).to receive(:identify) { true }
+        expect_any_instance_of(Segment::Analytics::Client).to receive(:track) { true }
+      end
 
       it 'should not crash' do
         expect { subject }.not_to raise_error
