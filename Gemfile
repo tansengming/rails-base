@@ -19,12 +19,12 @@ gem 'stripe'
 gem 'stripe-rails'
 
 # Front End
+gem 'bootstrap'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
 gem 'turbolinks'
-gem 'twitter-bootstrap-rails'
 
 # activeadmin
 gem 'activeadmin'
@@ -74,5 +74,5 @@ group :test do
 end
 
 group :production do
-  gem 'therubyracer'
+  gem 'mini_racer'
 end
