@@ -4,6 +4,7 @@
     %title RailsBase
     = stylesheet_link_tag "application", media: "all"
     = csrf_meta_tags
+    = javascript_include_tag 'application', defer: true
     = render 'shared/heap'
   %body
     %nav.navbar.navbar-default
@@ -26,7 +27,6 @@
             %p.alert.alert-danger
               = alert
       = yield
-      = javascript_include_tag "application"
       = yield :javascripts
       - # to use
       - # - content_for :javascripts do
