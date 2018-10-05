@@ -40,7 +40,7 @@ class ApplicationPolicy
 
   private
   def paid?
-    user.active_until && user.active_until > Time.now
+    user.active_until.presence > Time.now
   end
 
   class Scope

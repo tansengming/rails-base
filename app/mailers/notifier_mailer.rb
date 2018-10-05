@@ -6,12 +6,12 @@ class NotifierMailer < SendWithUsMailer::Base
   end
 
   private
-  def default_assigns_for(recipient)
+  # def default_assigns_for(recipient)
     # assign :recipient, recipient.name
-  end
+  # end
 
   def mail_for(recipient, email_id, opts = {})
-    default_assigns_for recipient
+    # default_assigns_for recipient
     default_opts = {
                       recipient_address: recipient.email, 
                       email_id: email_id
