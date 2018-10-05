@@ -26,6 +26,7 @@ class EventTracker
   end
 
   private
+
   def segment
     @segment ||= Segment::Analytics.new({
       write_key: ENV['SEGMENT_WRITE_KEY']

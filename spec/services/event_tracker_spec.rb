@@ -1,5 +1,5 @@
 require 'segment'
-require File.expand_path("../../../app/services/event_tracker", __FILE__)
+require File.expand_path('../../app/services/event_tracker', __dir__)
 
 describe EventTracker do
   before { ENV['SEGMENT_WRITE_KEY'] = 'segment-write-key' }

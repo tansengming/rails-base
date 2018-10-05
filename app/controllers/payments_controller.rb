@@ -4,7 +4,7 @@ class PaymentsController < ApplicationController
   helper_method :selected_plan
 
   def new
-    redirect_to plans_path, flash: {alert: 'Please select a plan before continuing.'} if selected_plan.nil?
+    redirect_to plans_path, flash: {alert: 'Please select a plan before continuing.'} unless selected_plan
   end
 
   def create

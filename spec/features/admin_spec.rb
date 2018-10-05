@@ -7,7 +7,7 @@ describe 'Admin' do
   describe 'login' do
     before do
       sign_in admin
-      visit "/admin"
+      visit '/admin'
     end
     its(:current_path) { should == '/admin' }
 
@@ -19,7 +19,7 @@ describe 'Admin' do
       end
 
       it 'should not have an exception' do
-         expect { subject }.not_to raise_error
+        expect { subject }.not_to raise_error
       end
     end
   end
