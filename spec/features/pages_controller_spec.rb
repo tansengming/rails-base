@@ -16,5 +16,5 @@ RSpec.describe PagesController do
     it 'should not show the page' do
       expect { subject }.to raise_error ActiveRecord::RecordNotFound
     end
-   end
+  end
 end
