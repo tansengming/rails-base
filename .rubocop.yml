@@ -18,3 +18,5 @@ Metrics/BlockLength:
     - 'spec/**/*'
 Style/Documentation:
   Enabled: false
+Style/LambdaCall:
+  Enabled: false
