@@ -1,16 +1,16 @@
 .row
   .col-md-5
-    = form_tag(payment_path, method: "post", id: 'payment-form') do
+    = form_tag(payment_path, method: 'post', id: 'payment-form') do
       .form-row
-        %label{:for => "card-element"}
+        %label{ for: 'card-element' }
           Credit or debit card
         #card-element
           / a Stripe Element will be inserted here.
         / Used to display Element errors
         #card-errors
       = hidden_field_tag 'plan', selected_plan.id
-      %button{type: 'submit'}
-        = "Pay $#{selected_plan&.amount&./100&.to_f} Every Month"
+      %button{ type: 'submit' }
+        Pay $#{selected_plan&.amount&./100&.to_f} Every Month
 %style
   :plain
     .StripeElement {
@@ -43,7 +43,7 @@
     }
 
 - content_for :javascripts do
-  #{stripe_javascript_tag}
+  = stripe_javascript_tag
   :javascript
     var elements = stripe.elements();
     var card = elements.create('card');

@@ -2,7 +2,7 @@
 %html
   %head
     %title RailsBase
-    = stylesheet_link_tag "application", media: "all"
+    = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
     = render 'shared/heap'
   %body
@@ -26,12 +26,13 @@
             %p.alert.alert-danger
               = alert
       = yield
-      = javascript_include_tag "application"
+      = javascript_include_tag 'application'
       = yield :javascripts
-      - # to use
-      - # - content_for :javascripts do
-      - #   :javascript
-      - #     $(document).ready(function({});)
+      :ruby
+        # to use
+        # - content_for :javascripts do
+        #   :javascript
+        #     $(document).ready(function({});)
     %footer.footer
       .container
         = link_to 'Terms of Service', page_path('terms')
