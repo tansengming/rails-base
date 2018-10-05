@@ -3,8 +3,8 @@
   %head
     %title
       = Rails.application.class.parent_name
-    = stylesheet_link_tag "application", media: "all"
     = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', defer: true
     = render 'shared/heap'
   %body
@@ -29,10 +29,11 @@
               = alert
       = yield
       = yield :javascripts
-      - # to use
-      - # - content_for :javascripts do
-      - #   :javascript
-      - #     $(document).ready(function({});)
+      :ruby
+        # to use
+        # - content_for :javascripts do
+        #   :javascript
+        #     $(document).ready(function({});)
     %footer.footer
       .container
         = link_to 'Terms of Service', page_path('terms')

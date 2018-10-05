@@ -1,0 +1,22 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'spec/support/**/*'
+    - 'spec/*_helper.rb'
+    - 'bin/{rails,rake}'
+Metrics/LineLength:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+Style/Documentation:
+  Enabled: false
+Style/LambdaCall:
+  Enabled: false

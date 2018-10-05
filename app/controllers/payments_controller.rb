@@ -4,7 +4,7 @@ class PaymentsController < ApplicationController
   helper_method :selected_plan
 
   def new
-    redirect_to plans_path, flash: {alert: 'Please select a plan before continuing.'} if selected_plan.nil?
+    redirect_to plans_path, flash: { alert: 'Please select a plan before continuing.' } unless selected_plan
   end
 
   def create
@@ -21,11 +21,12 @@ class PaymentsController < ApplicationController
   end
 
   private
+
   def retry_payment
-    redirect_to(new_payment_path, flash: {alert: 'There was a problem with the payment, please try again'}) and return
+    redirect_to(new_payment_path, flash: { alert: 'There was a problem with the payment, please try again' }) && return
   end
 
   def selected_plan
-    Stripe::Plans.all.find{|plan| plan.id.to_s == params[:plan]}
+    Stripe::Plans.all.find { |plan| plan.id.to_s == params[:plan] }
   end
 end

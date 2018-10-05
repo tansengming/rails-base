@@ -1,5 +1,6 @@
 class ApplicationPolicy
   attr_reader :user, :record
+  delegate :active_until, to: :user
 
   def initialize(user, record)
     @user = user
@@ -11,7 +12,7 @@ class ApplicationPolicy
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    scope.where(id: record.id).exists?
   end
 
   def create?
@@ -39,8 +40,9 @@ class ApplicationPolicy
   end
 
   private
+
   def paid?
-    user.active_until && user.active_until > Time.now
+    active_until && active_until > Time.now
   end
 
   class Scope
