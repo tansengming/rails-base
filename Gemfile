@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails',        '~> 5.2.0'
+gem 'rails', '~> 5.2.0'
+
 gem 'configatron'
 gem 'devise'
 gem 'pg'
@@ -35,7 +36,7 @@ gem 'rollbar'
 
 # Optional Services
 gem 'analytics-ruby', require: 'segment'
-gem "intercom-rails"
+gem 'intercom-rails'
 gem 'sendwithus_ruby_action_mailer'
 # gem 'skylight'
 
@@ -65,9 +66,9 @@ group :test do
   gem 'database_cleaner'
   gem 'fuubar'
   gem 'rspec-its'
-  gem 'rspec_junit_formatter'
   gem 'rspec-rails'
   gem 'rspec-retry'
+  gem 'rspec_junit_formatter'
   gem 'simplecov'
   gem 'stripe-ruby-mock', require: 'stripe_mock'
   gem 'webmock'

@@ -4,6 +4,7 @@ AllCops:
     - 'config/**/*'
     - 'script/**/*'
     - 'spec/support/**/*'
+    - 'spec/*_helper.rb'
     - 'bin/{rails,rake}'
 Metrics/LineLength:
   Enabled: false
@@ -16,4 +17,6 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
 Style/Documentation:
+  Enabled: false
+Style/LambdaCall:
   Enabled: false

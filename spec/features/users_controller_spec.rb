@@ -17,7 +17,7 @@ describe 'users controller' do
       context 'if heap id exists' do
         before { configatron.heap.app_id = 'fake-id' }
         after  { configatron.heap.app_id = nil }
-        
+
         it 'should have heap' do
           subject
           expect(page.body).to include 'heap.identify'

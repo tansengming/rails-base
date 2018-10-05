@@ -10,7 +10,7 @@ describe 'Admin' do
   describe 'login' do
     before do
       sign_in super_admin
-      visit "/super_admins"
+      visit '/super_admins'
     end
     its(:current_path) { should == '/super_admins' }
 
