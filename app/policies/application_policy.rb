@@ -1,5 +1,6 @@
 class ApplicationPolicy
   attr_reader :user, :record
+  delegate :active_until, to: :user
 
   def initialize(user, record)
     @user = user
@@ -40,7 +41,7 @@ class ApplicationPolicy
 
   private
   def paid?
-    user.active_until.presence > Time.now
+    active_until && active_until > Time.now
   end
 
   class Scope
