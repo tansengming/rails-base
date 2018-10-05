@@ -1,5 +1,5 @@
-require "rails_helper"
-require "pundit/rspec"
+require 'rails_helper'
+require 'pundit/rspec'
 
 RSpec.describe UserPolicy do
   subject { described_class }
