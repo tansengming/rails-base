@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.5.1'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -7,6 +8,7 @@ end
 
 gem 'rails', '~> 5.2.0'
 
+gem 'activeadmin'
 gem 'configatron'
 gem 'devise'
 gem 'pg'
@@ -26,9 +28,7 @@ gem 'jquery-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
 gem 'turbolinks'
-
-# activeadmin
-gem 'activeadmin'
+gem 'uglifier'
 
 # Required Services
 gem 'newrelic_rpm'
@@ -39,9 +39,6 @@ gem 'analytics-ruby', require: 'segment'
 gem 'intercom-rails'
 gem 'sendwithus_ruby_action_mailer'
 # gem 'skylight'
-
-# assets
-gem 'uglifier'
 
 group :development do
   gem 'listen'
