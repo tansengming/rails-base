@@ -22,12 +22,13 @@ gem 'stripe'
 gem 'stripe-rails'
 
 # Front End
+gem 'bootstrap'
+gem 'devise-bootstrap-views'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'lodash-rails'
 gem 'sass-rails'
 gem 'turbolinks'
-gem 'twitter-bootstrap-rails'
 gem 'uglifier'
 
 # Required Services
@@ -72,5 +73,5 @@ group :test do
 end
 
 group :production do
-  gem 'therubyracer'
+  gem 'mini_racer'
 end
