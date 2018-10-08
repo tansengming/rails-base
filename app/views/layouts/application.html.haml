@@ -44,15 +44,16 @@
     %footer.pt-4.my-md-5.border-top.container-fluid
       .row.justify-content-md-center
         .col.col-md-auto
-          = Rails.application.class.parent_name
-          © 2018
-        .col.col-md-auto
           %ul.list-unstyled.text-small
             %li
-              %a.text-muted{:href => page_path('privary')}
+              %a.text-muted{:href => page_path('privacy')}
                 Privacy
         .col.col-md-auto
           %ul.list-unstyled.text-small
             %li
               %a.text-muted{:href => page_path('terms')}
                 Terms
+      .row.justify-content-md-center
+        .col.col-md-auto
+          = Rails.application.class.parent_name
+          © 2018
