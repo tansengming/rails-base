@@ -23,8 +23,6 @@
           %ul.navbar-nav.navbar-right
             %li.nav-item
               = link_to "Log Out #{current_user.email}", destroy_user_session_path, method: 'delete', class: 'btn btn-default'
-
-
     .container-fluid
       .row
         .col
