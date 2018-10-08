@@ -39,7 +39,18 @@
         # - content_for :javascripts do
         #   :javascript
         #     $(document).ready(function({});)
-    %footer.footer
-      .container
-        %small
-          = link_to 'Terms of Service', page_path('terms')
+    %footer.pt-4.my-md-5.border-top
+      .row.justify-content-md-center
+        .col.col-md-auto
+          = Rails.application.class.parent_name
+          © 2018
+        .col.col-md-auto
+          %ul.list-unstyled.text-small
+            %li
+              %a.text-muted{:href => page_path('privary')}
+                Privary
+        .col.col-md-auto
+          %ul.list-unstyled.text-small
+            %li
+              %a.text-muted{:href => page_path('terms')}
+                Terms
