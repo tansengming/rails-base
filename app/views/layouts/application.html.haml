@@ -32,7 +32,9 @@
           - if alert
             %p.alert.alert-danger
               = alert
-      = yield
+      .row.pt-3
+        %main.col{role: 'main'}
+          = yield
       = yield :javascripts
       :ruby
         # to use
