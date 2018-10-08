@@ -1,6 +1,6 @@
-.row
-  .col-md-5{ data: { turbolinks: 'false' } }
-    - @plans.each do |plan|
+.row.justify-content-md-center
+  - @plans.each do |plan|
+    .col-md-auto.col{ data: { turbolinks: 'false' } }
       %a.btn.btn-default{ href: new_payment_path(plan: plan.id) }
         %p
           = plan.name
