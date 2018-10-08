@@ -8,6 +8,7 @@ end
 
 gem 'rails', '~> 5.2.0'
 
+gem 'activeadmin'
 gem 'configatron'
 gem 'devise'
 gem 'pg'
@@ -27,9 +28,7 @@ gem 'lodash-rails'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'twitter-bootstrap-rails'
-
-# activeadmin
-gem 'activeadmin'
+gem 'uglifier'
 
 # Required Services
 gem 'newrelic_rpm'
@@ -40,9 +39,6 @@ gem 'analytics-ruby', require: 'segment'
 gem 'intercom-rails'
 gem 'sendwithus_ruby_action_mailer'
 # gem 'skylight'
-
-# assets
-gem 'uglifier'
 
 group :development do
   gem 'listen'
