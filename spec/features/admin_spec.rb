@@ -13,7 +13,7 @@ describe 'Admin' do
 
     describe 'walking around the place' do
       before do
-        click_link 'Users'
+        click_link 'User'
         click_link 'New User'
         click_link 'Logout'
       end
