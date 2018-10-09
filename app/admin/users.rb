@@ -7,7 +7,7 @@ ActiveAdmin.register User do
     id_column
     column :email
     actions
-    column () do |user|
+    column do |user|
       link_to 'Login', impersonate_admin_user_path(user)
     end
   end
