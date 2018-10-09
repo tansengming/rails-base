@@ -35,7 +35,7 @@ ActiveAdmin.register User do
     active_admin_comments
   end
 
-  form do |f|
+  form do
     semantic_errors
     inputs do
       input :email
