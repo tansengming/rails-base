@@ -13,6 +13,9 @@ describe 'Admin' do
 
       click_link 'User'
       click_link 'New User'
+      click_link 'Cancel'
+      click_link 'View'
+
       click_link 'Logout'
       expect { subject }.not_to raise_error
     end
