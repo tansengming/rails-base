@@ -1,6 +1,8 @@
 ActiveAdmin.register User do
   permit_params :email, :password, :password_confirmation
 
+  filter :email_cont, label: 'Email'
+
   index do
     id_column
     column :email
