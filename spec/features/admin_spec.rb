@@ -2,25 +2,19 @@ require 'rails_helper'
 
 describe 'Admin' do
   subject { page }
-  let(:admin) { create(:admin_user) }
+  let(:admin) { create :admin_user }
+  let!(:user) { create :user }
 
-  describe 'login' do
-    before do
+  describe 'walking around the place' do
+    it 'should not crash' do
       sign_in admin
       visit '/admin'
-    end
-    its(:current_path) { should == '/admin' }
+      expect(subject.current_path).to eq '/admin'
 
-    describe 'walking around the place' do
-      before do
-        click_link 'User'
-        click_link 'New User'
-        click_link 'Logout'
-      end
-
-      it 'should not have an exception' do
-        expect { subject }.not_to raise_error
-      end
+      click_link 'User'
+      click_link 'New User'
+      click_link 'Logout'
+      expect { subject }.not_to raise_error
     end
   end
 end
