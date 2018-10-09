@@ -16,6 +16,7 @@ Lint/AmbiguousBlockAssociation:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+    - 'admin/**/*'
 Style/Documentation:
   Enabled: false
 Style/LambdaCall:
