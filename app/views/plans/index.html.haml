@@ -1,13 +1,45 @@
-.row.justify-content-md-center
-  - @plans.each do |plan|
-    .col-md-auto.col{ data: { turbolinks: 'false' } }
-      %a.btn.btn-default{ href: new_payment_path(plan: plan.id) }
-        %p
-          = plan.name
+/ https://getbootstrap.com/docs/4.1/examples/pricing/
+
+.pricing-header.px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+  %h1.display-4
+    Pricing
+  %p.lead
+    Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.
+
+.row.justify-content-md-center{ data: { turbolinks: 'false' } }
+  .card-deck.mb-3.text-center.px-3
+    - @plans.each do |plan|
+      .card.mb-4.shadow-sm.plan{ id: "#{plan.name.parameterize}-plan" }
+        .card-header
+          %h4.my-0.font-weight-normal
+            = plan.name
+        .card-body
+          %h1.card-title.pricing-card-title
+            = "$#{plan.amount / 100.0}"
+            %small.text-muted
+              \/
+              = plan.interval[0..1]
           %p
             = plan.metadata[:description]
-          %p
-            Charges
-            = "$#{plan.amount / 100.0}"
-            every
-            = plan.interval
+          %ul.list-unstyled.mt-3.mb-4
+            %li 10 users included
+            %li 2 GB of storage
+            %li Email support
+            %li Help center access
+        .card-footer.bg-white.border-top-0
+          %a.btn.btn-lg.btn-block.btn-outline-primary{ href: new_payment_path(plan: plan.id) }
+            Get Started
+    .card.mb-4.shadow-sm.plan{ id: 'custom-plan' }
+      .card-header
+        %h4.my-0.font-weight-normal
+          Custom
+      .card-body
+        %h1.card-title.pricing-card-title
+          Contact Us
+        %p
+          Happy to customize a plan to suit you
+        %ul.list-unstyled.mt-3.mb-4
+          %li Phone Support
+      .card-footer.bg-white.border-top-0
+        %a.btn.btn-lg.btn-block.btn-outline-primary{ href: "mailto:#{ApplicationMailer.default[:return_path] || ApplicationMailer.default[:from]}" }
+          Contact Us
