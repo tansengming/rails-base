@@ -9,7 +9,7 @@
 .row.justify-content-md-center{ data: { turbolinks: 'false' } }
   .card-deck.mb-3.text-center.px-3
     - @plans.each do |plan|
-      .card.mb-4.shadow-sm
+      .card.mb-4.shadow-sm.plan{ id: "#{plan.name.parameterize}-plan" }
         .card-header
           %h4.my-0.font-weight-normal
             = plan.name
@@ -29,7 +29,7 @@
         .card-footer.bg-white.border-top-0
           %a.btn.btn-lg.btn-block.btn-outline-primary{ href: new_payment_path(plan: plan.id) }
             Get Started
-    .card.mb-4.shadow-sm
+    .card.mb-4.shadow-sm.plan{ id: 'custom-plan' }
       .card-header
         %h4.my-0.font-weight-normal
           Custom

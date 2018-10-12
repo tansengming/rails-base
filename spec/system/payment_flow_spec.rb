@@ -16,7 +16,9 @@ RSpec.describe 'Payment Flow' do
     expect(page.current_path).to eq '/plans'
 
     # pick a plan
-    click_on 'Nice Tip'
+    within '#nice-tip-plan' do
+      click_on 'Get Started'
+    end
 
     expect(page.current_path).to eq new_payment_path
     # Note: cannot fulfill payment because there is no way for me to
