@@ -18,7 +18,6 @@ gem 'rack-attack'
 gem 'redis-rails'
 gem 'reform-rails'
 gem 'sidekiq'
-gem 'stripe'
 gem 'stripe-rails'
 
 # Front End
