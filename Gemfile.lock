@@ -352,6 +352,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    scout_apm (2.4.19)
     selenium-webdriver (3.14.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -462,6 +463,7 @@ DEPENDENCIES
   rspec-retry
   rspec_junit_formatter
   sass-rails
+  scout_apm
   sendwithus_ruby_action_mailer
   sidekiq
   simplecov

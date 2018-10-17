@@ -33,6 +33,7 @@ gem 'uglifier'
 # Required Services
 gem 'newrelic_rpm'
 gem 'rollbar'
+gem 'scout_apm'
 
 # Optional Services
 gem 'analytics-ruby', require: 'segment'
