@@ -8,8 +8,7 @@ describe 'roots controller' do
     context 'when not logged in' do
       it 'should not redirect' do
         visit '/'
-        expect(page.status_code).to eq 200
-        expect(page.body).to include 'Login' 
+        expect(page.body).to have_text 'Login' 
       end
     end
 
