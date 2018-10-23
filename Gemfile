@@ -52,6 +52,7 @@ group :development, :test do
   # gem 'awesome_print', require: 'ap'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'tapp'
 end
 
