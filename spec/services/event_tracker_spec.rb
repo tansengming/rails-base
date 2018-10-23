@@ -1,7 +1,7 @@
 require 'segment'
 require File.expand_path('../../app/services/event_tracker', __dir__)
 
-describe EventTracker do
+RSpec.describe EventTracker do
   before { ENV['SEGMENT_WRITE_KEY'] = 'segment-write-key' }
   after  { ENV['SEGMENT_WRITE_KEY'] = nil }
 

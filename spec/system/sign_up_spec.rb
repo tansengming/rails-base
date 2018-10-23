@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Siging Up' do
+RSpec.describe 'Siging Up' do
   def fill_and_submit_sign_up_form(email = 'email@example.com', password = '12345678')
     visit '/'
     click_on 'Login'

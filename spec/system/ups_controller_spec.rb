@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe UpsController do
+RSpec.describe UpsController do
   describe '/up' do
     context 'json' do
       subject { visit '/up.json' }

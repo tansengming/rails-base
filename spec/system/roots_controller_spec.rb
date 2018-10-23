@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'roots controller' do
+RSpec.describe 'roots controller' do
   subject { page }
   let(:user) { create :user }
 
