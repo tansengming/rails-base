@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe NotifierMailer do
+RSpec.describe NotifierMailer do
   let(:user) { create :user }
 
   describe '#welcome' do

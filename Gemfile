@@ -26,7 +26,6 @@ gem 'devise-bootstrap-views'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'lodash-rails'
-gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
 
@@ -50,7 +49,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'awesome_print', require: 'ap'
+  # gem 'awesome_print', require: 'ap'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'tapp'
@@ -58,10 +57,10 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'capybara-screenshot'
   gem 'capybara-selenium'
   gem 'chromedriver-helper'
   gem 'database_cleaner'
+  gem 'faker'
   gem 'fuubar'
   gem 'rspec-its'
   gem 'rspec-rails'

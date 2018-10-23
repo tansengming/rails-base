@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe UsersController do
+RSpec.describe UsersController do
   let(:user) { create(:user) }
 
   describe 'GET /edit' do

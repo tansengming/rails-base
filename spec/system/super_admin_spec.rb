@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Admin' do
+RSpec.describe 'Admin' do
   subject { page }
   let(:admin)       { create(:admin_user, email: 'an_admin@example.com') }
   let(:super_admin) { create(:super_admin) }
