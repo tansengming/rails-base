@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PaymentsController do
+RSpec.describe Stripetk::PaymentsController do
   let(:user) { create :user }
   before { sign_in user }
 
@@ -16,7 +16,7 @@ RSpec.describe PaymentsController do
 
     context 'when there is not a selected plan' do
       it 'should be a redirect' do
-        expect(subject).to redirect_to '/plans'
+        expect(subject).to redirect_to '/stripetk/plans'
       end
     end
 
@@ -43,7 +43,7 @@ RSpec.describe PaymentsController do
       it 'should create a new stripe customer' do
         expect { subject }.to change { RemoteKey.count }.by(1)
         expect(user.reload.stripe_customer).not_to be_nil
-        expect(subject).to redirect_to page_path('thanks')
+        expect(subject).to redirect_to '/pages/thanks'
         expect(user.stripe_customer.retrieve.subscriptions.data.map { |s| s.plan[:id] }).to eq ['good_tip']
       end
     end
@@ -53,7 +53,7 @@ RSpec.describe PaymentsController do
 
       it 'should not create a new stripe customer' do
         expect { subject }.not_to change { RemoteKey.count }
-        expect(subject).to redirect_to new_payment_path
+        expect(subject).to redirect_to '/stripetk/payment/new'
       end
     end
 
@@ -73,7 +73,7 @@ RSpec.describe PaymentsController do
 
       it 'should not create a new stripe customer' do
         expect { subject }.not_to change { RemoteKey.count }
-        expect(subject).to redirect_to new_payment_path
+        expect(subject).to redirect_to '/stripetk/payment/new'
       end
     end
 
@@ -83,7 +83,7 @@ RSpec.describe PaymentsController do
       it 'should not create a new stripe customer' do
         expect { subject }.not_to change { RemoteKey.count }
         expect(user.reload.stripe_customer).to be_nil
-        expect(subject).to redirect_to new_payment_path
+        expect(subject).to redirect_to '/stripetk/payment/new'
       end
     end
 
@@ -93,7 +93,7 @@ RSpec.describe PaymentsController do
       it 'should not create a new stripe customer' do
         expect { subject }.not_to change { RemoteKey.count }
         expect(user.reload.stripe_customer).to be_nil
-        expect(subject).to redirect_to new_payment_path
+        expect(subject).to redirect_to '/stripetk/payment/new'
       end
     end
   end
