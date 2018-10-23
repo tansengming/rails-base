@@ -1,6 +1,6 @@
 .row
   .col-md-5
-    = form_tag(payment_path, method: 'post', id: 'payment-form') do
+    = form_tag(stripetk_payment_path, method: 'post', id: 'payment-form') do
       .form-row
         %label{ for: 'card-element' }
           Credit or debit card

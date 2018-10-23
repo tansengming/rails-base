@@ -29,7 +29,7 @@ describe 'users controller' do
 
         it 'should redirect to plans' do
           subject
-          expect(page.current_path).to eq '/plans'
+          expect(page.current_path).to eq '/stripetk/plans'
         end
       end
     end

@@ -8,11 +8,12 @@ describe 'roots controller' do
   let!(:user) { create :user, password: '12345678', email: 'email@example.com' }
 
   describe 'GET /' do
-    before { visit '/' }
-
     context 'when not logged in' do
-      its(:status_code) { should eq 200 }
-      its(:body) { should include 'Login' }
+      it 'should not redirect' do
+        visit '/'
+        expect(page.status_code).to eq 200
+        expect(page.body).to include 'Login' 
+      end
     end
 
     context 'when logged in' do
@@ -20,7 +21,7 @@ describe 'roots controller' do
 
       it 'should redirect' do
         visit '/'
-        expect(subject.current_path).to eq plans_path
+        expect(subject.current_path).to eq '/stripetk/plans'
       end
     end
   end

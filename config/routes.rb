@@ -18,10 +18,12 @@ Rails.application.routes.draw do
   get '/user/edit' => 'users#edit', as: :user_root # creates user_root_path for Devise's after_sign_in_path
 
   resources :pages,     only: :show
-  resources :plans,     only: :index
-  resource  :payment,   only: [:new, :create]
   resource  :up,        only: :show
   resource  :user,      only: :edit
 
+  namespace :stripetk do
+    resources :plans,   only: :index
+    resource  :payment, only: [:new, :create]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,4 +1,4 @@
-class PlansController < ApplicationController
+class Stripetk::PlansController < ApplicationController
   before_action :authenticate_user!
 
   def index

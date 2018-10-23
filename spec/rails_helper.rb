@@ -22,7 +22,7 @@ require 'rspec/rails'
 #
 # Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
-%w[rspec_retry chrome_headless database_cleaner].each do |support_file|
+%w[rspec_retry database_cleaner].each do |support_file|
   require Rails.root.join("spec/support/#{support_file}.rb")
 end
 

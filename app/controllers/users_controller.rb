@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   rescue_from Pundit::NotAuthorizedError do
-    redirect_to plans_path, notice: 'Please subscribe to continue.'
+    redirect_to stripetk_plans_path, notice: 'Please subscribe to continue.'
   end
 
   def edit
