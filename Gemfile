@@ -26,7 +26,6 @@ gem 'devise-bootstrap-views'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'lodash-rails'
-gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
 
