@@ -1,11 +1,8 @@
 require 'rails_helper'
-require Rails.root.join('spec/support/feature_spec_helpers')
 
 describe 'roots controller' do
-  include FeatureSpecHelpers
-
   subject { page }
-  let!(:user) { create :user, password: '12345678', email: 'email@example.com' }
+  let(:user) { create :user }
 
   describe 'GET /' do
     context 'when not logged in' do
@@ -17,7 +14,7 @@ describe 'roots controller' do
     end
 
     context 'when logged in' do
-      before { login email: 'email@example.com', password: '12345678' }
+      before { sign_in user }
 
       it 'should redirect' do
         visit '/'

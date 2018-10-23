@@ -1,9 +1,6 @@
 require 'rails_helper'
-require Rails.root.join('spec/support/feature_spec_helpers')
 
 describe 'Siging Up' do
-  include FeatureSpecHelpers
-
   def fill_and_submit_sign_up_form(email = 'email@example.com', password = '12345678')
     visit '/'
     click_on 'Login'
