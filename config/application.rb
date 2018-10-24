@@ -10,8 +10,6 @@ module RailsBase
   class Application < Rails::Application
     config.middleware.use Rack::Attack
 
-    config.cache_store = :redis_store, ENV['REDIS_URL']
-
     config.active_job.queue_adapter = :sidekiq
     config.active_job.queue_name_prefix = "rails5_#{Rails.env}"
 
