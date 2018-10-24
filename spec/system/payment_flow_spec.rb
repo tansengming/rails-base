@@ -16,7 +16,7 @@ RSpec.describe 'Payment Flow' do
     expect(page.current_path).to eq '/stripetk/payment/new'
     # Note: cannot fulfill payment because there is no way for me to
     # get a Strip token. Goes to failure path instead.
-    click_on 'Pay $0.99 Every Month'
+    click_on 'Submit Monthly Payment'
     expect(page.current_path).to eq '/stripetk/plans'
   end
 end
