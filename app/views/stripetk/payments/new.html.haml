@@ -1,16 +1,16 @@
 .row
-  .col-md-5
+  .col
     = form_tag(stripetk_payment_path, method: 'post', id: 'payment-form') do
       .form-row
         %label{ for: 'card-element' }
           Credit or debit card
-        #card-element
+        #card-element.form-control
           / a Stripe Element will be inserted here.
         / Used to display Element errors
         #card-errors
       = hidden_field_tag 'plan', selected_plan.id
-      %button{ type: 'submit' }
-        Pay $#{selected_plan&.amount&./100&.to_f} Every Month
+      %button.btn.btn-block.btn-outline-primary.my-3
+        Submit Monthly Payment
 %style
   :plain
     .StripeElement {
@@ -33,13 +33,6 @@
 
     .StripeElement--webkit-autofill {
       background-color: #fefde5 !important;
-    }
-
-    #payment-form button {
-      display: block;
-      width: calc(100% - 30px);
-      height: 40px;
-      margin: 40px 15px 0;
     }
 
 - content_for :javascripts do
