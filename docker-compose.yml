@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/app
     depends_on:
-      - postgres
+      - db
       - redis
       - mailcatcher
   app:
@@ -15,7 +15,7 @@ services:
     ports:
       - "3000:3000"
     command: rails server -b '0.0.0.0'
-  postgres:
+  db:
     image: postgres
     ports:
       - "5432:5432"
