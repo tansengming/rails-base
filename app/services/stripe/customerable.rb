@@ -3,7 +3,7 @@ module Stripe
     extend ActiveSupport::Concern
 
     included do
-      has_many  :remote_keys, as: :remoteable
+      has_many :remote_keys, as: :remoteable
       # has_one   :stripe_customer, -> { stripe_customers.order('id desc') }, class_name: 'RemoteKey', as: :remoteable
     end
 
@@ -16,7 +16,7 @@ module Stripe
     end
 
     def active_stripe_subscriptions
-      stripe_subscriptions.select{ |s| s.status == 'active' }
+      stripe_subscriptions.select { |s| s.status == 'active' }
     end
 
     def active_stripe_subscription?
