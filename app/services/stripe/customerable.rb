@@ -8,7 +8,7 @@ module Stripe
     end
 
     def stripe_customer
-      @stripe_customer ||= RemoteKey.stripe_customers.order('id desc').where(remoteable_id: self.id).first&.retrieve
+      @stripe_customer ||= remote_keys.stripe_customers.order('id desc').first&.retrieve
     end
 
     def stripe_subscriptions
