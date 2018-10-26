@@ -2,23 +2,32 @@ require 'rails_helper'
 require 'pundit/rspec'
 
 RSpec.describe UserPolicy do
+  include Stripe::CustomerableHelper
+
   subject { described_class }
+  let(:user) { make_customerable(User.new) }
 
   permissions :edit? do
     context 'when user has not paid' do
+      before { user.remove_subscriptions! }
+
       it 'denies access' do
-        expect(subject).not_to permit User.new
+        expect(subject).not_to permit user
       end
     end
 
     context 'when user has paid' do
+      before { user.add_subscription! }
+
       it 'grants access' do
-        expect(subject).to permit User.new(active_until: 10.days.from_now)
+        expect(subject).to permit user
       end
 
       context 'but payment has expired' do
+        before { user.remove_subscriptions! }
+
         it 'denise access' do
-          expect(subject).not_to permit User.new(active_until: 10.days.ago)
+          expect(subject).not_to permit user
         end
       end
     end

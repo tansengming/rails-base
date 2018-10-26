@@ -1,12 +1,18 @@
 module Stripe
   module Customerable
-    # TODO: cleanup
+    extend ActiveSupport::Concern
+
+    included do
+      has_many  :remote_keys, as: :remoteable
+      # has_one   :stripe_customer, -> { stripe_customers.order('id desc') }, class_name: 'RemoteKey', as: :remoteable
+    end
+
     def stripe_customer
-      @stripe_customer ||= RemoteKey.stripe_customers.order('id desc').where(remoteable_id: self.id).first&.retrieve || OpenStruct.new(subscriptions: []) 
+      @stripe_customer ||= RemoteKey.stripe_customers.order('id desc').where(remoteable_id: self.id).first&.retrieve
     end
 
     def stripe_subscriptions
-      stripe_customer.subscriptions
+      stripe_customer&.subscriptions || []
     end
 
     def active_stripe_subscriptions
