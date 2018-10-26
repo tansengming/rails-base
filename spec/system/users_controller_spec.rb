@@ -4,7 +4,7 @@ RSpec.describe 'users controller' do
   include Stripe::CustomerableHelper
   let(:user) { create :user }
 
-  before { make_customerable_with_subscription user }
+  before { make_customerable(user).with_subscriptions! }
 
   describe 'GET /user/edit' do
     subject { visit '/user/edit' }
@@ -28,7 +28,7 @@ RSpec.describe 'users controller' do
       end
 
       context 'when not active' do
-        before { make_customerable user }
+        before { make_customerable(user).remove_subscriptions! }
 
         it 'should redirect to plans' do
           subject
