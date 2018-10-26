@@ -22,13 +22,18 @@ require 'rspec/rails'
 #
 # Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
-%w[rspec_retry database_cleaner].each do |support_file|
+%w[rspec_retry database_cleaner stripe/customerable_helper].each do |support_file|
   require Rails.root.join("spec/support/#{support_file}.rb")
 end
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
+
+# Stripe Mock Server
+# https://github.com/rebelidealist/stripe-ruby-mock#running-the-mock-server
+# require 'thin'
+# StripeMock.spawn_server
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
