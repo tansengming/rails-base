@@ -1,8 +1,8 @@
 module Stripe
   module Customerable
-    # TODO: nil
+    # TODO: cleanup
     def stripe_customer
-      @stripe_customer ||= RemoteKey.stripe_customers.order('id desc').where(remoteable_id: self.id).first.retrieve
+      @stripe_customer ||= RemoteKey.stripe_customers.order('id desc').where(remoteable_id: self.id).first&.retrieve || OpenStruct.new(subscriptions: []) 
     end
 
     def stripe_subscriptions
