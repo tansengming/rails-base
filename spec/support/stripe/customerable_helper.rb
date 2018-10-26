@@ -7,7 +7,7 @@ module Stripe
       @customerable_testing_subscriptions ||= []
     end
 
-    def with_subscriptions!
+    def add_subscription!
       @customerable_testing_subscriptions = [OpenStruct.new(status: 'active')]
     end
 

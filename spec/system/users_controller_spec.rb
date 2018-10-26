@@ -4,7 +4,7 @@ RSpec.describe 'users controller' do
   include Stripe::CustomerableHelper
   let(:user) { create :user }
 
-  before { make_customerable(user).with_subscriptions! }
+  before { make_customerable(user).add_subscription! }
 
   describe 'GET /user/edit' do
     subject { visit '/user/edit' }
