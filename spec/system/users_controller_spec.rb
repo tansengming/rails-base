@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'users controller' do
-  let(:user) { create :user, active_until: 1.year.from_now }
+  include Stripe::CustomerableHelper
+  let(:user) { create :user }
+
+  before { make_customerable_with_subscription user }
 
   describe 'GET /user/edit' do
     subject { visit '/user/edit' }
@@ -25,7 +28,7 @@ RSpec.describe 'users controller' do
       end
 
       context 'when not active' do
-        before { user.update! active_until: nil }
+        before { make_customerable user }
 
         it 'should redirect to plans' do
           subject
