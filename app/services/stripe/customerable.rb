@@ -8,11 +8,7 @@ module Stripe
     end
 
     def stripe_customer
-      @stripe_customer ||= if stripe_customer_id?
-                             stripe_customer_remote_key.retrieve
-                           else
-                             nil
-                           end
+      @stripe_customer ||= stripe_customer_remote_key.retrieve if stripe_customer_id?
     end
 
     def stripe_subscriptions
