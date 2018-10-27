@@ -32,6 +32,7 @@ module Stripe
     end
 
     private
+
     def stripe_customer_remote_key
       remote_keys.stripe_customers.order('id desc').first
     end
