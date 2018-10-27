@@ -8,11 +8,19 @@ module Stripe
     end
 
     def stripe_customer
-      @stripe_customer ||= remote_keys.stripe_customers.order('id desc').first&.retrieve
+      @stripe_customer ||= if has_stripe_customer_id?
+                             stripe_customer_remote_key.retrieve
+                           else
+                             nil
+                           end
     end
 
     def stripe_subscriptions
-      stripe_customer&.subscriptions || []
+      if has_stripe_customer?
+        stripe_customer.subscriptions
+      else
+        []
+      end
     end
 
     def active_stripe_subscriptions
@@ -21,6 +29,19 @@ module Stripe
 
     def active_stripe_subscription?
       active_stripe_subscriptions.any?
+    end
+
+    private
+    def stripe_customer_remote_key
+      remote_keys.stripe_customers.order('id desc').first
+    end
+
+    def has_stripe_customer_id?
+      stripe_customer_remote_key.present?
+    end
+
+    def has_stripe_customer?
+      stripe_customer.present?
     end
   end
 end
