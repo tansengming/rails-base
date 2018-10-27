@@ -8,7 +8,7 @@ module Stripe
     end
 
     def stripe_customer
-      @stripe_customer ||= if has_stripe_customer_id?
+      @stripe_customer ||= if stripe_customer_id?
                              stripe_customer_remote_key.retrieve
                            else
                              nil
@@ -16,7 +16,7 @@ module Stripe
     end
 
     def stripe_subscriptions
-      if has_stripe_customer?
+      if stripe_customer?
         stripe_customer.subscriptions
       else
         []
@@ -37,11 +37,11 @@ module Stripe
       remote_keys.stripe_customers.order('id desc').first
     end
 
-    def has_stripe_customer_id?
+    def stripe_customer_id?
       stripe_customer_remote_key.present?
     end
 
-    def has_stripe_customer?
+    def stripe_customer?
       stripe_customer.present?
     end
   end
