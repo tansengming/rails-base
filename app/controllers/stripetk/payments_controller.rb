@@ -17,7 +17,7 @@ module Stripetk
       @form = PaymentForm.new(OpenStruct.new)
 
       if @form.validate(payment_params)
-        Payments::Create.(payment_params[:stripeToken], payment_params[:plan], current_user)
+        Payments::Create.(stripe_token: payment_params[:stripeToken], plan_name: payment_params[:plan], user: current_user)
 
         redirect_to page_path('thanks')
       else

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include Stripe::Customerable
   devise  :database_authenticatable,
           :lockable,
           # :registerable,
@@ -6,9 +7,6 @@ class User < ApplicationRecord
           :rememberable,
           :trackable,
           :validatable
-
-  has_many  :remote_keys, as: :remoteable
-  has_one   :stripe_customer, -> { stripe_customers.order('id desc') }, class_name: 'RemoteKey', as: :remoteable
 
   validates :email, uniqueness: true, presence: true
   validates_format_of :email, with: Devise.email_regexp, allow_blank: true
