@@ -7,7 +7,7 @@
         #card-element.form-control
           / a Stripe Element will be inserted here.
         / Used to display Element errors
-        #card-errors
+        #card-errors.alert-danger
       = hidden_field_tag 'plan', selected_plan.id
       %button.btn.btn-block.btn-outline-primary.my-3
         Submit Monthly Payment
