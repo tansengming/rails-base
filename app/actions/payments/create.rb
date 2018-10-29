@@ -18,8 +18,7 @@ module Payments
         source: stripe_token,
         plan: plan_name
       )
-
-      user.remote_keys.stripe_customers.create! key: new_stripe_customer.id
+      user.stripe_customer = new_stripe_customer
     end
   end
 end

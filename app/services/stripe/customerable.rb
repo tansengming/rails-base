@@ -7,6 +7,10 @@ module Stripe
       # has_one   :stripe_customer, -> { stripe_customers.order('id desc') }, class_name: 'RemoteKey', as: :remoteable
     end
 
+    def stripe_customer=(stripe_customer)
+      remote_keys.stripe_customers.create! key: stripe_customer.id
+    end
+
     def stripe_customer
       @stripe_customer ||= stripe_customer_remote_key.retrieve if stripe_customer_id?
     end
