@@ -23,7 +23,6 @@ ActiveAdmin.register User do
       row :last_sign_in_at
       row :current_sign_in_ip
       row :last_sign_in_ip
-      row :active_until
       row :reset_password_token
       row :reset_password_sent_at
       row :remember_created_at

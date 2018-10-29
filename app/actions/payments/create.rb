@@ -20,7 +20,6 @@ module Payments
       )
 
       user.remote_keys.stripe_customers.create! key: new_stripe_customer.id
-      user.update_attributes! active_until: 33.days.from_now # slightly over a month
     end
   end
 end
