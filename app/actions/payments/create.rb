@@ -2,7 +2,7 @@ module Payments
   class Create
     attr_reader :stripe_token, :user, :plan_name
 
-    def self.call(stripe_token: stripe_token, plan_name: plan_name, user: user)
+    def self.call(stripe_token:, plan_name:, user:)
       new(stripe_token, plan_name, user).call
     end
 
