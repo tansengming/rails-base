@@ -1,5 +1,7 @@
-PATH
-  remote: ../stripe-rails
+GIT
+  remote: https://github.com/tansengming/stripe-rails.git
+  revision: 24a86e89dbfddb6770bf7f91fa2b812ef099e5ff
+  branch: feature/subscribable
   specs:
     stripe-rails (1.5.3)
       rails (>= 3)

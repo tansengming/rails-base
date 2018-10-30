@@ -18,7 +18,7 @@ gem 'rack-attack'
 gem 'redis-rails'
 gem 'reform-rails'
 gem 'sidekiq'
-gem 'stripe-rails', path: '../stripe-rails'
+gem 'stripe-rails', github: 'tansengming/stripe-rails', branch: 'feature/subscribable'
 
 # Front End
 gem 'bootstrap'
