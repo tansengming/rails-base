@@ -1,3 +1,11 @@
+PATH
+  remote: ../stripe-rails
+  specs:
+    stripe-rails (1.5.3)
+      rails (>= 3)
+      responders
+      stripe (>= 1.36.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -376,10 +384,6 @@ GEM
       sprockets (>= 3.0.0)
     stripe (3.28.0)
       faraday (~> 0.10)
-    stripe-rails (1.5.3)
-      rails (>= 3)
-      responders
-      stripe (>= 1.36.2)
     stripe-ruby-mock (2.5.5)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
@@ -458,7 +462,7 @@ DEPENDENCIES
   sidekiq
   simplecov
   spring-commands-rspec
-  stripe-rails
+  stripe-rails!
   stripe-ruby-mock
   tapp
   turbolinks

@@ -18,7 +18,7 @@ gem 'rack-attack'
 gem 'redis-rails'
 gem 'reform-rails'
 gem 'sidekiq'
-gem 'stripe-rails'
+gem 'stripe-rails', path: '../stripe-rails'
 
 # Front End
 gem 'bootstrap'
