@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_162533) do
+ActiveRecord::Schema.define(version: 2018_11_07_194541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,17 @@ ActiveRecord::Schema.define(version: 2018_10_29_162533) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["remoteable_type", "remoteable_id"], name: "index_remote_keys_on_remoteable_type_and_remoteable_id"
+  end
+
+  create_table "stripe_subscribe_remote_resources", force: :cascade do |t|
+    t.string "remote_resource_id"
+    t.string "remote_resource_type"
+    t.integer "stripeable_id"
+    t.string "stripeable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["remote_resource_id"], name: "index_stripe_subscribe_remote_resources_on_remote_resource_id"
+    t.index ["stripeable_type", "stripeable_id"], name: "index_remote_resource_on_stripeable_type_and_stripeable_id"
   end
 
   create_table "super_admins", id: :serial, force: :cascade do |t|
