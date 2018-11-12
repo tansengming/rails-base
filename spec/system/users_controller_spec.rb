@@ -32,7 +32,7 @@ RSpec.describe 'users controller' do
 
         it 'should redirect to plans' do
           subject
-          expect(page.current_path).to eq '/stripetk/plans'
+          expect(page.current_path).to eq '/stripe/subscribe/plans'
         end
       end
     end

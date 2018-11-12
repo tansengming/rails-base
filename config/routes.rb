@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   devise_for :admin_users,  ActiveAdmin::Devise.config
   devise_for :super_admins, ActiveAdmin::Devise.config.merge(path: :super_admins)
 
+  authenticate :user do
+    mount Stripe::Subscribe::Engine => "/stripe/subscribe"
+  end
+
   authenticate :admin_user do
     mount Sidekiq::Web => '/sidekiq'
   end
@@ -17,13 +21,9 @@ Rails.application.routes.draw do
   resource :user, only: :edit
   get '/user/edit' => 'users#edit', as: :user_root # creates user_root_path for Devise's after_sign_in_path
 
-  resources :pages,     only: :show
-  resource  :up,        only: :show
-  resource  :user,      only: :edit
+  resources :pages, only: :show
+  resource  :up,    only: :show
+  resource  :user,  only: :edit
 
-  namespace :stripetk do
-    resources :plans,   only: :index
-    resource  :payment, only: [:new, :create]
-  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

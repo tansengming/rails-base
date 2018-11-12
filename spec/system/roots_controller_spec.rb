@@ -17,7 +17,7 @@ RSpec.describe 'roots controller' do
 
       it 'should redirect' do
         visit '/'
-        expect(subject.current_path).to eq '/stripetk/plans'
+        expect(subject.current_path).to eq '/stripe/subscribe/plans'
       end
     end
   end

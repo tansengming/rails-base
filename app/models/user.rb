@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  include Stripe::Customerable
+  include Stripe::Subscriberable
+
   devise  :database_authenticatable,
           :lockable,
           # :registerable,

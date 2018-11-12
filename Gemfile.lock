@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/tansengming/stripe-subscribe.git
+  revision: 06ced041146190f5f6e5514157f1e83b2e647520
+  specs:
+    stripe-subscribe (0.1.0)
+      bootstrap
+      devise
+      reform-rails
+      stripe-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -63,8 +73,9 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    autoprefixer-rails (9.1.4)
+    autoprefixer-rails (9.3.1)
       execjs
+    awesome_print (1.8.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
     bootstrap (4.1.3)
@@ -98,7 +109,7 @@ GEM
     coffee-script-source (1.12.2)
     commander (4.4.6)
       highline (~> 1.7.2)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.3)
     configatron (4.5.1)
     connection_pool (2.2.2)
     crack (0.4.3)
@@ -214,7 +225,7 @@ GEM
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (>= 1.1, < 3)
       railties (>= 3.0.0, < 6)
-    method_source (0.9.0)
+    method_source (0.9.1)
     mimemagic (0.3.2)
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
@@ -339,7 +350,7 @@ GEM
       sexp_processor (~> 4.9)
     rubyzip (1.2.2)
     safe_yaml (1.0.4)
-    sass (3.6.0)
+    sass (3.7.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -374,13 +385,13 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (3.28.0)
+    stripe (3.30.0)
       faraday (~> 0.10)
     stripe-rails (1.5.3)
       rails (>= 3)
       responders
       stripe (>= 1.36.2)
-    stripe-ruby-mock (2.5.6)
+    stripe-ruby-mock (2.5.5)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
       stripe (>= 2.0.3)
@@ -421,6 +432,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   analytics-ruby
+  awesome_print
   bootstrap
   capybara
   capybara-selenium
@@ -460,6 +472,7 @@ DEPENDENCIES
   spring-commands-rspec
   stripe-rails
   stripe-ruby-mock
+  stripe-subscribe!
   tapp
   turbolinks
   uglifier
@@ -470,4 +483,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.4
+   1.17.1

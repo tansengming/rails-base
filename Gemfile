@@ -18,7 +18,8 @@ gem 'rack-attack'
 gem 'redis-rails'
 gem 'reform-rails'
 gem 'sidekiq'
-gem 'stripe-rails'
+gem 'stripe-rails' # TODO: Why do I still need this?
+gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
 
 # Front End
 gem 'bootstrap'
@@ -49,7 +50,7 @@ group :development do
 end
 
 group :development, :test do
-  # gem 'awesome_print', require: 'ap'
+  gem 'awesome_print', require: 'ap'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'tapp'
