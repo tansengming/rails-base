@@ -24,3 +24,22 @@ en:
     show:
       terms: This should contain your Terms of Service
       thanks: Thank you for your subscription!
+  stripe:
+    subscribe:
+      plans:
+        index:
+          nice_tip:
+            description:
+              html: This will be appreciated
+            features:
+              html: ''
+          good_tip:
+            description:
+              html: This will be REALLY appreciated
+            features:
+              html: ''
+          great_tip:
+            description:
+              html: This will be GREATLY appreciated
+            features:
+              html: ''
