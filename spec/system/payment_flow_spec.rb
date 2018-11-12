@@ -9,14 +9,14 @@ RSpec.describe 'Payment Flow' do
     expect(page.current_path).to eq '/stripe/subscribe/plans'
 
     # pick a plan
-    within '#nice-tip-plan' do
+    within '#nice_tip-plan' do
       click_on 'Get Started'
     end
 
     expect(page.current_path).to eq '/stripe/subscribe/payment/new'
     # Note: cannot fulfill payment because there is no way for me to
     # get a Strip token. Goes to failure path instead.
-    click_on 'Submit Monthly Payment'
+    click_on 'Submit Payment'
     expect(page.current_path).to eq '/stripe/subscribe/plans'
   end
 end
