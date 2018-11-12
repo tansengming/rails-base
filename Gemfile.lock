@@ -1,12 +1,10 @@
 GIT
   remote: https://github.com/tansengming/stripe-subscribe.git
-  revision: c60fa355170447ec6e6acb622ff4669e37bd69e2
-  branch: feature/move
+  revision: 06ced041146190f5f6e5514157f1e83b2e647520
   specs:
     stripe-subscribe (0.1.0)
       bootstrap
       devise
-      haml-rails
       reform-rails
       stripe-rails
 
@@ -352,7 +350,7 @@ GEM
       sexp_processor (~> 4.9)
     rubyzip (1.2.2)
     safe_yaml (1.0.4)
-    sass (3.7.1)
+    sass (3.7.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -387,7 +385,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (3.29.0)
+    stripe (3.30.0)
       faraday (~> 0.10)
     stripe-rails (1.5.3)
       rails (>= 3)

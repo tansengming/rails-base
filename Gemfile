@@ -19,7 +19,7 @@ gem 'redis-rails'
 gem 'reform-rails'
 gem 'sidekiq'
 gem 'stripe-rails' # TODO: Why do I still need this?
-gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe', branch: 'feature/move'
+gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
 
 # Front End
 gem 'bootstrap'
