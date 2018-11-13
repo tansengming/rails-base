@@ -16,9 +16,7 @@ gem 'puma'
 gem 'pundit'
 gem 'rack-attack'
 gem 'redis-rails'
-gem 'reform-rails'
 gem 'sidekiq'
-gem 'stripe-rails' # TODO: Why do I still need this?
 gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
 
 # Front End
