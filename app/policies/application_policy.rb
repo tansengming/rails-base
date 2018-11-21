@@ -1,6 +1,6 @@
 class ApplicationPolicy
   attr_reader :user, :record
-  delegate :active_stripe_subscription?, to: :user
+  delegate :stripe_active_subscription?, to: :user
 
   def initialize(user, record)
     @user = user
@@ -42,7 +42,7 @@ class ApplicationPolicy
   private
 
   def paid?
-    active_stripe_subscription?
+    stripe_active_subscription?
   end
 
   class Scope
