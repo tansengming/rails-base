@@ -1,9 +1,8 @@
 GIT
   remote: https://github.com/tansengming/stripe-subscribe.git
-  revision: f99bb637810b4b0dbc16de9f7a3a83ee0400df5c
+  revision: 5ac382da4efec8dc637571966e7305685b2edf71
   specs:
     stripe-subscribe (0.1.0)
-      bootstrap
       devise
       stripe-rails
 
@@ -223,6 +222,8 @@ GEM
     minitest (5.11.3)
     multi_json (1.13.1)
     multipart-post (2.0.0)
+    net-http-persistent (3.0.0)
+      connection_pool (~> 2.2)
     newrelic_rpm (5.5.0.348)
     nio4r (2.3.1)
     nokogiri (1.8.5)
@@ -364,9 +365,10 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (3.31.1)
-      faraday (~> 0.10)
-    stripe-rails (1.5.3)
+    stripe (4.0.3)
+      faraday (~> 0.13)
+      net-http-persistent (~> 3.0)
+    stripe-rails (1.5.4)
       rails (>= 3)
       responders
       stripe (>= 1.36.2)
@@ -387,8 +389,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
-    warden (1.2.7)
-      rack (>= 1.0)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
