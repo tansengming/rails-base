@@ -1,4 +1,6 @@
 require: rubocop-rspec
+Rails:
+  Enabled: true
 AllCops:
   Exclude:
     - 'db/**/*'
