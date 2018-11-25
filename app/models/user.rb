@@ -9,8 +9,11 @@ class User < ApplicationRecord
           :trackable,
           :validatable
 
-  validates :email, uniqueness: true, presence: true
-  validates_format_of :email, with: Devise.email_regexp, allow_blank: true
+  validates :email,
+            uniqueness: true,
+            presence: true,
+            format: { with: Devise.email_regexp },
+            allow_blank: true
 
   # https://github.com/plataformatec/devise#activejob-integration
   def send_devise_notification(notification, *args)
