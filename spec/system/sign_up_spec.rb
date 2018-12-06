@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Siging Up' do
+RSpec.describe 'User signing up', type: :system do
   def fill_and_submit_sign_up_form(email = 'email@example.com', password = '12345678')
     visit '/'
     click_on 'Login'
@@ -12,8 +12,12 @@ RSpec.describe 'Siging Up' do
     click_on 'Sign up'
   end
 
-  skip 'should create a new user and redirect to the plans page' do
+  skip 'should create a new user' do
     expect { fill_and_submit_sign_up_form }.to change { User.count }.by(1)
-    expect(page.current_path).to eq '/plans'
+  end
+
+  skip 'should redirect to the plans page' do
+    fill_and_submit_sign_up_form
+    expect(page).to have_current_path('/plans')
   end
 end
