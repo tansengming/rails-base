@@ -13,6 +13,8 @@ RSpec/ReturnFromStub:
   EnforcedStyle: block
 RSpec/ImplicitExpect:
   EnforcedStyle: should
+RSpec/ExpectChange:
+  EnforcedStyle: block
 Metrics/LineLength:
   Enabled: false
 Style/FrozenStringLiteralComment:
