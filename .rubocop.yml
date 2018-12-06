@@ -11,6 +11,8 @@ AllCops:
     - 'bin/{rails,rake}'
 RSpec/ReturnFromStub:
   EnforcedStyle: block
+RSpec/ImplicitExpect:
+  EnforcedStyle: should
 Metrics/LineLength:
   Enabled: false
 Style/FrozenStringLiteralComment:
