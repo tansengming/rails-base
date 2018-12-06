@@ -1,0 +1,8 @@
+plugin:
+  structure:
+    enabled: false
+  duplication:
+    enabled: false
+  rubocop:
+    enabled: true
+    channel: rubocop-0-60
