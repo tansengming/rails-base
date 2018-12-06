@@ -9,6 +9,8 @@ AllCops:
     - 'spec/support/**/*'
     - 'spec/*_helper.rb'
     - 'bin/{rails,rake}'
+RSpec/ReturnFromStub:
+  EnforcedStyle: block
 Metrics/LineLength:
   Enabled: false
 Style/FrozenStringLiteralComment:
