@@ -1,24 +1,29 @@
+require 'ostruct'
 require 'segment'
 require File.expand_path('../../app/services/event_tracker', __dir__)
 
 RSpec.describe EventTracker do
   before { ENV['SEGMENT_WRITE_KEY'] = 'segment-write-key' }
+
   after  { ENV['SEGMENT_WRITE_KEY'] = nil }
 
-  let(:user) { double(id: 1, email: 'xavier') }
+  let(:user) { OpenStruct.new(id: 1, email: 'xavier') }
 
   describe '.track' do
-    subject { described_class.track(user, event) }
+    subject(:calling_track) { described_class.track(user, event) }
 
-    context 'signup' do
-      let(:event) { :signup }
+    context 'when the event is signup' do
+      let(:event)          { :signup }
+      let(:segment_client) { instance_double(Segment::Analytics::Client) }
+
       before do
-        expect_any_instance_of(Segment::Analytics::Client).to receive(:identify) { true }
-        expect_any_instance_of(Segment::Analytics::Client).to receive(:track) { true }
+        allow(Segment::Analytics::Client).to receive(:new) { segment_client }
+        allow(segment_client).to receive(:identify) { true }
+        allow(segment_client).to receive(:track) { true }
       end
 
-      it 'should not crash' do
-        expect { subject }.not_to raise_error
+      it 'does not crash' do
+        expect { calling_track }.not_to raise_error
       end
     end
   end
