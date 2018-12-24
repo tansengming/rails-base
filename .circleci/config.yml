@@ -12,6 +12,7 @@ jobs:
           PGHOST: localhost
           PGUSER: postgres
           RAILS_ENV: test
+          REDIS_URL: redis://localhost:6379/0/cache
       - image: circleci/postgres:latest-ram
         environment:
           POSTGRES_USER: postgres
