@@ -32,3 +32,5 @@ Style/Documentation:
   Enabled: false
 Style/LambdaCall:
   Enabled: false
+Style/NumericLiterals:
+  Enabled: false
