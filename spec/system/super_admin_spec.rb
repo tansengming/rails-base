@@ -1,43 +1,38 @@
 require 'rails_helper'
 
-RSpec.describe 'Admin' do
-  subject { page }
+RSpec.describe 'Super Admin', type: :system do
   let(:admin)       { create(:admin_user, email: 'an_admin@example.com') }
   let(:super_admin) { create(:super_admin) }
 
-  before { admin }
+  before do
+    admin
+    sign_in super_admin
+    visit '/super_admins'
+    click_link 'Admin Users'
+  end
 
-  describe 'login' do
-    before do
-      sign_in super_admin
-      visit '/super_admins'
+  describe 'updating an admin from the index page' do
+    it 'should not crash' do
+      expect(page).to have_content('an_admin@example.com')
+
+      first('.table_actions').click_link('Edit')
+      fill_in 'Email', with: 'new_email@example.com'
+      click_button 'Update Admin user'
+
+      expect(page).to have_content('Admin user was successfully updated.')
+      expect(page).to have_content('new_email@example.com')
     end
-    its(:current_path) { should == '/super_admins' }
+  end
 
-    describe 'index page' do
-      before { click_link 'Admin Users' }
+  describe 'visiting new user page' do
+    it 'should not crash' do
+      click_link 'New Admin User'
+    end
+  end
 
-      it { should have_content('an_admin@example.com') }
-
-      describe 'updating the admin user' do
-        before do
-          first('.table_actions').click_link('Edit')
-          fill_in 'Email', with: 'new_email@example.com'
-          click_button 'Update Admin user'
-        end
-
-        it 'should update the admin' do
-          expect(page).to have_content('Admin user was successfully updated.')
-          expect(page).to have_content('new_email@example.com')
-        end
-      end
-
-      describe 'walking around' do
-        it 'should not crash' do
-          click_link 'New Admin User'
-          click_link 'Logout'
-        end
-      end
+  describe 'logging out' do
+    it 'should not crash' do
+      click_link 'Logout'
     end
   end
 end
