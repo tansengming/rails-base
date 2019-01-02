@@ -34,3 +34,9 @@ Style/LambdaCall:
   Enabled: false
 Style/NumericLiterals:
   Enabled: false
+RSpec/ExampleLength:
+  Exclude:
+    - 'spec/system/**/*'
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/system/**/*'
