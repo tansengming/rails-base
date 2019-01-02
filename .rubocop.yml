@@ -28,6 +28,7 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
     - 'app/admin/**/*'
+    - '**/*.rake'
 Style/Documentation:
   Enabled: false
 Style/LambdaCall:
