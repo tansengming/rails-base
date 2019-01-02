@@ -14,7 +14,7 @@ RSpec.describe 'Payment Flow', type: :system do
       click_on 'Get Started'
     end
 
-    expect(page).to have_current_path '/stripe/subscribe/payment/new'
+    expect(page).to have_current_path '/stripe/subscribe/payment/new?plan=nice_tip'
 
     # Note: cannot fulfill payment because there is no way for me to
     # get a Stripe token. Goes to failure path instead.
