@@ -114,7 +114,6 @@ GEM
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
     dante (0.2.0)
-    database_cleaner (1.7.0)
     devise (4.5.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -427,7 +426,6 @@ DEPENDENCIES
   capybara-selenium
   chromedriver-helper
   configatron
-  database_cleaner
   devise
   devise-bootstrap-views
   dotenv-rails
@@ -470,4 +468,4 @@ RUBY VERSION
    ruby 2.6.0p0
 
 BUNDLED WITH
-   1.17.1
+   1.17.2
