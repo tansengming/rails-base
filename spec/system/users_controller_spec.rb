@@ -1,46 +1,48 @@
 require 'rails_helper'
 
-RSpec.describe 'users controller' do
+RSpec.describe UsersController do
   include Stripe::CustomerableHelper
-  let(:user) { create :user }
 
   before { make_customerable(user).add_stripe_subscription! }
 
+  let(:user) { create :user }
+
   describe 'GET /user/edit' do
-    subject { visit '/user/edit' }
+    subject(:get_edit) { visit '/user/edit' }
 
-    context 'when logged in' do
-      before { sign_in user }
+    before { sign_in user }
 
-      it 'should visit the page' do
-        subject
-        expect(page.current_path).to eq '/user/edit'
+    it 'should visit the page' do
+      get_edit
+      expect(page).to have_current_path '/user/edit'
+    end
+
+    context 'when heap id exists' do
+      before { configatron.heap.app_id = 'fake-id' }
+
+      after  { configatron.heap.app_id = nil }
+
+      it 'should have heap' do
+        get_edit
+        expect(page.body).to include 'heap.identify'
       end
+    end
 
-      context 'if heap id exists' do
-        before { configatron.heap.app_id = 'fake-id' }
-        after  { configatron.heap.app_id = nil }
+    context 'when not active' do
+      before { make_customerable(user).remove_stripe_subscriptions! }
 
-        it 'should have heap' do
-          subject
-          expect(page.body).to include 'heap.identify'
-        end
-      end
-
-      context 'when not active' do
-        before { make_customerable(user).remove_stripe_subscriptions! }
-
-        it 'should redirect to plans' do
-          subject
-          expect(page.current_path).to eq '/stripe/subscribe/plans'
-        end
+      it 'should redirect to plans' do
+        get_edit
+        expect(page).to have_current_path '/stripe/subscribe/plans'
       end
     end
 
     context 'when not logged in' do
+      before { sign_out user }
+
       it 'should be redirected' do
-        subject
-        expect(page.current_path).to_not eq '/user/edit'
+        get_edit
+        expect(page).not_to have_current_path '/user/edit'
       end
     end
   end

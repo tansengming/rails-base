@@ -7,11 +7,12 @@ jobs:
   build:
     parallelism: 1
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.6.0-node-browsers
         environment:
           PGHOST: localhost
           PGUSER: postgres
           RAILS_ENV: test
+          REDIS_URL: redis://localhost:6379/0/cache
       - image: circleci/postgres:latest-ram
         environment:
           POSTGRES_USER: postgres

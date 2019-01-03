@@ -1,14 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe 'roots controller' do
-  subject { page }
+RSpec.describe 'roots controller', type: :system do
   let(:user) { create :user }
 
   describe 'GET /' do
     context 'when not logged in' do
       it 'should not redirect' do
         visit '/'
-        expect(page.body).to have_text 'Login' 
+        expect(page.body).to have_text 'Login'
       end
     end
 
@@ -17,7 +16,7 @@ RSpec.describe 'roots controller' do
 
       it 'should redirect' do
         visit '/'
-        expect(subject.current_path).to eq '/stripe/subscribe/plans'
+        expect(page).to have_current_path('/stripe/subscribe/plans')
       end
     end
   end

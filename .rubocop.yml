@@ -15,6 +15,8 @@ RSpec/ImplicitExpect:
   EnforcedStyle: should
 RSpec/ExpectChange:
   EnforcedStyle: block
+RSpec/ExampleWording:
+  Enabled: false
 Metrics/LineLength:
   Enabled: false
 Style/FrozenStringLiteralComment:
@@ -26,7 +28,16 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
     - 'app/admin/**/*'
+    - '**/*.rake'
 Style/Documentation:
   Enabled: false
 Style/LambdaCall:
   Enabled: false
+Style/NumericLiterals:
+  Enabled: false
+RSpec/ExampleLength:
+  Exclude:
+    - 'spec/system/**/*'
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/system/**/*'

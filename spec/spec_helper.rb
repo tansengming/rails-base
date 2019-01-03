@@ -14,17 +14,20 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+require 'irb'
 require 'simplecov'
+require 'support/load_request_fixture'
+require 'webmock/rspec'
+
 SimpleCov.start do
   add_filter ['/spec/', '/config/']
 end
 
-require 'webmock/rspec'
 WebMock.disable_net_connect! allow_localhost: true, allow: 'codeclimate.com'
 
-require 'irb'
-
 RSpec.configure do |config|
+  config.include LoadRequestFixture
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -84,7 +87,7 @@ RSpec.configure do |config|
     # Use the documentation formatter for detailed output,
     # unless a formatter has already been configured
     # (e.g. via a command-line flag).
-    config.default_formatter = "doc"
+    config.default_formatter = 'doc'
   end
 
   # Print the 10 slowest examples and example groups at the
@@ -103,5 +106,4 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   Kernel.srand config.seed
-
 end
