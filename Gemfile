@@ -58,7 +58,6 @@ group :test do
   gem 'capybara'
   gem 'capybara-selenium'
   gem 'chromedriver-helper'
-  gem 'database_cleaner'
   gem 'faker'
   gem 'fuubar'
   gem 'rspec-its'
