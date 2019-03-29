@@ -68,8 +68,6 @@ GEM
       commander (~> 4.4)
     arbre (1.1.1)
       activesupport (>= 3.0.0)
-    archive-zip (0.12.0)
-      io-like (~> 0.3.0)
     arel (9.0.0)
     autoprefixer-rails (9.4.7)
       execjs
@@ -95,9 +93,6 @@ GEM
       selenium-webdriver
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    chromedriver-helper (2.1.1)
-      archive-zip (~> 0.10)
-      nokogiri (~> 1.8)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -176,7 +171,6 @@ GEM
       responders
     intercom-rails (0.4.0)
       activesupport (> 3.0)
-    io-like (0.3.0)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -223,6 +217,7 @@ GEM
     multipart-post (2.0.0)
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
+    net_http_ssl_fix (0.0.10)
     newrelic_rpm (6.2.0.354)
     nio4r (2.3.1)
     nokogiri (1.10.2)
@@ -405,6 +400,11 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webdrivers (3.7.1)
+      net_http_ssl_fix
+      nokogiri (~> 1.6)
+      rubyzip (~> 1.0)
+      selenium-webdriver (~> 3.0)
     webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -425,7 +425,6 @@ DEPENDENCIES
   bootstrap
   capybara
   capybara-selenium
-  chromedriver-helper
   configatron
   devise
   devise-bootstrap-views
@@ -463,6 +462,7 @@ DEPENDENCIES
   turbolinks
   uglifier
   web-console
+  webdrivers
   webmock
 
 RUBY VERSION

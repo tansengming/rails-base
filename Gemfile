@@ -57,7 +57,6 @@ end
 group :test do
   gem 'capybara'
   gem 'capybara-selenium'
-  gem 'chromedriver-helper'
   gem 'faker'
   gem 'fuubar'
   gem 'rspec-its'
@@ -66,6 +65,7 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'simplecov'
   gem 'stripe-ruby-mock', require: 'stripe_mock'
+  gem 'webdrivers'
   gem 'webmock'
 end
 
