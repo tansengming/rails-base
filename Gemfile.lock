@@ -68,7 +68,7 @@ GEM
       commander (~> 4.4)
     arbre (1.1.1)
       activesupport (>= 3.0.0)
-    archive-zip (0.11.0)
+    archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
     autoprefixer-rails (9.4.7)
@@ -95,7 +95,7 @@ GEM
       selenium-webdriver
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    chromedriver-helper (2.1.0)
+    chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     coffee-rails (4.2.2)
