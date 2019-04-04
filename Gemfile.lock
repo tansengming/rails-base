@@ -64,8 +64,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    analytics-ruby (2.2.5)
-      commander (~> 4.4)
+    analytics-ruby (2.2.6)
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (9.0.0)
@@ -100,8 +99,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commander (4.4.6)
-      highline (~> 1.7.2)
     concurrent-ruby (1.1.5)
     configatron (4.5.1)
     connection_pool (2.2.2)
@@ -156,7 +153,6 @@ GEM
       actionpack (>= 4.1)
       activesupport (>= 4.1)
     hashdiff (0.3.7)
-    highline (1.7.10)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
