@@ -18,6 +18,7 @@ gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
 gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
+gem 'stripe-rails'
 
 # Front End
 gem 'bootstrap'

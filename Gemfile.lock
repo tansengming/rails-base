@@ -452,6 +452,7 @@ DEPENDENCIES
   sidekiq
   simplecov
   spring-commands-rspec
+  stripe-rails
   stripe-ruby-mock
   stripe-subscribe!
   tapp
