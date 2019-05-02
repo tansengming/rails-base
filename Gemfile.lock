@@ -96,6 +96,13 @@ GEM
       selenium-webdriver
     childprocess (1.0.1)
       rake (< 13.0)
+    coffee-rails (5.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 5.2.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     configatron (4.5.1)
     connection_pool (2.2.2)
@@ -420,6 +427,7 @@ DEPENDENCIES
   bootstrap
   capybara
   capybara-selenium
+  coffee-rails
   configatron
   devise
   devise-bootstrap-views
@@ -465,4 +473,4 @@ RUBY VERSION
    ruby 2.6.2p47
 
 BUNDLED WITH
-   1.17.2
+   1.17.3

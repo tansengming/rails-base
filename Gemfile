@@ -22,6 +22,7 @@ gem 'stripe-rails'
 
 # Front End
 gem 'bootstrap'
+gem 'coffee-rails'
 gem 'devise-bootstrap-views'
 gem 'haml-rails'
 gem 'jquery-rails'
