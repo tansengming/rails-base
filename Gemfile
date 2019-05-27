@@ -60,7 +60,6 @@ group :test do
   gem 'capybara'
   gem 'capybara-selenium'
   gem 'faker'
-  gem 'fuubar'
   gem 'rspec-its'
   gem 'rspec-rails'
   gem 'rspec-retry'
