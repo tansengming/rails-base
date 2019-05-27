@@ -18,8 +18,8 @@ gem 'pundit'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
-gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
 gem 'stripe-rails'
+gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
 
 # Front End
 gem 'bootstrap'
