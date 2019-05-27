@@ -77,6 +77,8 @@ GEM
       execjs (~> 2.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
+    bootsnap (1.4.4)
+      msgpack (~> 1.0)
     bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
@@ -213,6 +215,7 @@ GEM
     mini_racer (0.2.6)
       libv8 (>= 6.9.411)
     minitest (5.11.3)
+    msgpack (1.2.10)
     multi_json (1.13.1)
     multipart-post (2.1.1)
     net-http-persistent (3.0.1)
@@ -357,10 +360,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    spring (2.0.2)
-      activesupport (>= 4.2)
-    spring-commands-rspec (1.0.4)
-      spring (>= 0.9.1)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -424,6 +423,7 @@ DEPENDENCIES
   activeadmin
   analytics-ruby
   awesome_print
+  bootsnap
   bootstrap
   capybara
   capybara-selenium
@@ -458,7 +458,6 @@ DEPENDENCIES
   sendwithus_ruby_action_mailer
   sidekiq
   simplecov
-  spring-commands-rspec
   stripe-rails
   stripe-ruby-mock
   stripe-subscribe!

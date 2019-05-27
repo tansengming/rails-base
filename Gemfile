@@ -9,6 +9,7 @@ end
 gem 'rails', '~> 5.2.0'
 
 gem 'activeadmin'
+gem 'bootsnap', require: false
 gem 'configatron'
 gem 'devise'
 gem 'pg'
@@ -44,7 +45,6 @@ gem 'sendwithus_ruby_action_mailer'
 group :development do
   gem 'listen'
   gem 'meta_request' # For rails_panel
-  gem 'spring-commands-rspec'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
 end
