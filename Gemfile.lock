@@ -201,7 +201,7 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
-    meta_request (0.7.0)
+    meta_request (0.7.1)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (>= 1.1, < 3)
       railties (>= 3.0.0, < 7)
