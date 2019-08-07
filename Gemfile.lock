@@ -167,7 +167,7 @@ GEM
       has_scope (~> 0.6)
       railties (>= 5.0, < 6.0)
       responders (~> 2.0)
-    intercom-rails (0.4.0)
+    intercom-rails (0.4.1)
       activesupport (> 3.0)
     jquery-rails (4.3.5)
       rails-dom-testing (>= 1, < 3)
