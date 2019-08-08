@@ -32,13 +32,13 @@ gem 'turbolinks'
 gem 'uglifier'
 
 # Required Services
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 gem 'rollbar'
 # gem 'scout_apm'
 
 # Optional Services
 gem 'analytics-ruby', require: 'segment'
-gem 'intercom-rails'
+# gem 'intercom-rails'
 gem 'sendwithus_ruby_action_mailer'
 # gem 'skylight'
 
