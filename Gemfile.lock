@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/jacobcsmith/stripe-rails.git
+  revision: 27caf4e89b5e345d997dda1d9fede111cc0fff17
+  branch: 149-support-multiple-signing-secrets
+  specs:
+    stripe-rails (1.8.1)
+      rails (>= 3)
+      responders
+      stripe (>= 1.36.2)
+
+GIT
   remote: https://github.com/tansengming/stripe-subscribe.git
   revision: 5ac382da4efec8dc637571966e7305685b2edf71
   specs:
@@ -134,8 +144,6 @@ GEM
       railties (>= 4.2.0)
     faker (2.2.0)
       i18n (>= 0.8)
-    faraday (0.15.4)
-      multipart-post (>= 1.2, < 3)
     ffi (1.11.1)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
@@ -210,10 +218,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.3.1)
     multi_json (1.13.1)
-    multipart-post (2.1.1)
-    net-http-persistent (3.1.0)
-      connection_pool (~> 2.2)
-    nio4r (2.4.0)
+    nio4r (2.5.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
@@ -356,13 +361,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (4.21.3)
-      faraday (~> 0.13)
-      net-http-persistent (~> 3.0)
-    stripe-rails (1.8.1)
-      rails (>= 3)
-      responders
-      stripe (>= 1.36.2)
+    stripe (5.1.0)
     stripe-ruby-mock (2.5.8)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
@@ -439,7 +438,7 @@ DEPENDENCIES
   sendwithus_ruby_action_mailer
   sidekiq
   simplecov
-  stripe-rails
+  stripe-rails!
   stripe-ruby-mock
   stripe-subscribe!
   tapp

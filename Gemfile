@@ -18,7 +18,7 @@ gem 'pundit'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
-gem 'stripe-rails'
+gem 'stripe-rails', github: 'jacobcsmith/stripe-rails', branch: '149-support-multiple-signing-secrets'
 gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
 
 # Front End
