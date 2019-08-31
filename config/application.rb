@@ -15,6 +15,7 @@ module RailsBase
 
     config.stripe.secret_key      = ENV['STRIPE_SECRET_KEY']
     config.stripe.publishable_key = ENV['STRIPE_PUBLISHABLE_KEY']
+    config.stripe.signing_secret  = ENV.fetch('STRIPE_SIGNING_SECRET')
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
