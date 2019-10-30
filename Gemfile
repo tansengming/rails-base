@@ -28,6 +28,7 @@ gem 'devise-bootstrap-views'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'lodash-rails'
+gem 'sprockets', '< 4'
 gem 'turbolinks'
 gem 'uglifier'
 

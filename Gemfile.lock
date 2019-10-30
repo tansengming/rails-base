@@ -350,8 +350,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (5.1.0)
-    stripe-rails (1.9.0)
+    stripe (5.7.1)
+    stripe-rails (1.9.1)
       rails (>= 3)
       responders
       stripe (>= 1.36.2)
@@ -431,6 +431,7 @@ DEPENDENCIES
   sendwithus_ruby_action_mailer
   sidekiq
   simplecov
+  sprockets (< 4)
   stripe-rails
   stripe-ruby-mock
   stripe-subscribe!
