@@ -205,7 +205,7 @@ GEM
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pg (1.1.4)
+    pg (1.2.0)
     polyamorous (2.3.0)
       activerecord (>= 5.0)
     popper_js (1.14.5)
