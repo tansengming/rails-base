@@ -63,7 +63,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    analytics-ruby (2.2.7)
+    analytics-ruby (2.2.8)
     arbre (1.2.1)
       activesupport (>= 3.0.0)
     arel (9.0.0)
