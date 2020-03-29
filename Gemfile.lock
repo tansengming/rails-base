@@ -1,14 +1,4 @@
 GIT
-  remote: https://github.com/jacobcsmith/stripe-rails.git
-  revision: 27caf4e89b5e345d997dda1d9fede111cc0fff17
-  branch: 149-support-multiple-signing-secrets
-  specs:
-    stripe-rails (1.8.1)
-      rails (>= 3)
-      responders
-      stripe (>= 1.36.2)
-
-GIT
   remote: https://github.com/tansengming/stripe-subscribe.git
   revision: 5ac382da4efec8dc637571966e7305685b2edf71
   specs:
@@ -362,6 +352,10 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     stripe (5.1.0)
+    stripe-rails (1.9.1)
+      rails (>= 3)
+      responders
+      stripe (>= 1.36.2)
     stripe-ruby-mock (2.5.8)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
@@ -438,7 +432,7 @@ DEPENDENCIES
   sendwithus_ruby_action_mailer
   sidekiq
   simplecov
-  stripe-rails!
+  stripe-rails
   stripe-ruby-mock
   stripe-subscribe!
   tapp
