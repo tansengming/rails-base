@@ -24,27 +24,6 @@
 #   plan.trial_period_days = 30
 # end
 
-Stripe.plan :tiered do |plan|
-  plan.name = 'Tiered'
-  plan.aggregate_usage = 'max'
-  plan.billing_scheme = 'tiered'
-  # interval must be either 'day', 'week', 'month' or 'year'
-  plan.interval = 'month'
-  plan.interval_count = 1
-  plan.tiers = [
-    {
-      unit_amount: 1500,
-      up_to: 10
-    },
-    {
-      unit_amount: 1000,
-      up_to: 'inf'
-    }
-  ]
-  plan.tiers_mode = 'graduated'
-  plan.usage_type = 'metered'
-end
-
 Stripe.plan :nice_tip do |plan|
   plan.name     = 'Nice Tip'
   plan.amount   = 99
