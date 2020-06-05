@@ -1,6 +1,6 @@
 plugins:
   rubocop:
-    enabled: false
+    enabled: true
     channel: rubocop-0-83
 exclude_patterns:
 - "config/"
