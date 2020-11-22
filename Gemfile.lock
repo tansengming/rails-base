@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/jamesprior/stripe-rails.git
+  revision: f8b074dfd0556067d2aa306f2443d8186e23c4d6
+  branch: patch-1
+  specs:
+    stripe-rails (2.1.0)
+      rails (>= 5.1)
+      responders
+      stripe (>= 3.15.0)
+
+GIT
   remote: https://github.com/tansengming/stripe-subscribe.git
   revision: 5ac382da4efec8dc637571966e7305685b2edf71
   specs:
@@ -176,7 +186,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    libv8 (7.3.492.27.1)
+    libv8 (8.4.255.0)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -196,12 +206,12 @@ GEM
     mimemagic (0.3.4)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    mini_racer (0.2.9)
-      libv8 (>= 6.9.411)
+    mini_racer (0.3.1)
+      libv8 (~> 8.4.255)
     minitest (5.14.1)
     msgpack (1.3.3)
     multi_json (1.14.1)
-    nio4r (2.5.2)
+    nio4r (2.5.4)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
@@ -210,7 +220,7 @@ GEM
       activerecord (>= 5.2.1)
     popper_js (1.14.5)
     public_suffix (4.0.3)
-    puma (4.3.5)
+    puma (5.0.4)
       nio4r (~> 2.0)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
@@ -341,10 +351,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     stripe (5.17.0)
-    stripe-rails (1.10.0)
-      rails (>= 3)
-      responders
-      stripe (>= 1.36.2)
     stripe-ruby-mock (3.0.1)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
@@ -422,7 +428,7 @@ DEPENDENCIES
   sidekiq
   simplecov
   sprockets (< 4)
-  stripe-rails
+  stripe-rails!
   stripe-ruby-mock
   stripe-subscribe!
   tapp
