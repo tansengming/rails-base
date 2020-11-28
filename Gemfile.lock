@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/jamesprior/stripe-rails.git
+  revision: f8b074dfd0556067d2aa306f2443d8186e23c4d6
+  branch: patch-1
+  specs:
+    stripe-rails (2.1.0)
+      rails (>= 5.1)
+      responders
+      stripe (>= 3.15.0)
+
+GIT
   remote: https://github.com/tansengming/stripe-subscribe.git
   revision: 5ac382da4efec8dc637571966e7305685b2edf71
   specs:
@@ -341,10 +351,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     stripe (5.28.0)
-    stripe-rails (2.1.0)
-      rails (>= 5.1)
-      responders
-      stripe (>= 3.15.0)
     stripe-ruby-mock (3.0.1)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
@@ -422,7 +428,7 @@ DEPENDENCIES
   sidekiq
   simplecov
   sprockets (< 4)
-  stripe-rails
+  stripe-rails!
   stripe-ruby-mock
   stripe-subscribe!
   tapp
