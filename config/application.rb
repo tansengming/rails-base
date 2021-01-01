@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module RailsBase
   class Application < Rails::Application
+    config.load_defaults 6.0
+
     config.active_job.queue_adapter = :sidekiq
     config.active_job.queue_name_prefix = "rails5_#{Rails.env}"
 
