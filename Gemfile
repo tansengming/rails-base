@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '~> 2.7.1'
+ruby '~> 3.0.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -47,6 +47,10 @@ group :development do
   gem 'listen'
   gem 'meta_request' # For rails_panel
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+
   gem 'web-console'
 end
 
