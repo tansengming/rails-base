@@ -47,6 +47,11 @@ group :development do
   gem 'listen'
   gem 'meta_request' # For rails_panel
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-rails', require: false
+
   gem 'web-console'
 end
 
