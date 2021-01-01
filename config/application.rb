@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module RailsBase
   class Application < Rails::Application
+    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
     config.active_job.queue_adapter = :sidekiq
@@ -15,7 +16,6 @@ module RailsBase
 
     config.stripe.secret_key      = ENV['STRIPE_SECRET_KEY']
     config.stripe.publishable_key = ENV['STRIPE_PUBLISHABLE_KEY']
-
     # Settings in config/environments/* take precedence over those specified here.
     # NOTE: please update for PROD
     config.action_mailer.default_url_options = { :host => 'localhost' }
