@@ -277,6 +277,7 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rexml (3.2.4)
     rollbar (2.24.0)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
@@ -413,6 +414,7 @@ DEPENDENCIES
   rack-attack
   rails (~> 5.2.0)
   redis-rails
+  rexml
   rollbar
   rspec-its
   rspec-rails

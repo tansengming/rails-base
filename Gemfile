@@ -21,6 +21,8 @@ gem 'sidekiq'
 gem 'stripe-rails'
 gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
 
+gem 'rexml' # https://github.com/Shopify/bootsnap/issues/325
+
 # Front End
 gem 'bootstrap'
 gem 'coffee-rails'
