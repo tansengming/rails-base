@@ -2,7 +2,7 @@
 %html
   %head
     %title
-      = Rails.application.class.parent_name
+      = Rails.application.class.module_parent_name
     = csrf_meta_tags
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', defer: true
@@ -10,7 +10,7 @@
   %body
     %nav.navbar.navbar-expand-lg.navbar-light.bg-light
       %a.navbar-brand{href: '#'}
-        = Rails.application.class.parent_name
+        = Rails.application.class.module_parent_name
       %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbarSupportedContent.collapse.navbar-collapse
@@ -55,5 +55,5 @@
                 Terms
       .row.justify-content-md-center
         .col.col-md-auto
-          = Rails.application.class.parent_name
-          © 2018
+          = Rails.application.class.module_parent_name
+          © 2021
