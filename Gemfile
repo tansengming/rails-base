@@ -18,7 +18,7 @@ gem 'pundit'
 gem 'rack-attack'
 gem 'redis-rails'
 gem 'sidekiq'
-gem 'stripe-rails'
+gem 'stripe-rails', github: 'ZilvinasKucinskas/stripe-rails', branch: 'feature/support-name-in-coupons'
 gem 'stripe-subscribe', github: 'tansengming/stripe-subscribe'
 
 # Front End

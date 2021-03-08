@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/ZilvinasKucinskas/stripe-rails.git
+  revision: 39ea694156a97d9bed1baf9dc6e715241b5043d2
+  branch: feature/support-name-in-coupons
+  specs:
+    stripe-rails (2.2.1)
+      rails (>= 5.1)
+      responders
+      stripe (>= 3.15.0)
+
+GIT
   remote: https://github.com/tansengming/stripe-subscribe.git
   revision: 089430e7b5f4853d97af49ceac1cf1153ea0fbdc
   specs:
@@ -354,10 +364,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     stripe (5.28.0)
-    stripe-rails (2.2.1)
-      rails (>= 5.1)
-      responders
-      stripe (>= 3.15.0)
     stripe-ruby-mock (3.0.1)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
@@ -435,7 +441,7 @@ DEPENDENCIES
   sidekiq
   simplecov
   sprockets (< 4)
-  stripe-rails
+  stripe-rails!
   stripe-ruby-mock
   stripe-subscribe!
   tapp
