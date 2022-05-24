@@ -1,7 +1,7 @@
-require: rubocop-rspec
-Rails:
-  Enabled: true
+require: 
+  - rubocop-rspec
 AllCops:
+  NewCops: enable
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
@@ -9,35 +9,58 @@ AllCops:
     - 'spec/support/**/*'
     - 'spec/*_helper.rb'
     - 'bin/{rails,rake}'
-RSpec/ReturnFromStub:
-  EnforcedStyle: block
-RSpec/ImplicitExpect:
-  EnforcedStyle: should
-RSpec/ExpectChange:
-  EnforcedStyle: block
-RSpec/ExampleWording:
-  Enabled: false
-Metrics/LineLength:
-  Enabled: false
-Style/FrozenStringLiteralComment:
+Layout/LineLength:
   Enabled: false
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - 'spec/**/*'
 Metrics/BlockLength:
   Exclude:
+    - config/routes.rb
     - 'spec/**/*'
     - 'app/admin/**/*'
     - '**/*.rake'
+RSpec/EmptyLineAfterSubject:
+  Exclude:
+    - 'spec/factories.rb'
+RSpec/ExpectChange:
+  EnforcedStyle: block
+RSpec/ExampleLength:
+  Exclude:
+    - 'spec/system/**/*'
+RSpec/ExampleWording:
+  Enabled: false
+RSpec/ImplicitExpect:
+  EnforcedStyle: should
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/system/**/*'
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+RSpec/NamedSubject:
+  Enabled: false
+RSpec/NestedGroups:
+  Max: 4
+RSpec/ReturnFromStub:
+  EnforcedStyle: block
 Style/Documentation:
   Enabled: false
 Style/LambdaCall:
   Enabled: false
 Style/NumericLiterals:
   Enabled: false
-RSpec/ExampleLength:
+Style/Semicolon:
   Exclude:
-    - 'spec/system/**/*'
-RSpec/MultipleExpectations:
-  Exclude:
-    - 'spec/system/**/*'
+    - 'spec/**/*'
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
